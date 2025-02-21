@@ -3,3 +3,16 @@ Temp/
 Logs/
 Obj/
 UserSettings/
+
+*.csproj
+*.sln
+*.suo
+*.user
+*.unityproj
+*.pidb
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.ide/
