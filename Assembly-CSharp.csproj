@@ -59,12 +59,14 @@
     <UnityVersion>6000.0.38f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\rafae\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\jpaso\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.38f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.38f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.38f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\SecurityPatrol.cs" />
+    <Compile Include="Assets\Scripts\Security.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>
