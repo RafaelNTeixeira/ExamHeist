@@ -48,6 +48,11 @@ public class SecurityPatrol : MonoBehaviour
                 DirectionChange();
         }
     }
+    
+    public bool IsAtEdge()
+    {
+        return security.position.x <= leftEdge.position.x || security.position.x >= rightEdge.position.x;
+    }
 
     private void DirectionChange()
     {

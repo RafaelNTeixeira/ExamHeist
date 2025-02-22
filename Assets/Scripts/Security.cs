@@ -18,20 +18,24 @@ public class Security : MonoBehaviour
     
     private void Update()
     {
-       if (PlayerInSight())
-       {
+        if (PlayerInSight())
             anim.SetTrigger("catch");
-       }
+       
 
-       if (securityPatrol != null)
-       {
-           securityPatrol.enabled = !PlayerInSight();
-       }
+        if (securityPatrol != null)
+            securityPatrol.enabled = !PlayerInSight();
+       
     }
 
     private bool PlayerInSight()
     {
-        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + (transform.right)/5 * range * (transform.localScale.x)/5 * colliderDistance,
+        // Check if the security is at an edge
+        if (securityPatrol != null && securityPatrol.IsAtEdge())
+        {
+            return false; // Disable BoxCast when at the edge
+        }
+
+        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right/Mathf.Abs(transform.localScale.x) * range * Mathf.Sign(transform.localScale.x) * colliderDistance,
         new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
         0, Vector2.left, 0, playerLayer);
         return hit.collider != null;
@@ -39,8 +43,14 @@ public class Security : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        // Check if the security is at an edge
+        if (securityPatrol != null && securityPatrol.IsAtEdge())
+        {
+            return; 
+        }
+
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(boxCollider.bounds.center + (transform.right)/5 * range * (transform.localScale.x)/5 * colliderDistance,
+        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right/Mathf.Abs(transform.localScale.x) * range * Mathf.Sign(transform.localScale.x) * colliderDistance,
         new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
 }
