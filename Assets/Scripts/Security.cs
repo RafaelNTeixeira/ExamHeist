@@ -20,11 +20,9 @@ public class Security : MonoBehaviour
     {
         if (PlayerInSight())
             anim.SetTrigger("catch");
-       
 
         if (securityPatrol != null)
             securityPatrol.enabled = !PlayerInSight();
-       
     }
 
     private bool PlayerInSight()
