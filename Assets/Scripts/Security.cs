@@ -9,10 +9,11 @@ public class Security : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
 
     [Header("Cone Raycast Settings")]
-    private readonly float fovAngle = 60f;
+    private readonly float fovAngle = 45f;
     private readonly float viewDistance = 3f; 
     private readonly int rayCount = 10; // Number of rays in cone
     [SerializeField] private LayerMask obstacleLayer;
+    
 
     private Animator anim;
     private SecurityPatrol securityPatrol;
