@@ -116,12 +116,12 @@ TextureImporter:
       name: Tileset_32x32_3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 320
-        height: 320
+        x: 287
+        y: 225
+        width: 32
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ca0f3d7b06e498a41bc7e4f26b2518b6
     internalID: 0
     vertices: []
     indices: 
