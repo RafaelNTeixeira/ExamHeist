@@ -119,12 +119,12 @@ TextureImporter:
       name: Tileset_16x16_1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 145
+        x: 80
+        y: 97
+        width: 48
+        height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -146,7 +146,7 @@ TextureImporter:
         width: 48
         height: 87
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -159,11 +159,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Tileset_16x16_1_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 33
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2abbbeeda7fd24745ad9cb237d16f4ff
+      internalID: 2124941814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8bafe316e97717e4780f0f21dc0df8c9
     internalID: 0
     vertices: []
     indices: 
@@ -175,6 +197,7 @@ TextureImporter:
     nameFileIdTable:
       Tileset_16x16_1_0: 1557291200079399622
       Tileset_16x16_1_1: 7119548628868429049
+      Tileset_16x16_1_2: 2124941814
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
