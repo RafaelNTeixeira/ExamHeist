@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class SecurityCamera : MonoBehaviour
 {
-    [Header("Rotação")]
+    [Header("Rotation")]
     [SerializeField] private float rotationSpeed = 30f;
     [SerializeField] private float rotationAngle = 45f;
 
-    [Header("Configuração da Luz")]
-    [SerializeField] private float fovAngle = 30f;  // Menor campo de visão (cone menor)
-    [SerializeField] private float viewDistance = 1.5f; // Luz com menor alcance
-    [SerializeField] private int rayCount = 10; // Menos raios para um cone menor
+    [Header("Light")]
+    [SerializeField] private float fovAngle = 30f;  
+    [SerializeField] private float viewDistance = 1.5f; 
+    [SerializeField] private int rayCount = 10;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private LayerMask obstacleLayer;
 
@@ -34,7 +34,7 @@ public class SecurityCamera : MonoBehaviour
     private bool PlayerInSight()
     {
         Vector2 origin = transform.position;
-        Vector2 downward = -transform.up; // Agora aponta para baixo
+        Vector2 downward = -transform.up;
         float halfFOV = fovAngle / 2f;
         float angleStep = fovAngle / (rayCount - 1);
 
@@ -60,7 +60,7 @@ public class SecurityCamera : MonoBehaviour
     private void OnDrawGizmos()
     {
         Vector2 origin = transform.position;
-        Vector2 downward = -transform.up; // Aponta para baixo
+        Vector2 downward = -transform.up; 
         float halfFOV = fovAngle / 2f;
         float angleStep = fovAngle / (rayCount - 1);
 
