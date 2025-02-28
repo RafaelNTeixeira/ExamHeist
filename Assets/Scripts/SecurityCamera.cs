@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class SecurityCamera : MonoBehaviour
 {
@@ -12,6 +13,13 @@ public class SecurityCamera : MonoBehaviour
     [SerializeField] private int rayCount = 10;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private LayerMask obstacleLayer;
+    [SerializeField] private AlarmLamp[] alarmLamps;
+    [SerializeField] private Light2D[] lamps;
+
+    [Header("Cooldown Settings")]
+    [SerializeField] private float alarmCooldown = 30f; // Time before alarm turns off
+    private float cooldownTimer = 0f;
+    private bool alarmActive = false;
 
     private float startRotation;
 
@@ -25,10 +33,51 @@ public class SecurityCamera : MonoBehaviour
         float angle = Mathf.PingPong(Time.time * rotationSpeed, rotationAngle * 2) - rotationAngle;
         transform.rotation = Quaternion.Euler(0, 0, startRotation + angle);
 
-        if (PlayerInSight())
+        bool playerDetected = PlayerInSight();
+
+        if (playerDetected)
         {
-            Debug.Log("Jogador encontrado");
+            cooldownTimer = alarmCooldown; // Reset cooldown
+            if (!alarmActive) 
+            {
+                ActivateAlarm(true);
+                alarmActive = true;
+            }
         }
+        else
+        {
+            if (alarmActive) 
+            {
+                cooldownTimer -= Time.deltaTime;
+                if (cooldownTimer <= 0)
+                {
+                    ActivateAlarm(false);
+                    alarmActive = false;
+                }
+            }
+        }
+    }
+
+    private void ActivateAlarm(bool state)
+    {
+        if (alarmLamps != null)
+        {
+            foreach (var alarmLamp in alarmLamps)
+            {
+                if (alarmLamp != null)
+                {
+                    alarmLamp.ActivateAlarm(state);
+                }
+            }
+            foreach (var lamp in lamps)
+            {
+                if (lamp != null)
+                {
+                    lamp.enabled = !state; // Lights are shutdown
+                }
+            }
+        }
+        Debug.Log("Alarm " + (state ? "Activated" : "Deactivated"));
     }
 
     private bool PlayerInSight()
