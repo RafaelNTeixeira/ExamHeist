@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game Paused");
         Time.timeScale = 0; // Freeze game
+        AlarmManager.instance.StopAlarm();
         SceneManager.LoadSceneAsync("PauseMenu", LoadSceneMode.Additive); // Load pause menu without unloading the game
     }
 
@@ -73,7 +74,8 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Resumed");
         Time.timeScale = 1; // Unfreeze game
         SceneManager.UnloadSceneAsync("PauseMenu"); // Only remove the pause menu
-        currentState = GameState.Playing;
+        AlarmManager.instance.ResumeAlarm();
+        currentState = GameState.Playing; // Can't call SetGameState() otherwise it will load the scene from scratch because of the state machine
     }
 
     void ShowGameOverScreen()

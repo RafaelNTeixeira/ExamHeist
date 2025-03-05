@@ -58,6 +58,24 @@ public class AlarmManager : MonoBehaviour
         }
     }
 
+    // Stop alarm sound when game is paused
+    public void StopAlarm()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Pause(); // Pause the audio when the game is paused
+        }
+    }
+
+    // Resume alarm sound when game is unpaused
+    public void ResumeAlarm()
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.UnPause(); // Resume the audio if it was paused
+        }
+    }
+
     private IEnumerator FadeAudio(float startVolume, float targetVolume, float duration)
     {
         float timer = 0f;
