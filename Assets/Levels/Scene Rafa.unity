@@ -1832,6 +1832,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+--- !u!1 &71308271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 71308272}
+  - component: {fileID: 71308273}
+  m_Layer: 0
+  m_Name: AlarmManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &71308272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71308271}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -87.046234, y: -41.403725, z: 0}
+  m_LocalScale: {x: 14.285715, y: 14.285715, z: 14.285715}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1741635714}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &71308273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71308271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be984daa0e4876846baccfc8501eace0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alarmSound: {fileID: 8300000, guid: 2e58b081870484b40bc26a2efc47ed82, type: 3}
+  fadeDuration: 1.5
+  maxVolume: 0.5
 --- !u!1 &77307298
 GameObject:
   m_ObjectHideFlags: 0
@@ -7040,6 +7087,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &295510016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 295510017}
+  - component: {fileID: 295510018}
+  m_Layer: 0
+  m_Name: AlarmManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &295510017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295510016}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -315.61768, y: -12.832294, z: 0}
+  m_LocalScale: {x: 14.285715, y: 14.285715, z: 14.285715}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 413677385}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &295510018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295510016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be984daa0e4876846baccfc8501eace0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alarmSound: {fileID: 8300000, guid: 2e58b081870484b40bc26a2efc47ed82, type: 3}
+  fadeDuration: 1.5
+  maxVolume: 0.5
 --- !u!1 &303236414
 GameObject:
   m_ObjectHideFlags: 0
@@ -9615,6 +9709,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 954048748}
+  - {fileID: 295510017}
   m_Father: {fileID: 1185543477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &413677386
@@ -9688,8 +9783,6 @@ MonoBehaviour:
   - {fileID: 562433602}
   - {fileID: 1114384522}
   alarmCooldown: 20
-  alarmSound: {fileID: 8300000, guid: 2e58b081870484b40bc26a2efc47ed82, type: 3}
-  fadeDuration: 2
 --- !u!1 &419657291
 GameObject:
   m_ObjectHideFlags: 0
@@ -12076,6 +12169,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1899642350}
+  - {fileID: 1779260476}
   m_Father: {fileID: 46048980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &526919417
@@ -12149,8 +12243,6 @@ MonoBehaviour:
   - {fileID: 562433602}
   - {fileID: 1114384522}
   alarmCooldown: 20
-  alarmSound: {fileID: 8300000, guid: 2e58b081870484b40bc26a2efc47ed82, type: 3}
-  fadeDuration: 2
 --- !u!1 &534458833
 GameObject:
   m_ObjectHideFlags: 0
@@ -15933,6 +16025,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2135555745}
+  - {fileID: 1001921121}
   m_Father: {fileID: 1252810302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &741101886
@@ -16006,8 +16099,6 @@ MonoBehaviour:
   - {fileID: 562433602}
   - {fileID: 1114384522}
   alarmCooldown: 20
-  alarmSound: {fileID: 8300000, guid: 2e58b081870484b40bc26a2efc47ed82, type: 3}
-  fadeDuration: 2
 --- !u!1 &742059402
 GameObject:
   m_ObjectHideFlags: 0
@@ -16328,6 +16419,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 476458526}
+  - {fileID: 967703401}
   m_Father: {fileID: 1644265184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &753565649
@@ -16401,8 +16493,6 @@ MonoBehaviour:
   - {fileID: 562433602}
   - {fileID: 1114384522}
   alarmCooldown: 20
-  alarmSound: {fileID: 8300000, guid: 2e58b081870484b40bc26a2efc47ed82, type: 3}
-  fadeDuration: 2
 --- !u!1 &759467939
 GameObject:
   m_ObjectHideFlags: 0
@@ -22136,6 +22226,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &967703400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 967703401}
+  - component: {fileID: 967703402}
+  m_Layer: 0
+  m_Name: AlarmManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &967703401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967703400}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -144.18909, y: -41.403725, z: 0}
+  m_LocalScale: {x: 14.285715, y: 14.285715, z: 14.285715}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 753565648}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &967703402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967703400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be984daa0e4876846baccfc8501eace0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alarmSound: {fileID: 8300000, guid: 2e58b081870484b40bc26a2efc47ed82, type: 3}
+  fadeDuration: 1.5
+  maxVolume: 0.5
 --- !u!1 &970902484
 GameObject:
   m_ObjectHideFlags: 0
@@ -22714,6 +22851,53 @@ Transform:
   - {fileID: 1224385640}
   m_Father: {fileID: 707142775}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1001921120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1001921121}
+  - component: {fileID: 1001921122}
+  m_Layer: 0
+  m_Name: AlarmManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1001921121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001921120}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 74.38235, y: -12.832294, z: 0}
+  m_LocalScale: {x: 14.285715, y: 14.285715, z: 14.285715}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 741101885}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1001921122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001921120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be984daa0e4876846baccfc8501eace0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alarmSound: {fileID: 8300000, guid: 2e58b081870484b40bc26a2efc47ed82, type: 3}
+  fadeDuration: 1.5
+  maxVolume: 0.5
 --- !u!1 &1006377999
 GameObject:
   m_ObjectHideFlags: 0
@@ -23898,6 +24082,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1465308218}
+  - {fileID: 2078856974}
   m_Father: {fileID: 738196003}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1069260633
@@ -23971,8 +24156,6 @@ MonoBehaviour:
   - {fileID: 562433602}
   - {fileID: 1114384522}
   alarmCooldown: 20
-  alarmSound: {fileID: 8300000, guid: 2e58b081870484b40bc26a2efc47ed82, type: 3}
-  fadeDuration: 2
 --- !u!1 &1078841853
 GameObject:
   m_ObjectHideFlags: 0
@@ -26697,6 +26880,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1203634144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1203634145}
+  - component: {fileID: 1203634146}
+  m_Layer: 0
+  m_Name: AlarmManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1203634145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203634144}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -187.04623, y: 44.310566, z: 0}
+  m_LocalScale: {x: 14.285715, y: 14.285715, z: 14.285715}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1683586854}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1203634146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203634144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be984daa0e4876846baccfc8501eace0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alarmSound: {fileID: 8300000, guid: 2e58b081870484b40bc26a2efc47ed82, type: 3}
+  fadeDuration: 1.5
+  maxVolume: 0.5
 --- !u!1 &1214473209
 GameObject:
   m_ObjectHideFlags: 0
@@ -27927,6 +28157,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1598131940}
+  - {fileID: 1497824417}
   m_Father: {fileID: 1899291921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1267051626
@@ -28000,8 +28231,6 @@ MonoBehaviour:
   - {fileID: 562433602}
   - {fileID: 1114384522}
   alarmCooldown: 20
-  alarmSound: {fileID: 8300000, guid: 2e58b081870484b40bc26a2efc47ed82, type: 3}
-  fadeDuration: 2
 --- !u!1 &1272773281
 GameObject:
   m_ObjectHideFlags: 0
@@ -31097,6 +31326,53 @@ Transform:
   - {fileID: 1215244051}
   m_Father: {fileID: 398235763}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1497824416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1497824417}
+  - component: {fileID: 1497824418}
+  m_Layer: 0
+  m_Name: AlarmManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1497824417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497824416}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.760509, y: 15.739139, z: 0}
+  m_LocalScale: {x: 14.285715, y: 14.285715, z: 14.285715}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1267051625}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1497824418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497824416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be984daa0e4876846baccfc8501eace0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alarmSound: {fileID: 8300000, guid: 2e58b081870484b40bc26a2efc47ed82, type: 3}
+  fadeDuration: 1.5
+  maxVolume: 0.5
 --- !u!1 &1497845706
 GameObject:
   m_ObjectHideFlags: 0
@@ -35134,6 +35410,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 836127501}
+  - {fileID: 1203634145}
   m_Father: {fileID: 1024591506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1683586855
@@ -35207,8 +35484,6 @@ MonoBehaviour:
   - {fileID: 562433602}
   - {fileID: 1114384522}
   alarmCooldown: 20
-  alarmSound: {fileID: 8300000, guid: 2e58b081870484b40bc26a2efc47ed82, type: 3}
-  fadeDuration: 2
 --- !u!1 &1685542982
 GameObject:
   m_ObjectHideFlags: 0
@@ -36110,6 +36385,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1249151253}
+  - {fileID: 71308272}
   m_Father: {fileID: 405036977}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1741635715
@@ -36183,8 +36459,6 @@ MonoBehaviour:
   - {fileID: 562433602}
   - {fileID: 1114384522}
   alarmCooldown: 20
-  alarmSound: {fileID: 8300000, guid: 2e58b081870484b40bc26a2efc47ed82, type: 3}
-  fadeDuration: 2
 --- !u!1 &1743382956
 GameObject:
   m_ObjectHideFlags: 0
@@ -37242,6 +37516,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1779260475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1779260476}
+  - component: {fileID: 1779260477}
+  m_Layer: 0
+  m_Name: AlarmManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1779260476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779260475}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -208.47481, y: -41.403725, z: 0}
+  m_LocalScale: {x: 14.285715, y: 14.285715, z: 14.285715}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 526919416}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1779260477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779260475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be984daa0e4876846baccfc8501eace0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alarmSound: {fileID: 8300000, guid: 2e58b081870484b40bc26a2efc47ed82, type: 3}
+  fadeDuration: 1.5
+  maxVolume: 0.5
 --- !u!1 &1785917176
 GameObject:
   m_ObjectHideFlags: 0
@@ -42863,6 +43184,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 82029083}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2078856973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2078856974}
+  - component: {fileID: 2078856975}
+  m_Layer: 0
+  m_Name: AlarmManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2078856974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078856973}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 22.953777, y: 44.310566, z: 0}
+  m_LocalScale: {x: 14.285715, y: 14.285715, z: 14.285715}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1069260631}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2078856975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078856973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be984daa0e4876846baccfc8501eace0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alarmSound: {fileID: 8300000, guid: 2e58b081870484b40bc26a2efc47ed82, type: 3}
+  fadeDuration: 1.5
+  maxVolume: 0.5
 --- !u!1 &2081307262
 GameObject:
   m_ObjectHideFlags: 0
