@@ -13,6 +13,11 @@ public class Security : MonoBehaviour
     private readonly float viewDistance = 3f; 
     private readonly int rayCount = 10; // Number of rays in cone
     [SerializeField] private LayerMask obstacleLayer;
+
+    [Header("Audio Settings")]
+    public AudioClip hitSound;
+    private readonly float soundCooldown = 2f;
+    private float nextSoundTime = 0f;
     
 
     private Animator anim;
@@ -27,7 +32,15 @@ public class Security : MonoBehaviour
     private void Update()
     {
         if (PlayerInSight())
+        {
             anim.SetTrigger("catch");
+
+            if (Time.time >= nextSoundTime)
+            {
+                AudioSource.PlayClipAtPoint(hitSound, transform.position);
+                nextSoundTime = Time.time + soundCooldown;
+            }
+        }
 
         if (securityPatrol != null)
             securityPatrol.enabled = !PlayerInSight();

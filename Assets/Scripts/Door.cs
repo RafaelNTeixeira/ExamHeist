@@ -5,6 +5,7 @@ public class Door : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Collider2D doorCollider;
     private bool playerNearby = false;
+    public AudioClip doorSound;
 
     private void Awake()
     {
@@ -17,6 +18,9 @@ public class Door : MonoBehaviour
         if (playerNearby && KeyText.keyCount > 0 && Input.GetKeyUp(KeyCode.O))
         {
             OpenDoor();
+
+            AudioSource.PlayClipAtPoint(doorSound, transform.position);
+
             KeyText.keyCount -= 1;
         }
     }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using System.Collections;
 
 public class SecurityCamera : MonoBehaviour
 {
@@ -23,9 +24,21 @@ public class SecurityCamera : MonoBehaviour
 
     private float startRotation;
 
+    [Header("Audio Settings")]
+    public AudioClip alarmSound;
+    private AudioSource audioSource;
+    [SerializeField] private float fadeDuration = 1.5f; // Time for fade in/out of alarm volume
+    private Coroutine fadeCoroutine;
+
     void Start()
     {
         startRotation = transform.rotation.eulerAngles.z;
+
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = alarmSound;
+        audioSource.loop = true;
+        audioSource.playOnAwake = false;
+        audioSource.volume = 0f; // Start silent
     }
 
     void Update()
@@ -42,6 +55,11 @@ public class SecurityCamera : MonoBehaviour
             {
                 ActivateAlarm(true);
                 alarmActive = true;
+
+                // Start fade-in effect
+                if (fadeCoroutine != null)
+                    StopCoroutine(fadeCoroutine);
+                fadeCoroutine = StartCoroutine(FadeAudio(0f, 0.5f, fadeDuration));
             }
         }
         else
@@ -53,8 +71,37 @@ public class SecurityCamera : MonoBehaviour
                 {
                     ActivateAlarm(false);
                     alarmActive = false;
+
+                    // Start fade-out effect
+                    if (fadeCoroutine != null)
+                        StopCoroutine(fadeCoroutine);
+                    fadeCoroutine = StartCoroutine(FadeAudio(1f, 0f, fadeDuration));
                 }
             }
+        }
+    }
+
+    private IEnumerator FadeAudio(float startVolume, float targetVolume, float duration)
+    {
+        float timer = 0f;
+        
+        if (targetVolume > 0 && !audioSource.isPlaying)
+        {
+            audioSource.Play(); // Start playing if it's not already
+        }
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            audioSource.volume = Mathf.Lerp(startVolume, targetVolume, timer / duration);
+            yield return null;
+        }
+
+        audioSource.volume = targetVolume;
+
+        if (targetVolume == 0)
+        {
+            audioSource.Stop(); // Stop playing when fully faded out
         }
     }
 
