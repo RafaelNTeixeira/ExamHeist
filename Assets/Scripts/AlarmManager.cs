@@ -45,10 +45,8 @@ public class AlarmManager : MonoBehaviour
         activeCameras++;
         cooldownTimer = alarmCooldown; // Reset cooldown every time a camera detects the player
 
-        Debug.Log("Active cameras: " + activeCameras);
-
         // Only start the fade-in if the alarm is completely off
-        if (activeCameras == 1 && audioSource.volume == 0f) // First camera detected player
+        if (activeCameras == 1 && audioSource.volume == 0f)
         {
             if (fadeCoroutine != null)
                 StopCoroutine(fadeCoroutine);
