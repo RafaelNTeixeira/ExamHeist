@@ -13,7 +13,7 @@ public class AlarmLamp : MonoBehaviour
     private void Awake()
     {
         alarmLight = GetComponent<Light2D>();
-        alarmLight.intensity = 0f;
+        alarmLight.intensity = 0f; 
     }
 
     private void Update()
@@ -32,7 +32,7 @@ public class AlarmLamp : MonoBehaviour
         }
     }
 
-    public void ActivateAlarm(bool state)
+    public void ActivateAlarmLight(bool state)
     {
         isActive = state;
     }

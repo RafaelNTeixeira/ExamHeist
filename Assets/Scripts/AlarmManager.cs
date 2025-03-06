@@ -12,6 +12,8 @@ public class AlarmManager : MonoBehaviour
 
     [SerializeField] private float fadeDuration = 1.5f; // Fade in/out duration
     [SerializeField] private float maxVolume = 0.5f; // Max alarm volume
+    [SerializeField] private float alarmCooldown = 50f; // Global cooldown
+    public float cooldownTimer = 0f;
 
     void Awake()
     {
@@ -33,11 +35,20 @@ public class AlarmManager : MonoBehaviour
         audioSource.volume = 0f;
     }
 
+    public bool IsAlarmActive()
+    {
+        return activeCameras > 0;
+    }
+
     public void RequestAlarm()
     {
         activeCameras++;
+        cooldownTimer = alarmCooldown; // Reset cooldown every time a camera detects the player
 
-        if (activeCameras == 1) // First camera detected player
+        Debug.Log("Active cameras: " + activeCameras);
+
+        // Only start the fade-in if the alarm is completely off
+        if (activeCameras == 1 && audioSource.volume == 0f) // First camera detected player
         {
             if (fadeCoroutine != null)
                 StopCoroutine(fadeCoroutine);
@@ -52,27 +63,13 @@ public class AlarmManager : MonoBehaviour
         if (activeCameras <= 0)
         {
             activeCameras = 0;
-            if (fadeCoroutine != null)
-                StopCoroutine(fadeCoroutine);
-            fadeCoroutine = StartCoroutine(FadeAudio(maxVolume, 0f, fadeDuration));
-        }
-    }
 
-    // Stop alarm sound when game is paused
-    public void StopAlarm()
-    {
-        if (audioSource.isPlaying)
-        {
-            audioSource.Pause(); // Pause the audio when the game is paused
-        }
-    }
-
-    // Resume alarm sound when game is unpaused
-    public void ResumeAlarm()
-    {
-        if (!audioSource.isPlaying)
-        {
-            audioSource.UnPause(); // Resume the audio if it was paused
+            if (cooldownTimer <= 0)
+            {
+                if (fadeCoroutine != null)
+                    StopCoroutine(fadeCoroutine);
+                fadeCoroutine = StartCoroutine(FadeAudio(maxVolume, 0f, fadeDuration));
+            }
         }
     }
 
@@ -94,5 +91,37 @@ public class AlarmManager : MonoBehaviour
 
         if (targetVolume == 0)
             audioSource.Stop();
+    }
+
+    public void UpdateAlarmCooldown(float deltaTime)
+    {
+        if (activeCameras == 0 && cooldownTimer > 0)
+        {
+            cooldownTimer -= deltaTime;
+            if (cooldownTimer <= 0)
+            {
+                if (fadeCoroutine != null)
+                    StopCoroutine(fadeCoroutine);
+                fadeCoroutine = StartCoroutine(FadeAudio(maxVolume, 0f, fadeDuration));
+            }
+        }
+    }
+
+    // Stop alarm sound when game is paused
+    public void StopAlarm()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Pause(); // Pause the audio when the game is paused
+        }
+    }
+
+    // Resume alarm sound when game is unpaused
+    public void ResumeAlarm()
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.UnPause(); // Resume the audio if it was paused
+        }
     }
 }

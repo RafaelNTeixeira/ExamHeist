@@ -17,9 +17,6 @@ public class SecurityCamera : MonoBehaviour
     [SerializeField] private AlarmLamp[] alarmLamps;
     [SerializeField] private Light2D[] lamps;
 
-    [Header("Cooldown Settings")]
-    [SerializeField] private float alarmCooldown = 30f;
-    private float cooldownTimer = 0f;
     private bool alarmActive = false;
 
     private float startRotation;
@@ -38,50 +35,51 @@ public class SecurityCamera : MonoBehaviour
 
         if (playerDetected)
         {
-            cooldownTimer = alarmCooldown;
-            if (!alarmActive) 
-            {
-                ActivateAlarm(true);
-                alarmActive = true;
-                AlarmManager.instance.RequestAlarm(); // Notify the global alarm system
-            }
+            ActivateAlarmLights(true);
+            alarmActive = true;
+            AlarmManager.instance.RequestAlarm(); // Notify the global alarm system
         }
         else
         {
-            if (alarmActive) 
+            if (alarmActive)
             {
-                cooldownTimer -= Time.deltaTime;
-                if (cooldownTimer <= 0)
-                {
-                    ActivateAlarm(false);
-                    alarmActive = false;
-                    AlarmManager.instance.ReleaseAlarm(); // Notify the alarm system
-                }
+                AlarmManager.instance.ReleaseAlarm(); // Notify the alarm system
+            }
+
+            // Only deactivate lights when cooldown reaches 0
+            if (AlarmManager.instance.cooldownTimer <= 0)
+            {
+                ActivateAlarmLights(false);
+                alarmActive = false;
             }
         }
+
+        // Update cooldown in AlarmManager
+        AlarmManager.instance.UpdateAlarmCooldown(Time.deltaTime);
     }
 
-    private void ActivateAlarm(bool state)
+
+
+    private void ActivateAlarmLights(bool state)
     {
-        if (alarmLamps != null)
+        foreach (var alarmLamp in alarmLamps)
         {
-            foreach (var alarmLamp in alarmLamps)
+            if (alarmLamp != null)
             {
-                if (alarmLamp != null)
-                {
-                    alarmLamp.ActivateAlarm(state);
-                }
-            }
-            foreach (var lamp in lamps)
-            {
-                if (lamp != null)
-                {
-                    lamp.enabled = !state; // Lights turn off when alarm is inactive
-                }
+                alarmLamp.ActivateAlarmLight(state);
             }
         }
+        foreach (var lamp in lamps)
+        {
+            if (lamp != null)
+            {
+                lamp.enabled = !state; // Ensure lights only turn on when no alarm is active
+            }
+        }
+
         Debug.Log("Alarm " + (state ? "Activated" : "Deactivated"));
     }
+
 
     private bool PlayerInSight()
     {

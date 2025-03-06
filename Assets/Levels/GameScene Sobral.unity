@@ -9217,6 +9217,8 @@ MonoBehaviour:
   alarmSound: {fileID: 8300000, guid: 2e58b081870484b40bc26a2efc47ed82, type: 3}
   fadeDuration: 1.5
   maxVolume: 0.5
+  alarmCooldown: 50
+  cooldownTimer: 0
 --- !u!1 &404785990
 GameObject:
   m_ObjectHideFlags: 0
@@ -9883,7 +9885,6 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
-  alarmCooldown: 20
 --- !u!1 &419657291
 GameObject:
   m_ObjectHideFlags: 0
@@ -12462,7 +12463,6 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
-  alarmCooldown: 20
 --- !u!1 &534458833
 GameObject:
   m_ObjectHideFlags: 0
@@ -16437,7 +16437,6 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
-  alarmCooldown: 20
 --- !u!1 &742059402
 GameObject:
   m_ObjectHideFlags: 0
@@ -16830,7 +16829,6 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
-  alarmCooldown: 20
 --- !u!1 &759467939
 GameObject:
   m_ObjectHideFlags: 0
@@ -24578,7 +24576,6 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
-  alarmCooldown: 20
 --- !u!1 &1078841853
 GameObject:
   m_ObjectHideFlags: 0
@@ -28605,7 +28602,6 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
-  alarmCooldown: 20
 --- !u!1 &1272773281
 GameObject:
   m_ObjectHideFlags: 0
@@ -35810,7 +35806,6 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
-  alarmCooldown: 20
 --- !u!1 &1685542982
 GameObject:
   m_ObjectHideFlags: 0
@@ -36904,7 +36899,6 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
-  alarmCooldown: 20
 --- !u!1 &1743382956
 GameObject:
   m_ObjectHideFlags: 0
