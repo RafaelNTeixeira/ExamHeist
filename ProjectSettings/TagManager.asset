@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Security
   - Door
+  - Closet
   layers:
   - Default
   - TransparentFX
