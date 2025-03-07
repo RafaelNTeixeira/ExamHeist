@@ -6810,6 +6810,8 @@ GameObject:
   m_Component:
   - component: {fileID: 281486334}
   - component: {fileID: 281486335}
+  - component: {fileID: 281486337}
+  - component: {fileID: 281486336}
   m_Layer: 0
   m_Name: EletricPanel
   m_TagString: Untagged
@@ -6887,6 +6889,83 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &281486336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281486333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05351563f50e374c9245aa7a9bdbf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  securityCameras:
+  - {fileID: 1683586855}
+  - {fileID: 413677386}
+  - {fileID: 526919417}
+  - {fileID: 1741635715}
+  - {fileID: 753565649}
+  - {fileID: 741101886}
+  - {fileID: 1267051626}
+  - {fileID: 1069260633}
+  lamps:
+  - {fileID: 166143025}
+  - {fileID: 1642296023}
+  - {fileID: 263678193}
+  - {fileID: 2023104786}
+  - {fileID: 1515983246}
+  - {fileID: 770841575}
+  - {fileID: 1177855924}
+  - {fileID: 562433602}
+  - {fileID: 1114384522}
+--- !u!61 &281486337
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281486333}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.2, y: 0.2901417}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.2, y: 0.2901417}
+  m_EdgeRadius: 0
 --- !u!1 &282869173
 GameObject:
   m_ObjectHideFlags: 0
@@ -9885,6 +9964,7 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
+  securityPatrol: []
 --- !u!1 &419657291
 GameObject:
   m_ObjectHideFlags: 0
@@ -12464,6 +12544,7 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
+  securityPatrol: []
 --- !u!1 &534458833
 GameObject:
   m_ObjectHideFlags: 0
@@ -16438,6 +16519,7 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
+  securityPatrol: []
 --- !u!1 &742059402
 GameObject:
   m_ObjectHideFlags: 0
@@ -16830,6 +16912,7 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
+  securityPatrol: []
 --- !u!1 &759467939
 GameObject:
   m_ObjectHideFlags: 0
@@ -17260,6 +17343,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 738196003}
   - {fileID: 1024591506}
   - {fileID: 1185543477}
   - {fileID: 46048980}
@@ -17267,7 +17351,6 @@ Transform:
   - {fileID: 1644265184}
   - {fileID: 1252810302}
   - {fileID: 1899291921}
-  - {fileID: 738196003}
   m_Father: {fileID: 398235763}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &776989593
@@ -24577,6 +24660,7 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
+  securityPatrol: []
 --- !u!1 &1078841853
 GameObject:
   m_ObjectHideFlags: 0
@@ -26166,7 +26250,7 @@ Transform:
   m_GameObject: {fileID: 1157457326}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.00069049717, w: 0.99999976}
-  m_LocalPosition: {x: -6.1, y: -4.5, z: 0}
+  m_LocalPosition: {x: -0.91, y: -2.34, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28603,6 +28687,7 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
+  securityPatrol: []
 --- !u!1 &1272773281
 GameObject:
   m_ObjectHideFlags: 0
@@ -35807,6 +35892,7 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
+  securityPatrol: []
 --- !u!1 &1685542982
 GameObject:
   m_ObjectHideFlags: 0
@@ -36900,6 +36986,7 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
+  securityPatrol: []
 --- !u!1 &1743382956
 GameObject:
   m_ObjectHideFlags: 0

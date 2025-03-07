@@ -76,4 +76,11 @@ public class SecurityPatrol : MonoBehaviour
         security.position = new Vector3(security.position.x + Time.deltaTime * _direction * speed,
             security.position.y, security.position.z);
     }
+
+    public void PlayerDetected(bool _detected)
+    {
+        if (_detected) speed *= 1.5f;
+        
+        else speed /= 1.5f;
+    }
 }
