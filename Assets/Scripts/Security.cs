@@ -40,6 +40,11 @@ public class Security : MonoBehaviour
                 AudioSource.PlayClipAtPoint(hitSound, transform.position);
                 nextSoundTime = Time.time + soundCooldown;
             }
+
+            if (GameManager.instance.currentState == GameManager.GameState.Playing)
+            {
+                GameManager.instance.SetGameState(GameManager.GameState.GameOver);
+            }
         }
 
         if (securityPatrol != null)

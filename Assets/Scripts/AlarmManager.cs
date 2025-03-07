@@ -42,6 +42,7 @@ public class AlarmManager : MonoBehaviour
 
     public void RequestAlarm()
     {
+        // Debug.Log("Called requestAlarm");
         activeCameras++;
         cooldownTimer = alarmCooldown; // Reset cooldown every time a camera detects the player
 
@@ -121,5 +122,35 @@ public class AlarmManager : MonoBehaviour
         {
             audioSource.UnPause(); // Resume the audio if it was paused
         }
+    }
+
+    public void StopAllSounds()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+
+        BackgroundMusic.instance.StopMusic();
+
+        // // Also stop all other audio sources in the scene
+        // AudioSource[] allAudioSources = Object.FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
+        // foreach (AudioSource source in allAudioSources)
+        // {
+        //     source.Stop();
+        // }
+    }
+
+    public void ResetAlarmState()
+    {
+        StopAllSounds();  // Stop all audio sources
+        activeCameras = 0; 
+        cooldownTimer = 0f;
+
+        if (fadeCoroutine != null)
+            StopCoroutine(fadeCoroutine);
+
+        audioSource.volume = 0f;
+        audioSource.Stop();
     }
 }

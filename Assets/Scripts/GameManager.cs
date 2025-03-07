@@ -78,10 +78,35 @@ public class GameManager : MonoBehaviour
         currentState = GameState.Playing; // Can't call SetGameState() otherwise it will load the scene from scratch because of the state machine
     }
 
+    public void PlayAgain()
+    {
+        Debug.Log("Game Restarting");
+        Time.timeScale = 1;
+        ResetGameState();
+        
+        SetGameState(GameState.Playing);
+    }
+
+    public void ResetGameState() 
+    {
+        AlarmManager.instance.ResetAlarmState();
+        BackgroundMusic.instance.PlayMusic();
+
+        foreach (var camera in Object.FindObjectsByType<SecurityCamera>(FindObjectsSortMode.None))
+        {
+            camera.ResetCameraState();
+        }
+
+        USBPenText.penCount = 0;
+        KeyText.keyCount = 0;
+    }
+
+
     void ShowGameOverScreen()
     {
         Debug.Log("Game Over");
-        Time.timeScale = 1; // Reset time in case of pause
+        AlarmManager.instance.StopAllSounds();
+        //Time.timeScale = 0;
         SceneManager.LoadScene("GameOver");
     }
 

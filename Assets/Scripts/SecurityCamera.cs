@@ -58,9 +58,7 @@ public class SecurityCamera : MonoBehaviour
         AlarmManager.instance.UpdateAlarmCooldown(Time.deltaTime);
     }
 
-
-
-    private void ActivateAlarmLights(bool state)
+    public void ActivateAlarmLights(bool state)
     {
         foreach (var alarmLamp in alarmLamps)
         {
@@ -77,9 +75,14 @@ public class SecurityCamera : MonoBehaviour
             }
         }
 
-        Debug.Log("Alarm " + (state ? "Activated" : "Deactivated"));
+        //Debug.Log("Alarm " + (state ? "Activated" : "Deactivated"));
     }
 
+    public void ResetCameraState()
+    {
+        ActivateAlarmLights(false); // Turn off alarm lights
+        alarmActive = false;
+    }
 
     private bool PlayerInSight()
     {

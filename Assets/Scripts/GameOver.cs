@@ -1,20 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PauseMenu : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
-    public Button resumeButton;
+    public Button playAgainButton;
     public Button quitButton;
 
     private void Start()
     {
-        resumeButton.onClick.AddListener(ResumeGame);
+        playAgainButton.onClick.AddListener(PlayAgain);
         quitButton.onClick.AddListener(QuitGame);
     }
 
-    public void ResumeGame()
+    public void PlayAgain()
     {
-        GameManager.instance.ResumeGame();
+        GameManager.instance.PlayAgain();
     }
 
     public void QuitGame()

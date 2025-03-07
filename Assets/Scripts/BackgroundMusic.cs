@@ -11,19 +11,30 @@ public class BackgroundMusic : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject); // Keep playing across scenes
+            audioSource = GetComponent<AudioSource>();
+            if (audioSource != null)
+            {
+                audioSource.loop = true;
+                audioSource.Play();
+            }
         }
         else
         {
             Destroy(gameObject); // Prevent duplicates
-            return;
         }
+    }
 
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource != null && !audioSource.isPlaying)
+    public void PlayMusic()
+    {
+        if (!audioSource.isPlaying)
         {
-            audioSource.loop = true;
             audioSource.Play();
         }
+    }
+
+    public void StopMusic()
+    {
+        audioSource.Stop();
     }
 
     // Function to change music dynamically
