@@ -18,7 +18,7 @@ public class SecurityCamera : MonoBehaviour
     [SerializeField] private Light2D[] lamps;
     [SerializeField] private SecurityPatrol[] securityPatrol;
 
-    private bool alarmActive = false;
+    public bool alarmActive = false;
 
     private float startRotation;
 
