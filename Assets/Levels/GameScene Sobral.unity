@@ -679,7 +679,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.56, y: 0.8}
+  m_Size: {x: 0.1, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &28150734
 GameObject:
@@ -1497,7 +1497,7 @@ Transform:
   m_GameObject: {fileID: 46048979}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.5, y: 2.2, z: 0.058838937}
+  m_LocalPosition: {x: 17, y: 2.2, z: 0.058838937}
   m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7419,7 +7419,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.56, y: 0.8}
+  m_Size: {x: 0.1, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &308543887
 GameObject:
@@ -9364,7 +9364,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.56, y: 0.8}
+  m_Size: {x: 0.1, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &405036976
 GameObject:
@@ -10030,7 +10030,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.56, y: 0.8}
+  m_Size: {x: 0.1, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &430035323
 GameObject:
@@ -10418,7 +10418,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.56, y: 0.8}
+  m_Size: {x: 0.1, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &442259669
 GameObject:
@@ -12008,7 +12008,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2132228148}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
@@ -15737,7 +15738,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.56, y: 0.8}
+  m_Size: {x: 0.1, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &726135493
 GameObject:
@@ -16006,7 +16007,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.56, y: 0.8}
+  m_Size: {x: 0.1, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &737110520
 GameObject:
@@ -20035,7 +20036,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.56, y: 0.8}
+  m_Size: {x: 0.1, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &875356385
 GameObject:
@@ -21279,7 +21280,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.56, y: 0.8}
+  m_Size: {x: 0.1, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &924754185
 GameObject:
@@ -21513,7 +21514,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.56, y: 0.8}
+  m_Size: {x: 0.1, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &927626575
 GameObject:
@@ -36038,7 +36039,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.56, y: 0.8}
+  m_Size: {x: 0.1, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &1695462662
 GameObject:
@@ -44947,7 +44948,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132228144}
   m_LocalRotation: {x: -0, y: 0.008727774, z: -0, w: 0.9999619}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -44955,7 +44956,7 @@ RectTransform:
   - {fileID: 1545008389}
   - {fileID: 522590934}
   - {fileID: 48789772}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 519420032}
   m_LocalEulerAnglesHint: {x: 0, y: 1, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -45276,5 +45277,4 @@ SceneRoots:
   - {fileID: 1157457328}
   - {fileID: 726135494}
   - {fileID: 398235763}
-  - {fileID: 2132228148}
   - {fileID: 239050639}
