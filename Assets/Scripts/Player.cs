@@ -34,17 +34,17 @@ public class Player : MonoBehaviour
     }
 
 
-    // Speed boost player *2 movement speed during 20 seconds
-    public void BoostSpeed()
+    // Speed boost player movement speed during 20 seconds
+    public void BoostSpeed(float boostSpeed)
     {
-        speed *= 2;
-        StartCoroutine(RestoreSpeed());
+        speed *= boostSpeed;
+        StartCoroutine(RestoreSpeed(boostSpeed));
     }
 
-    private IEnumerator RestoreSpeed()
+    private IEnumerator RestoreSpeed(float boostSpeed)
     {
         yield return new WaitForSeconds(20);
-        speed /= 2;
+        speed /= boostSpeed;
     }
 
 }

@@ -67,8 +67,7 @@ public class SecurityCamera : MonoBehaviour
         {
             if (patrol != null && patrol.playerDetected != state)
             {
-                patrol.PlayerDetected(state);
-                patrol.playerDetected = state;
+                patrol.PlayerDetected(state, 2f);
             }
         }
     }

@@ -79,10 +79,12 @@ public class SecurityPatrol : MonoBehaviour
             security.position.y, security.position.z);
     }
 
-    public void PlayerDetected(bool _detected)
+    public void PlayerDetected(bool _detected, float _speed)
     {
-        if (_detected) speed *= 2;
+        if (_detected) speed *= _speed;
         
-        else speed /= 2;
+        else speed /= _speed;
+
+        playerDetected = _detected;
     }
 }
