@@ -679,7 +679,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.1, y: 0.8}
+  m_Size: {x: 0.15, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &28150734
 GameObject:
@@ -2253,6 +2253,7 @@ MonoBehaviour:
   speed: 2
   idleDuration: 1
   anim: {fileID: 1290242023}
+  playerDetected: 0
 --- !u!1 &92817363
 GameObject:
   m_ObjectHideFlags: 0
@@ -3050,6 +3051,7 @@ MonoBehaviour:
   speed: 2
   idleDuration: 1
   anim: {fileID: 323938820}
+  playerDetected: 0
 --- !u!1 &120769727
 GameObject:
   m_ObjectHideFlags: 0
@@ -5233,6 +5235,7 @@ MonoBehaviour:
   speed: 2
   idleDuration: 1
   anim: {fileID: 1753230728}
+  playerDetected: 0
 --- !u!1 &213427341
 GameObject:
   m_ObjectHideFlags: 0
@@ -6765,6 +6768,7 @@ MonoBehaviour:
   speed: 2
   idleDuration: 1
   anim: {fileID: 965781355}
+  playerDetected: 0
 --- !u!1 &278041540
 GameObject:
   m_ObjectHideFlags: 0
@@ -7498,7 +7502,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.1, y: 0.8}
+  m_Size: {x: 0.15, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &308543887
 GameObject:
@@ -9443,7 +9447,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.1, y: 0.8}
+  m_Size: {x: 0.15, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &405036976
 GameObject:
@@ -9964,7 +9968,8 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
-  securityPatrol: []
+  securityPatrols: []
+  alarmActive: 0
 --- !u!1 &419657291
 GameObject:
   m_ObjectHideFlags: 0
@@ -10110,7 +10115,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.1, y: 0.8}
+  m_Size: {x: 0.15, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &430035323
 GameObject:
@@ -10498,7 +10503,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.1, y: 0.8}
+  m_Size: {x: 0.15, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &442259669
 GameObject:
@@ -12544,7 +12549,8 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
-  securityPatrol: []
+  securityPatrols: []
+  alarmActive: 0
 --- !u!1 &534458833
 GameObject:
   m_ObjectHideFlags: 0
@@ -15107,6 +15113,7 @@ MonoBehaviour:
   speed: 2
   idleDuration: 1
   anim: {fileID: 249102303}
+  playerDetected: 0
 --- !u!1 &703636846
 GameObject:
   m_ObjectHideFlags: 0
@@ -15819,7 +15826,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.1, y: 0.8}
+  m_Size: {x: 0.15, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &726135493
 GameObject:
@@ -16088,7 +16095,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.1, y: 0.8}
+  m_Size: {x: 0.15, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &737110520
 GameObject:
@@ -16519,7 +16526,8 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
-  securityPatrol: []
+  securityPatrols: []
+  alarmActive: 0
 --- !u!1 &742059402
 GameObject:
   m_ObjectHideFlags: 0
@@ -16912,7 +16920,8 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
-  securityPatrol: []
+  securityPatrols: []
+  alarmActive: 0
 --- !u!1 &759467939
 GameObject:
   m_ObjectHideFlags: 0
@@ -20119,7 +20128,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.1, y: 0.8}
+  m_Size: {x: 0.15, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &875356385
 GameObject:
@@ -20762,6 +20771,7 @@ MonoBehaviour:
   speed: 2
   idleDuration: 1
   anim: {fileID: 707796093}
+  playerDetected: 0
 --- !u!1 &893522750
 GameObject:
   m_ObjectHideFlags: 0
@@ -21363,7 +21373,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.1, y: 0.8}
+  m_Size: {x: 0.15, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &924754185
 GameObject:
@@ -21597,7 +21607,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.1, y: 0.8}
+  m_Size: {x: 0.15, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &927626575
 GameObject:
@@ -22013,6 +22023,7 @@ MonoBehaviour:
   speed: 2
   idleDuration: 1
   anim: {fileID: 1627003914}
+  playerDetected: 0
 --- !u!4 &938324714
 Transform:
   m_ObjectHideFlags: 0
@@ -24660,7 +24671,8 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
-  securityPatrol: []
+  securityPatrols: []
+  alarmActive: 0
 --- !u!1 &1078841853
 GameObject:
   m_ObjectHideFlags: 0
@@ -26341,6 +26353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60bb1ce2e39e71744b7ef9e6ea4869bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 1
 --- !u!95 &1157457332
 Animator:
   serializedVersion: 7
@@ -28687,7 +28700,8 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
-  securityPatrol: []
+  securityPatrols: []
+  alarmActive: 0
 --- !u!1 &1272773281
 GameObject:
   m_ObjectHideFlags: 0
@@ -30220,6 +30234,7 @@ MonoBehaviour:
   speed: 2
   idleDuration: 1
   anim: {fileID: 1785917179}
+  playerDetected: 0
 --- !u!1 &1370124240
 GameObject:
   m_ObjectHideFlags: 0
@@ -35892,7 +35907,8 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
-  securityPatrol: []
+  securityPatrols: []
+  alarmActive: 0
 --- !u!1 &1685542982
 GameObject:
   m_ObjectHideFlags: 0
@@ -36125,7 +36141,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.1, y: 0.8}
+  m_Size: {x: 0.15, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &1695462662
 GameObject:
@@ -36986,7 +37002,8 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
-  securityPatrol: []
+  securityPatrols: []
+  alarmActive: 0
 --- !u!1 &1743382956
 GameObject:
   m_ObjectHideFlags: 0
