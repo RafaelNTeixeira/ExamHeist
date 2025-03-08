@@ -21,6 +21,8 @@ public class Computer : MonoBehaviour
     private float remainingTime;
     private bool isHacking = false;
 
+    [SerializeField] private DoorExit doorExit;
+
     private void Update()
     {
         if (playerNearby && USBPenText.penCount > 0 && Input.GetKeyDown(KeyCode.UpArrow))
@@ -102,7 +104,7 @@ public class Computer : MonoBehaviour
         isHacking = false;
         hackingUIPanel.SetActive(false);
         Debug.Log("Access Granted!");
-
+        doorExit.OpenExitDoor();
         EnablePlayerMovement();
     }
 
