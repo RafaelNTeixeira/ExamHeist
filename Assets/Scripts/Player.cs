@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Player : MonoBehaviour
 {
@@ -22,6 +23,20 @@ public class Player : MonoBehaviour
         else if (horizontalDirection < -0.01f) transform.localScale = new Vector3(-4, 4, 4);
 
         animator.SetBool("isRunning", horizontalDirection != 0); // Is running when a movement key is being pressed (left or right)
+    }
+
+
+    // Speed boost player *2 movement speed during 20 seconds
+    public void BoostSpeed()
+    {
+        speed *= 2;
+        StartCoroutine(RestoreSpeed());
+    }
+
+    private IEnumerator RestoreSpeed()
+    {
+        yield return new WaitForSeconds(20);
+        speed /= 2;
     }
 
 }

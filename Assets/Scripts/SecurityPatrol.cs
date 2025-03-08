@@ -21,6 +21,8 @@ public class SecurityPatrol : MonoBehaviour
     [Header("Security Animator")]
     [SerializeField] private Animator anim;
 
+    public bool playerDetected = false;
+
 
     private void Awake()
     {
@@ -79,8 +81,8 @@ public class SecurityPatrol : MonoBehaviour
 
     public void PlayerDetected(bool _detected)
     {
-        if (_detected) speed *= 1.5f;
+        if (_detected) speed *= 2;
         
-        else speed /= 1.5f;
+        else speed /= 2;
     }
 }

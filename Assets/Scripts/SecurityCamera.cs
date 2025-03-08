@@ -16,7 +16,7 @@ public class SecurityCamera : MonoBehaviour
     [SerializeField] private LayerMask obstacleLayer;
     [SerializeField] private AlarmLamp[] alarmLamps;
     [SerializeField] private Light2D[] lamps;
-    [SerializeField] private SecurityPatrol[] securityPatrol;
+    [SerializeField] private SecurityPatrol[] securityPatrols;
 
     public bool alarmActive = false;
 
@@ -38,8 +38,8 @@ public class SecurityCamera : MonoBehaviour
         {
             ActivateAlarmLights(true);
             alarmActive = true;
-            AlarmManager.instance.RequestAlarm(); // Notify the global alarm system
-            NotifySecurityPatrol(true);      
+            AlarmManager.instance.RequestAlarm(); // Notify the global alarm system 
+            NotifySecurityPatrol(true);    
         }
         else
         {
@@ -53,6 +53,7 @@ public class SecurityCamera : MonoBehaviour
             {
                 ActivateAlarmLights(false);
                 alarmActive = false;
+                NotifySecurityPatrol(false);
             }
         }
 
@@ -62,11 +63,12 @@ public class SecurityCamera : MonoBehaviour
 
     public void NotifySecurityPatrol(bool state)
     {
-        foreach (var patrol in securityPatrol)
+        foreach (var patrol in securityPatrols)
         {
-            if (patrol != null)
+            if (patrol != null && patrol.playerDetected != state)
             {
                 patrol.PlayerDetected(state);
+                patrol.playerDetected = state;
             }
         }
     }
@@ -95,6 +97,7 @@ public class SecurityCamera : MonoBehaviour
     {
         ActivateAlarmLights(false); // Turn off alarm lights
         alarmActive = false;
+        NotifySecurityPatrol(false);
     }
 
     private bool PlayerInSight()

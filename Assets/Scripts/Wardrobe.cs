@@ -25,10 +25,12 @@ public class Wardrobe : MonoBehaviour
 
     private void Update()
     {
-        if ((isPlayerInside || isHiding) && Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isPlayerInside || 
+            Input.GetKeyDown(KeyCode.DownArrow) && isHiding)
         {
             ToggleHide();
         }
+
     }
 
      private void ToggleHide()
