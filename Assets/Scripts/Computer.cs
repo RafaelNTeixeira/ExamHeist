@@ -20,6 +20,7 @@ public class Computer : MonoBehaviour
     private string playerInput = "";
     private float remainingTime;
     private bool isHacking = false;
+    private bool gotAccess = false; // Check if player already guessed the password
 
     [SerializeField] private DoorExit doorExit;
 
@@ -27,7 +28,8 @@ public class Computer : MonoBehaviour
     {
         if (playerNearby && USBPenText.penCount > 0 && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            StartHacking();
+            if (!gotAccess)
+                StartHacking();
         }
 
         if (isHacking)
@@ -102,6 +104,7 @@ public class Computer : MonoBehaviour
     private void SuccessHack()
     {
         isHacking = false;
+        gotAccess = true;
         hackingUIPanel.SetActive(false);
         Debug.Log("Access Granted!");
         doorExit.OpenExitDoor();
