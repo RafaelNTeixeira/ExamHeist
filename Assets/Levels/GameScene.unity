@@ -2226,7 +2226,7 @@ Transform:
   m_GameObject: {fileID: 82029082}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.76, y: -2.99, z: 0.0602379}
+  m_LocalPosition: {x: -18.76, y: -2.9900002, z: 0.0602379}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2421,7 +2421,7 @@ GameObject:
   - component: {fileID: 96020264}
   - component: {fileID: 96020266}
   m_Layer: 0
-  m_Name: cocaine
+  m_Name: Cocaine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2436,11 +2436,11 @@ Transform:
   m_GameObject: {fileID: 96020262}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.216764, y: -2.6282606, z: 0.058838937}
+  m_LocalPosition: {x: 24.31, y: -1.9300001, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2064014136}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &96020264
 BoxCollider2D:
@@ -5355,7 +5355,7 @@ Transform:
   m_GameObject: {fileID: 211404294}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.86, y: -5, z: 0.0602379}
+  m_LocalPosition: {x: -0.85999966, y: -5, z: 0.0602379}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5848,12 +5848,12 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 938324714}
-  - {fileID: 211404295}
   - {fileID: 82029083}
   - {fileID: 120156984}
   - {fileID: 1368972029}
   - {fileID: 276842060}
   - {fileID: 703103441}
+  - {fileID: 211404295}
   - {fileID: 890348186}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -44209,7 +44209,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 96020263}
   - {fileID: 523806997}
   - {fileID: 534458834}
   - {fileID: 1170503177}
@@ -46039,6 +46038,7 @@ SceneRoots:
   - {fileID: 1157457328}
   - {fileID: 726135494}
   - {fileID: 1819579603}
+  - {fileID: 96020263}
   - {fileID: 2057909645}
   - {fileID: 471209127}
   - {fileID: 120769731}
