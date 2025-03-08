@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
     private float speed = 8.0f;
     private Rigidbody2D body;
     private Animator animator;
+    public bool canMove = true;
 
     private void Awake()
     {
@@ -15,6 +16,13 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        if (!canMove) // Prevent movement when hacking
+        {
+            body.linearVelocity = Vector2.zero; // Stop the player
+            animator.SetBool("isRunning", false);
+            return;
+        }
+
         float horizontalDirection = Input.GetAxis("Horizontal");
         body.linearVelocity = new Vector2(horizontalDirection * speed, body.linearVelocityY);
 

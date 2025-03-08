@@ -45,6 +45,16 @@ public class Computer : MonoBehaviour
     private void StartHacking()
     {
         Debug.Log("Started Hacking");
+        playerInput = "";
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null)
+        {
+            Player player = playerObj.GetComponent<Player>();
+            if (player != null)
+            {
+                player.canMove = false;
+            }
+        }
 
         AudioSource.PlayClipAtPoint(hackSound, transform.position);
 
@@ -62,7 +72,7 @@ public class Computer : MonoBehaviour
     {
         while (remainingTime > 0)
         {
-            if (!isHacking) yield break; 
+            if (!isHacking) yield break;
 
             timerText.text = "Time: " + remainingTime.ToString("F1");
             yield return new WaitForSeconds(0.1f);
@@ -92,6 +102,8 @@ public class Computer : MonoBehaviour
         isHacking = false;
         hackingUIPanel.SetActive(false);
         Debug.Log("Access Granted!");
+
+        EnablePlayerMovement();
     }
 
     private void FailHack()
@@ -99,6 +111,8 @@ public class Computer : MonoBehaviour
         isHacking = false;
         hackingUIPanel.SetActive(false);
         Debug.Log("Alarm Triggered!");
+
+        EnablePlayerMovement();
 
         SecurityCamera[] cameras = Object.FindObjectsByType<SecurityCamera>(FindObjectsSortMode.None);
         foreach (SecurityCamera camera in cameras)
@@ -132,6 +146,19 @@ public class Computer : MonoBehaviour
         {
             Debug.Log("Player left trigger zone");
             playerNearby = false;
+        }
+    }
+
+    private void EnablePlayerMovement()
+    {
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null)
+        {
+            Player player = playerObj.GetComponent<Player>();
+            if (player != null)
+            {
+                player.canMove = true; // Enable movement
+            }
         }
     }
 }
