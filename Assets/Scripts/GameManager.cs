@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 
     public enum GameState { MainMenu, Playing, Paused, GameOver }
     public GameState currentState;
+    private SecurityPatrol[] securityPatrols;
+
 
     void Awake()
     {
