@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public enum GameState { MainMenu, Instructions, Playing, Paused, GameOver, Win}
     public GameState currentState;
     private SecurityPatrol[] securityPatrols;
+    private bool cutscenePlayed = false;
 
 
     void Awake()
@@ -66,7 +67,12 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Loaded Start Game");
         Time.timeScale = 1; // Ensure normal game speed
-        SceneManager.LoadScene("CutScene");
+        if (!cutscenePlayed)
+            SceneManager.LoadScene("CutScene");
+        else 
+            SceneManager.LoadScene("GameScene");
+
+        cutscenePlayed = true;
     }
 
     void ShowInstructionsMenu()
