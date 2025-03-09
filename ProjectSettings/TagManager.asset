@@ -71,5 +71,8 @@ TagManager:
   - name: Security
     uniqueID: 2321535661
     locked: 0
+  - name: Tilemap
+    uniqueID: 4207244349
+    locked: 0
   m_RenderingLayers:
   - Default
