@@ -8,6 +8,10 @@ public class ChangeSceneOnTimer : MonoBehaviour
     private void Update()
     {
         changeTime -= Time.deltaTime;
+        if (Input.GetKeyUp(KeyCode.Space)) {
+            SceneManager.LoadScene("GameScene");
+        }
+        
         if (changeTime <= 0) 
         {
             SceneManager.LoadScene("GameScene");

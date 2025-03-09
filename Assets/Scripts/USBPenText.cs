@@ -13,6 +13,6 @@ public class USBPenText : MonoBehaviour
 
     private void Update()
     {
-        text.text = penCount + "/1";
+        text.text = penCount + "";
     }
 }
