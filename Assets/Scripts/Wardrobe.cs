@@ -48,7 +48,7 @@ public class Wardrobe : MonoBehaviour
         Rigidbody2D body = player.GetComponent<Rigidbody2D>();
         Player playerScript = player.GetComponent<Player>();
 
-        spriteRenderer.enabled = !hide;
+        spriteRenderer.color = new Color(1, 1, 1, hide ? 0.6f : 1f);
         boxCollider.enabled = !hide;
         body.bodyType = hide ? RigidbodyType2D.Static : RigidbodyType2D.Dynamic;
         playerScript.enabled = !hide;

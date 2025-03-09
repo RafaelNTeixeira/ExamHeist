@@ -16,13 +16,13 @@ TagManager:
   - UI
   - Player
   - Security
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Alarm
+  - Room
+  - Door
+  - Wardrobe
+  - Camera
+  - Stairs
+  - Gadget
   - 
   - 
   - 
@@ -43,6 +43,33 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Room
+    uniqueID: 244873991
+    locked: 0
+  - name: Alarm
+    uniqueID: 1799982987
+    locked: 0
+  - name: Door
+    uniqueID: 2624100181
+    locked: 0
+  - name: Wardrobe
+    uniqueID: 2845344095
+    locked: 0
+  - name: Camera
+    uniqueID: 150690563
+    locked: 0
+  - name: Stairs
+    uniqueID: 2483179263
+    locked: 0
+  - name: Gadget
+    uniqueID: 3949887327
+    locked: 0
+  - name: Player
+    uniqueID: 669118667
+    locked: 0
+  - name: Security
+    uniqueID: 2321535661
     locked: 0
   m_RenderingLayers:
   - Default
