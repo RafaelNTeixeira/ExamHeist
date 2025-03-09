@@ -21,7 +21,12 @@ public class DoorExit : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             if (doorOpened)
-                Debug.Log("PLAYER WON");
+            {
+                if (GameManager.instance.currentState == GameManager.GameState.Playing)
+                {
+                    GameManager.instance.SetGameState(GameManager.GameState.Win);
+                }
+            }
         }
     }
 }

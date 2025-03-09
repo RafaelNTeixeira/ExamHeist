@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance; // Singleton instance
 
-    public enum GameState { MainMenu, Playing, Paused, GameOver }
+    public enum GameState { MainMenu, Playing, Paused, GameOver, Win}
     public GameState currentState;
     private SecurityPatrol[] securityPatrols;
 
@@ -46,6 +46,9 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.GameOver:
                 ShowGameOverScreen();
+                break;
+            case GameState.Win:
+                ShowWinScreen();
                 break;
         }
     }
@@ -110,6 +113,14 @@ public class GameManager : MonoBehaviour
         AlarmManager.instance.StopAllSounds();
         //Time.timeScale = 0;
         SceneManager.LoadScene("GameOver");
+    }
+
+    void ShowWinScreen()
+    {
+        Debug.Log("Win");
+        AlarmManager.instance.StopAllSounds();
+        //Time.timeScale = 0;
+        SceneManager.LoadScene("Win");
     }
 
     public void QuitGame()
