@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Loaded Start Game");
         Time.timeScale = 1; // Ensure normal game speed
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("CutScene");
     }
 
     void PauseGame()
