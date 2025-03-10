@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InstructionsText : MonoBehaviour
+public class TutorialText : MonoBehaviour
 {
     public GameObject uiText;  // Assign the UI Text GameObject in the Inspector
 
