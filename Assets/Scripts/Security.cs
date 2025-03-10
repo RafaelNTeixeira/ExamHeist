@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Security : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class Security : MonoBehaviour
     [SerializeField] private float colliderDistance;
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask playerLayer;
-
+    
     [Header("Cone Raycast Settings")]
     private readonly float fovAngle = 45f;
     private readonly float viewDistance = 3f; 
@@ -19,6 +20,9 @@ public class Security : MonoBehaviour
     private readonly float soundCooldown = 2f;
     private float nextSoundTime = 0f;
     
+    [Header("Tutorial UI Settings")]
+    public GameObject uiText;  // Assign the UI Text GameObject in the Inspector
+    public GameObject uiTextDelete;
 
     private Animator anim;
     private SecurityPatrol securityPatrol;
@@ -44,6 +48,15 @@ public class Security : MonoBehaviour
             if (GameManager.instance.currentState == GameManager.GameState.Playing)
             {
                 GameManager.instance.SetGameState(GameManager.GameState.GameOver);
+            }
+
+            if (GameManager.instance.currentState == GameManager.GameState.Toturial)
+            {
+                uiTextDelete.SetActive(false); // Hide the text UI
+                uiText.SetActive(true); // Show the text UI
+                GameObject player = GameObject.Find("Player");
+                player.transform.position = new Vector2(7.7f, player.transform.position.y);
+                
             }
         }
 

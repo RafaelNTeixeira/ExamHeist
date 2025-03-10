@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        GameManager.instance.SetGameState(GameManager.GameState.Playing);
+        GameManager.instance.SetGameState(GameManager.GameState.Toturial);
     }
 
     public void InstructionsScreen()

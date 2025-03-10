@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance; // Singleton instance
 
-    public enum GameState { MainMenu, Instructions, Playing, Paused, GameOver, Win}
+    public enum GameState { MainMenu, Instructions, Toturial, Playing, Paused, GameOver, Win}
     public GameState currentState;
     private SecurityPatrol[] securityPatrols;
     private bool cutscenePlayed = false;
@@ -45,6 +45,9 @@ public class GameManager : MonoBehaviour
             case GameState.Instructions:
                 ShowInstructionsMenu();
                 break;
+            case GameState.Toturial:
+                StartTutorial();
+                break;
             case GameState.Paused:
                 PauseGame();
                 break;
@@ -79,6 +82,12 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Loaded Instructions");
         SceneManager.LoadSceneAsync("Instructions", LoadSceneMode.Additive); // Load instructions menu without unloading the game
+    }
+
+    void StartTutorial()
+    {
+        Debug.Log("Loaded Tutorial");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void GoBackToMenu()
