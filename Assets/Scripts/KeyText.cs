@@ -13,6 +13,6 @@ public class KeyText : MonoBehaviour
 
     private void Update()
     {
-        text.text = keyCount + "/3";
+        text.text = keyCount + "";
     }
 }

@@ -4,18 +4,25 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public Button playButton;
+    public Button instructionsButton;
     public Button quitButton;
 
     private void Start()
     {
         playButton.onClick.AddListener(PlayGame);
+        instructionsButton.onClick.AddListener(InstructionsScreen);
         quitButton.onClick.AddListener(QuitGame);
     }
 
     public void PlayGame()
     {
-        Debug.Log("Clicked on PLAY");
         GameManager.instance.SetGameState(GameManager.GameState.Playing);
+    }
+
+    public void InstructionsScreen()
+    {
+        Debug.Log("Clicked on Instructions");
+        GameManager.instance.SetGameState(GameManager.GameState.Instructions);
     }
 
     public void QuitGame()
