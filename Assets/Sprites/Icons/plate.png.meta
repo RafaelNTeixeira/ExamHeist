@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 741545373f167d742859cdf736f364f0
+guid: 72c3c7a0849c9b44d881fa690cdbeb32
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4308299254793491665
-    second: sdleslide_0
+      213: -4795573259988461060
+    second: plate_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sdleslide_0
+      name: plate_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 39
         y: 0
-        width: 847
-        height: 551
+        width: 305
+        height: 321
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f2b24f377a8d534c0800000000000000
-      internalID: -4308299254793491665
+      spriteID: cf996003783b27db0800000000000000
+      internalID: -4795573259988461060
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      sdleslide_0: -4308299254793491665
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
