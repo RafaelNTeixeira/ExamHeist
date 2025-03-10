@@ -26,6 +26,10 @@ public class DoorExit : MonoBehaviour
                 {
                     GameManager.instance.SetGameState(GameManager.GameState.Win);
                 }
+                else if (GameManager.instance.currentState == GameManager.GameState.Toturial)
+                {
+                    GameManager.instance.SetGameState(GameManager.GameState.MainMenu);
+                }
             }
         }
     }
