@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameState currentState;
     private SecurityPatrol[] securityPatrols;
     private bool cutscenePlayed = false;
+    public bool canPauseGame = false;
     private bool tutorialPlayed = false;
 
 
@@ -82,9 +83,13 @@ public class GameManager : MonoBehaviour
         }
 
         if (!cutscenePlayed)
+        {
             SceneManager.LoadScene("CutScene");
+        }
         else 
+        {
             SceneManager.LoadScene("GameScene");
+        }
 
         cutscenePlayed = true;
     }
@@ -176,7 +181,7 @@ public class GameManager : MonoBehaviour
         // Toggle pause when pressing Escape key
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (currentState == GameState.Playing)
+            if (currentState == GameState.Playing && canPauseGame)
             {
                 SetGameState(GameState.Paused);
             }
