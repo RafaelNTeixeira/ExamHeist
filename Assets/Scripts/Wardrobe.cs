@@ -52,5 +52,7 @@ public class Wardrobe : MonoBehaviour
         boxCollider.enabled = !hide;
         body.bodyType = hide ? RigidbodyType2D.Static : RigidbodyType2D.Dynamic;
         playerScript.enabled = !hide;
+
+       playerScript.animator.SetBool("isRunning", false);
     }
 }

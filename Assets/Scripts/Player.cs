@@ -5,7 +5,7 @@ public class Player : MonoBehaviour
 {
     private float speed = 8.0f;
     private Rigidbody2D body;
-    private Animator animator;
+    public Animator animator;
     public bool canMove = true;
 
     private void Awake()
