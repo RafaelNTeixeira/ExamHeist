@@ -15,7 +15,7 @@ public class Door : MonoBehaviour
 
     private void Update()
     {
-        if (playerNearby && KeyText.keyCount > 0 && Input.GetKeyUp(KeyCode.O))
+        if (playerNearby && KeyText.keyCount > 0 && Input.GetKeyUp(KeyCode.UpArrow))
         {
             OpenDoor();
 
