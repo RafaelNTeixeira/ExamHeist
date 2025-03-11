@@ -21,7 +21,6 @@ public class SecurityCamera : MonoBehaviour
     public bool alarmActive = false;
 
     [Header("Tutorial UI Settings")]    
-    [SerializeField] private bool tutorialCamera = false;
     [SerializeField] private bool eletricCamera = false;
     [SerializeField] private GameObject uiText;  // Assign the UI Text GameObject in the Inspector
     [SerializeField] private GameObject uiTextDelete;
@@ -47,7 +46,7 @@ public class SecurityCamera : MonoBehaviour
             AlarmManager.instance.RequestAlarm(); // Notify the global alarm system 
             NotifySecurityPatrol(true); 
 
-            if (GameManager.instance.currentState == GameManager.GameState.Toturial)
+            if (GameManager.instance.currentState == GameManager.GameState.Tutorial)
             {
                 uiTextDelete.SetActive(false); // Hide the text UI
                 uiText.SetActive(true); // Show the text UI

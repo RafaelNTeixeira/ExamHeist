@@ -4874,7 +4874,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398235762}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be984daa0e4876846baccfc8501eace0, type: 3}
   m_Name: 
@@ -10382,9 +10382,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Amazing! Now Hacking: Grab a USB stick, stand by a computer, and press
-    Arrow Up to start hacking. Type fast to crack the password\u2014fail, and the
-    alarm goes off!"
+  m_Text: 'Amazing! Now Hacking: Grab a USB stick, stand by a computer, and press
+    Arrow Up to start hacking. Type fast to crack the password. If you fail or the
+    timer ends, the alarm goes off!'
 --- !u!222 &1059486940
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10497,7 +10497,6 @@ MonoBehaviour:
   securityPatrols:
   - {fileID: 82029084}
   alarmActive: 0
-  tutorialCamera: 1
   eletricCamera: 0
   uiText: {fileID: 348500332}
   uiTextDelete: {fileID: 1096247960}
@@ -18568,7 +18567,6 @@ MonoBehaviour:
   securityPatrols:
   - {fileID: 82029084}
   alarmActive: 0
-  tutorialCamera: 1
   eletricCamera: 1
   uiText: {fileID: 299447532}
   uiTextDelete: {fileID: 80778495}

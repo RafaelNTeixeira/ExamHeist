@@ -50,7 +50,7 @@ public class Security : MonoBehaviour
                 GameManager.instance.SetGameState(GameManager.GameState.GameOver);
             }
 
-            if (GameManager.instance.currentState == GameManager.GameState.Toturial)
+            if (GameManager.instance.currentState == GameManager.GameState.Tutorial)
             {
                 uiTextDelete.SetActive(false); // Hide the text UI
                 uiText.SetActive(true); // Show the text UI

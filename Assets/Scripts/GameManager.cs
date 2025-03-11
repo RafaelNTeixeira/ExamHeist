@@ -5,10 +5,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance; // Singleton instance
 
-    public enum GameState { MainMenu, Instructions, Toturial, Playing, Paused, GameOver, Win}
+    public enum GameState { MainMenu, Instructions, Tutorial, Playing, Paused, GameOver, Win}
     public GameState currentState;
     private SecurityPatrol[] securityPatrols;
     private bool cutscenePlayed = false;
+    private bool tutorialPlayed = false;
 
 
     void Awake()
@@ -45,7 +46,7 @@ public class GameManager : MonoBehaviour
             case GameState.Instructions:
                 ShowInstructionsMenu();
                 break;
-            case GameState.Toturial:
+            case GameState.Tutorial:
                 StartTutorial();
                 break;
             case GameState.Paused:
@@ -70,6 +71,16 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Loaded Start Game");
         Time.timeScale = 1; // Ensure normal game speed
+
+        if (tutorialPlayed)
+        {
+            GameObject room = GameObject.Find("Room");
+            if (room != null)
+            {
+                Destroy(room); // Destroy the Room from the tutorial scene
+            }
+        }
+
         if (!cutscenePlayed)
             SceneManager.LoadScene("CutScene");
         else 
@@ -87,6 +98,7 @@ public class GameManager : MonoBehaviour
     void StartTutorial()
     {
         Debug.Log("Loaded Tutorial");
+        tutorialPlayed = true;
         SceneManager.LoadScene("Tutorial");
     }
 
