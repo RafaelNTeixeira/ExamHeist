@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-    private float speed = 8.0f;
+    private float speed = 4.0f;
     private Rigidbody2D body;
     public Animator animator;
     public bool canMove = true;
