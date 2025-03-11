@@ -19600,8 +19600,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.055099726, y: -0.44}
-  m_SizeDelta: {x: 17.9535, y: 4.3707}
+  m_AnchoredPosition: {x: -0.055099726, y: 0.03}
+  m_SizeDelta: {x: 17.9535, y: 6.1458}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2037411887
 MonoBehaviour:
@@ -19639,7 +19639,11 @@ MonoBehaviour:
   m_Text: 'Welcome to the tutorial!
 
     We''ll guide you through the basics so 
-    you can master the game.'
+    you can master the game.
+
+
+    If you want to skip the tutorial, just press the
+    ''Esc'' Key.'
 --- !u!222 &2037411888
 CanvasRenderer:
   m_ObjectHideFlags: 0

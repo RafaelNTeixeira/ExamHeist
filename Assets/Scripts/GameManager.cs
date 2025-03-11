@@ -181,6 +181,9 @@ public class GameManager : MonoBehaviour
         // Toggle pause when pressing Escape key
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            if (currentState == GameState.Tutorial) {
+                SetGameState(GameState.MainMenu);
+            }
             if (currentState == GameState.Playing && canPauseGame)
             {
                 SetGameState(GameState.Paused);
