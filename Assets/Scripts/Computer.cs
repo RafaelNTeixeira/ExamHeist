@@ -105,6 +105,7 @@ public class Computer : MonoBehaviour
     {
         isHacking = false;
         gotAccess = true;
+        USBPenText.penCount--;
         hackingUIPanel.SetActive(false);
         Debug.Log("Access Granted!");
         doorExit.OpenExitDoor();
