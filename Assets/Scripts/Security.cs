@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class Security : MonoBehaviour
@@ -26,11 +28,13 @@ public class Security : MonoBehaviour
 
     private Animator anim;
     private SecurityPatrol securityPatrol;
+    private Light2D securityLight;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
         securityPatrol = GetComponentInParent<SecurityPatrol>();
+        securityLight = GetComponentInChildren<Light2D>();
     }
     
     private void Update()
@@ -68,9 +72,11 @@ public class Security : MonoBehaviour
     {
         if (securityPatrol != null && securityPatrol.IsAtEdge())
         {
+            securityLight.enabled = false;
             return false;
         }
 
+        securityLight.enabled = true;
         float securityHeight = boxCollider.bounds.size.y;
         Vector2 origin = new Vector2(transform.position.x, transform.position.y + securityHeight/2); // Offset so that raycasts originate at the security's eye level.
         Vector2 forward = transform.right * Mathf.Sign(transform.localScale.x);
@@ -102,6 +108,7 @@ public class Security : MonoBehaviour
     {
         if (securityPatrol != null && securityPatrol.IsAtEdge())
         {
+            
             return;
         }
 
