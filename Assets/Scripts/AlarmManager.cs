@@ -14,6 +14,7 @@ public class AlarmManager : MonoBehaviour
     [SerializeField] private float maxVolume = 0.5f; // Max alarm volume
     [SerializeField] private float alarmCooldown = 50f; // Global cooldown
     public float cooldownTimer = 0f;
+    public bool isAlarmActive = false; // Check if alarm is active
 
     void Awake()
     {
@@ -45,6 +46,7 @@ public class AlarmManager : MonoBehaviour
         // Debug.Log("Called requestAlarm");
         activeCameras++;
         cooldownTimer = alarmCooldown; // Reset cooldown every time a camera detects the player
+        isAlarmActive = true;
 
         // Only start the fade-in if the alarm is completely off
         if (activeCameras == 1 && audioSource.volume == 0f)
@@ -65,6 +67,7 @@ public class AlarmManager : MonoBehaviour
 
             if (cooldownTimer <= 0)
             {
+                isAlarmActive = false;
                 if (fadeCoroutine != null)
                     StopCoroutine(fadeCoroutine);
                 fadeCoroutine = StartCoroutine(FadeAudio(maxVolume, 0f, fadeDuration));

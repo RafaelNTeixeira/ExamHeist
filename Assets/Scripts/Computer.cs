@@ -28,7 +28,7 @@ public class Computer : MonoBehaviour
     {
         if (playerNearby && USBPenText.penCount > 0 && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            if (!gotAccess)
+            if (!gotAccess && !AlarmManager.instance.isAlarmActive)
                 StartHacking();
         }
 

@@ -4884,6 +4884,7 @@ MonoBehaviour:
   maxVolume: 0.5
   alarmCooldown: 50
   cooldownTimer: 0
+  isAlarmActive: 0
 --- !u!1 &398924388
 GameObject:
   m_ObjectHideFlags: 0
@@ -4987,8 +4988,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Nice work! Some doors are locked, collect keys and press "O" to open locked
-    doors.
+  m_Text: Nice work! Some doors are locked, collect keys and press 'Up Arrow' to
+    open locked doors.
 --- !u!222 &441785960
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10382,9 +10383,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Amazing! Now Hacking: Grab a USB stick, stand by a computer, and press
-    Arrow Up to start hacking. Type fast to crack the password. If you fail or the
-    timer ends, the alarm goes off!'
+  m_Text: "Amazing! Now Hacking: Grab a USB stick, stand by a computer, and press
+    'Up Arrow' to start hacking. Type fast to crack the password. If you fail or
+    the timer ends, the alarm goes off! \nIf the alarm is active you will need to
+    wait for it to be turned off in order to use the computer"
 --- !u!222 &1059486940
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10409,8 +10411,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0717, y: -0.8616}
-  m_SizeDelta: {x: 16.2902, y: 5.5217}
+  m_AnchoredPosition: {x: -0.0717, y: -0.7913}
+  m_SizeDelta: {x: 16.2902, y: 9.038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1069260630
 GameObject:
@@ -11312,7 +11314,7 @@ Transform:
   m_GameObject: {fileID: 1157457326}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.00069049717, w: 0.99999976}
-  m_LocalPosition: {x: -7.299999, y: 3.6, z: 0}
+  m_LocalPosition: {x: -7.299999, y: -2.31, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11403,6 +11405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60bb1ce2e39e71744b7ef9e6ea4869bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   canMove: 1
 --- !u!95 &1157457332
 Animator:
@@ -12879,7 +12882,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Smart thinking! You can shut down the power to create distractions. Stand
-    in front of an electrical panel and press Arrow Up to turn off the lights.
+    in front of an electrical panel and press 'Up Arrow' to turn off the lights.
 --- !u!222 &1371536199
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17175,8 +17178,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 29.837, y: 28.652}
-  m_SizeDelta: {x: 18.439, y: 8.235}
+  m_AnchoredPosition: {x: 29.837, y: 27.509}
+  m_SizeDelta: {x: 18.439, y: 8.692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1856156949
 GameObject:
@@ -18640,8 +18643,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stand in front of a wardrobe and press Arrow Up to hide. Press Arrow Down
-    to exit. Use this to avoid cameras and guards!
+  m_Text: Stand in front of a wardrobe and press  'Up Arrow' to hide. Press 'Down
+    Arrow' to exit. Use this to avoid cameras and guards!
 --- !u!222 &1933833382
 CanvasRenderer:
   m_ObjectHideFlags: 0
