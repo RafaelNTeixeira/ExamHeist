@@ -1283,7 +1283,7 @@ GameObject:
   - component: {fileID: 96020264}
   - component: {fileID: 96020266}
   m_Layer: 0
-  m_Name: Cocaine
+  m_Name: MonsterDrink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1342,7 +1342,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.48, y: 4.47}
+    oldSize: {x: 1.38, y: 2.42}
     newSize: {x: 4.48, y: 4.47}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1394,7 +1394,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -4035795436505748616, guid: 3b7e17979ad77954391dbe6eff958322, type: 3}
+  m_Sprite: {fileID: 4644523113532460279, guid: 0b6238de996f71b46bb04ec095ccb713, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

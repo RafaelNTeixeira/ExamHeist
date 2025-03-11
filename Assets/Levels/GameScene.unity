@@ -2421,7 +2421,7 @@ GameObject:
   - component: {fileID: 96020264}
   - component: {fileID: 96020266}
   m_Layer: 0
-  m_Name: Cocaine
+  m_Name: MonsterDrink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2480,7 +2480,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.48, y: 4.47}
+    oldSize: {x: 1.38, y: 2.42}
     newSize: {x: 4.48, y: 4.47}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2532,7 +2532,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -4035795436505748616, guid: 3b7e17979ad77954391dbe6eff958322, type: 3}
+  m_Sprite: {fileID: 4644523113532460279, guid: 0b6238de996f71b46bb04ec095ccb713, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8026,6 +8026,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   hitSound: {fileID: 8300000, guid: 84f41981f5541184f83dab1d3e4f8c7c, type: 3}
+  uiText: {fileID: 0}
+  uiTextDelete: {fileID: 0}
 --- !u!95 &323938820
 Animator:
   serializedVersion: 7
@@ -9993,6 +9995,9 @@ MonoBehaviour:
   - {fileID: 211404296}
   - {fileID: 890348187}
   alarmActive: 0
+  eletricCamera: 0
+  uiText: {fileID: 0}
+  uiTextDelete: {fileID: 0}
 --- !u!1 &419657291
 GameObject:
   m_ObjectHideFlags: 0
@@ -12642,6 +12647,9 @@ MonoBehaviour:
   - {fileID: 211404296}
   - {fileID: 890348187}
   alarmActive: 0
+  eletricCamera: 0
+  uiText: {fileID: 0}
+  uiTextDelete: {fileID: 0}
 --- !u!1 &534458833
 GameObject:
   m_ObjectHideFlags: 0
@@ -15198,6 +15206,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   hitSound: {fileID: 8300000, guid: 84f41981f5541184f83dab1d3e4f8c7c, type: 3}
+  uiText: {fileID: 0}
+  uiTextDelete: {fileID: 0}
 --- !u!95 &707796093
 Animator:
   serializedVersion: 7
@@ -16437,6 +16447,9 @@ MonoBehaviour:
   - {fileID: 211404296}
   - {fileID: 890348187}
   alarmActive: 0
+  eletricCamera: 0
+  uiText: {fileID: 0}
+  uiTextDelete: {fileID: 0}
 --- !u!1 &742059402
 GameObject:
   m_ObjectHideFlags: 0
@@ -16838,6 +16851,9 @@ MonoBehaviour:
   - {fileID: 211404296}
   - {fileID: 890348187}
   alarmActive: 0
+  eletricCamera: 0
+  uiText: {fileID: 0}
+  uiTextDelete: {fileID: 0}
 --- !u!1 &759467939
 GameObject:
   m_ObjectHideFlags: 0
@@ -22519,6 +22535,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   hitSound: {fileID: 8300000, guid: 84f41981f5541184f83dab1d3e4f8c7c, type: 3}
+  uiText: {fileID: 0}
+  uiTextDelete: {fileID: 0}
 --- !u!95 &965781355
 Animator:
   serializedVersion: 7
@@ -24552,6 +24570,9 @@ MonoBehaviour:
   - {fileID: 211404296}
   - {fileID: 890348187}
   alarmActive: 0
+  eletricCamera: 0
+  uiText: {fileID: 0}
+  uiTextDelete: {fileID: 0}
 --- !u!114 &1069260634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28640,6 +28661,9 @@ MonoBehaviour:
   - {fileID: 211404296}
   - {fileID: 890348187}
   alarmActive: 0
+  eletricCamera: 0
+  uiText: {fileID: 0}
+  uiTextDelete: {fileID: 0}
 --- !u!1 &1272773281
 GameObject:
   m_ObjectHideFlags: 0
@@ -28951,6 +28975,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   hitSound: {fileID: 8300000, guid: 84f41981f5541184f83dab1d3e4f8c7c, type: 3}
+  uiText: {fileID: 0}
+  uiTextDelete: {fileID: 0}
 --- !u!95 &1290242023
 Animator:
   serializedVersion: 7
@@ -34394,6 +34420,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   hitSound: {fileID: 8300000, guid: 84f41981f5541184f83dab1d3e4f8c7c, type: 3}
+  uiText: {fileID: 0}
+  uiTextDelete: {fileID: 0}
 --- !u!50 &1627003916
 Rigidbody2D:
   serializedVersion: 5
@@ -36076,6 +36104,9 @@ MonoBehaviour:
   - {fileID: 211404296}
   - {fileID: 890348187}
   alarmActive: 0
+  eletricCamera: 0
+  uiText: {fileID: 0}
+  uiTextDelete: {fileID: 0}
 --- !u!1 &1685542982
 GameObject:
   m_ObjectHideFlags: 0
@@ -37178,6 +37209,9 @@ MonoBehaviour:
   - {fileID: 211404296}
   - {fileID: 890348187}
   alarmActive: 0
+  eletricCamera: 0
+  uiText: {fileID: 0}
+  uiTextDelete: {fileID: 0}
 --- !u!1 &1743382956
 GameObject:
   m_ObjectHideFlags: 0
@@ -37411,6 +37445,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   hitSound: {fileID: 8300000, guid: 84f41981f5541184f83dab1d3e4f8c7c, type: 3}
+  uiText: {fileID: 0}
+  uiTextDelete: {fileID: 0}
 --- !u!95 &1753230728
 Animator:
   serializedVersion: 7
@@ -38294,6 +38330,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   hitSound: {fileID: 8300000, guid: 84f41981f5541184f83dab1d3e4f8c7c, type: 3}
+  uiText: {fileID: 0}
+  uiTextDelete: {fileID: 0}
 --- !u!95 &1785917179
 Animator:
   serializedVersion: 7
