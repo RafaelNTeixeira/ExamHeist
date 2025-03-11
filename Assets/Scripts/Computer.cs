@@ -24,12 +24,19 @@ public class Computer : MonoBehaviour
 
     [SerializeField] private DoorExit doorExit;
 
+    private void Awake()
+    {
+        inputText.text = "-> ";
+    }
+
     private void Update()
     {
         if (playerNearby && USBPenText.penCount > 0 && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            if (!gotAccess && !AlarmManager.instance.isAlarmActive)
+            if (!gotAccess && !AlarmManager.instance.isAlarmActive && !isHacking)
+            {
                 StartHacking();
+            }
         }
 
         if (isHacking)
@@ -117,6 +124,9 @@ public class Computer : MonoBehaviour
         isHacking = false;
         hackingUIPanel.SetActive(false);
         Debug.Log("Alarm Triggered!");
+
+        inputText.text = "-> "; // Reset the displayed input text
+        playerInput = ""; // Clear the stored player input
 
         EnablePlayerMovement();
 
