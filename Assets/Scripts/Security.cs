@@ -60,7 +60,6 @@ public class Security : MonoBehaviour
                 uiText.SetActive(true); // Show the text UI
                 GameObject player = GameObject.Find("Player");
                 player.transform.position = new Vector2(7.7f, player.transform.position.y);
-                
             }
         }
 

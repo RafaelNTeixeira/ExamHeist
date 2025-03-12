@@ -4,17 +4,24 @@ using UnityEngine.UI;
 public class Win : MonoBehaviour
 {
     public Button playAgainButton;
+    public Button mainMenuButton;
     public Button quitButton;
 
     private void Start()
     {
         playAgainButton.onClick.AddListener(PlayAgain);
+        mainMenuButton.onClick.AddListener(MainMenu);
         quitButton.onClick.AddListener(QuitGame);
     }
 
     public void PlayAgain()
     {
         GameManager.instance.PlayAgain();
+    }
+
+    public void MainMenu()
+    {
+        GameManager.instance.SetGameState(GameManager.GameState.MainMenu);
     }
 
     public void QuitGame()
