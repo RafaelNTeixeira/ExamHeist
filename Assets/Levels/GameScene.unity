@@ -3605,6 +3605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goesUp: 0
+  stairsSound: {fileID: 8300000, guid: 7c8c92c6b522f5849beb8e1f9af95d56, type: 3}
 --- !u!61 &131903038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4533,6 +4534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goesUp: 1
+  stairsSound: {fileID: 8300000, guid: 7c8c92c6b522f5849beb8e1f9af95d56, type: 3}
 --- !u!61 &175619576
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14195,6 +14197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goesUp: 1
+  stairsSound: {fileID: 8300000, guid: 7c8c92c6b522f5849beb8e1f9af95d56, type: 3}
 --- !u!61 &627610786
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14604,6 +14607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goesUp: 0
+  stairsSound: {fileID: 8300000, guid: 7c8c92c6b522f5849beb8e1f9af95d56, type: 3}
 --- !u!61 &668596146
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19786,6 +19790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goesUp: 0
+  stairsSound: {fileID: 8300000, guid: 7c8c92c6b522f5849beb8e1f9af95d56, type: 3}
 --- !u!61 &871839927
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20857,6 +20862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goesUp: 1
+  stairsSound: {fileID: 8300000, guid: 7c8c92c6b522f5849beb8e1f9af95d56, type: 3}
 --- !u!61 &904870250
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24264,6 +24270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goesUp: 1
+  stairsSound: {fileID: 8300000, guid: 7c8c92c6b522f5849beb8e1f9af95d56, type: 3}
 --- !u!61 &1057719045
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24412,6 +24419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goesUp: 0
+  stairsSound: {fileID: 8300000, guid: 7c8c92c6b522f5849beb8e1f9af95d56, type: 3}
 --- !u!61 &1062710435
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32946,6 +32954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goesUp: 1
+  stairsSound: {fileID: 8300000, guid: 7c8c92c6b522f5849beb8e1f9af95d56, type: 3}
 --- !u!61 &1542412379
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33879,6 +33888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goesUp: 1
+  stairsSound: {fileID: 8300000, guid: 7c8c92c6b522f5849beb8e1f9af95d56, type: 3}
 --- !u!61 &1604969771
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35643,6 +35653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goesUp: 0
+  stairsSound: {fileID: 8300000, guid: 7c8c92c6b522f5849beb8e1f9af95d56, type: 3}
 --- !u!61 &1660637830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40287,6 +40298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goesUp: 0
+  stairsSound: {fileID: 8300000, guid: 7c8c92c6b522f5849beb8e1f9af95d56, type: 3}
 --- !u!61 &1866528272
 BoxCollider2D:
   m_ObjectHideFlags: 0
