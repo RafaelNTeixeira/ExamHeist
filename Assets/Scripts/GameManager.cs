@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     private SecurityPatrol[] securityPatrols;
     private bool cutscenePlayed = false;
     public bool canPauseGame = false;
-    private bool tutorialPlayed = false;
 
 
     void Awake()
@@ -78,13 +77,10 @@ public class GameManager : MonoBehaviour
             Destroy(backgroundMusic);
         }
 
-        if (tutorialPlayed)
+        GameObject room = GameObject.Find("Room");
+        if (room != null)
         {
-            GameObject room = GameObject.Find("Room");
-            if (room != null)
-            {
-                Destroy(room); // Destroy the Room from the tutorial scene
-            }
+            Destroy(room); // Rebuild the room to not overlap with the tutorial one
         }
 
         if (!cutscenePlayed)
@@ -108,11 +104,18 @@ public class GameManager : MonoBehaviour
     void StartTutorial()
     {
         Debug.Log("Loaded Tutorial");
+        Time.timeScale = 1;
         GameObject backgroundMusic = GameObject.Find("BackgroundMusic");
         if (backgroundMusic != null) {
             Destroy(backgroundMusic);
         }
-        tutorialPlayed = true;
+
+        GameObject room = GameObject.Find("Room");
+        if (room != null)
+        {
+            Destroy(room); // Rebuild the room to not overlap with the game scene one
+        }
+
         SceneManager.LoadScene("Tutorial");
     }
 
