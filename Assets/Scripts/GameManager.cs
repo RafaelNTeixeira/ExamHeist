@@ -73,6 +73,11 @@ public class GameManager : MonoBehaviour
         Debug.Log("Loaded Start Game");
         Time.timeScale = 1; // Ensure normal game speed
 
+        GameObject backgroundMusic = GameObject.Find("BackgroundMusic");
+        if (backgroundMusic != null) {
+            Destroy(backgroundMusic);
+        }
+
         if (tutorialPlayed)
         {
             GameObject room = GameObject.Find("Room");
@@ -103,6 +108,10 @@ public class GameManager : MonoBehaviour
     void StartTutorial()
     {
         Debug.Log("Loaded Tutorial");
+        GameObject backgroundMusic = GameObject.Find("BackgroundMusic");
+        if (backgroundMusic != null) {
+            Destroy(backgroundMusic);
+        }
         tutorialPlayed = true;
         SceneManager.LoadScene("Tutorial");
     }
@@ -186,7 +195,7 @@ public class GameManager : MonoBehaviour
                 BackgroundMusic.instance.StopMusic();
                 SetGameState(GameState.MainMenu);
             }
-            if (currentState == GameState.Playing && canPauseGame)
+            else if (currentState == GameState.Playing && canPauseGame)
             {
                 BackgroundMusic.instance.StopMusic();
                 SetGameState(GameState.Paused);

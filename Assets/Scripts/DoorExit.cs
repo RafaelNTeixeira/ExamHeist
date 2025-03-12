@@ -24,10 +24,12 @@ public class DoorExit : MonoBehaviour
             {
                 if (GameManager.instance.currentState == GameManager.GameState.Playing)
                 {
+                    BackgroundMusic.instance.StopMusic();
                     GameManager.instance.SetGameState(GameManager.GameState.Win);
                 }
                 else if (GameManager.instance.currentState == GameManager.GameState.Tutorial)
                 {
+                    BackgroundMusic.instance.StopMusic();
                     GameManager.instance.SetGameState(GameManager.GameState.MainMenu);
                 }
             }

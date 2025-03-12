@@ -6852,7 +6852,7 @@ Transform:
   m_GameObject: {fileID: 281486333}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.24, y: -2.53, z: 0.058838937}
+  m_LocalPosition: {x: -5.24, y: -4.57, z: 0.058838937}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6944,6 +6944,46 @@ MonoBehaviour:
   - {fileID: 1177855924}
   - {fileID: 562433602}
   - {fileID: 1114384522}
+  alarmLamps:
+  - {fileID: 92817365}
+  - {fileID: 1649568468}
+  - {fileID: 156816776}
+  - {fileID: 92817365}
+  - {fileID: 1649568468}
+  - {fileID: 156816776}
+  - {fileID: 795559775}
+  - {fileID: 2093256597}
+  - {fileID: 487139349}
+  - {fileID: 42238516}
+  - {fileID: 1214473213}
+  - {fileID: 254660669}
+  - {fileID: 412147805}
+  - {fileID: 1140970900}
+  - {fileID: 1238485794}
+  - {fileID: 430035327}
+  - {fileID: 965523517}
+  - {fileID: 2081307266}
+  - {fileID: 737110524}
+  - {fileID: 194343684}
+  - {fileID: 2014816784}
+  - {fileID: 1181886607}
+  - {fileID: 68454879}
+  - {fileID: 336392109}
+  - {fileID: 114758044}
+  - {fileID: 332017099}
+  - {fileID: 1881932947}
+  - {fileID: 687294416}
+  - {fileID: 1412965892}
+  - {fileID: 1373002355}
+  - {fileID: 11212044}
+  - {fileID: 1110954119}
+  - {fileID: 260136268}
+  - {fileID: 1450244997}
+  - {fileID: 1094742994}
+  - {fileID: 1103202144}
+  - {fileID: 1036819591}
+  - {fileID: 1511630788}
+  - {fileID: 2125448664}
 --- !u!61 &281486337
 BoxCollider2D:
   m_ObjectHideFlags: 0
