@@ -125,6 +125,7 @@ public class GameManager : MonoBehaviour
     public void ResumeGame()
     {
         Debug.Log("Game Resumed");
+        BackgroundMusic.instance.PlayMusic();
         Time.timeScale = 1; // Unfreeze game
         SceneManager.UnloadSceneAsync("PauseMenu"); // Only remove the pause menu
         AlarmManager.instance.ResumeAlarm();
@@ -182,14 +183,17 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (currentState == GameState.Tutorial) {
+                BackgroundMusic.instance.StopMusic();
                 SetGameState(GameState.MainMenu);
             }
             if (currentState == GameState.Playing && canPauseGame)
             {
+                BackgroundMusic.instance.StopMusic();
                 SetGameState(GameState.Paused);
             }
             else if (currentState == GameState.Paused)
             {
+                BackgroundMusic.instance.PlayMusic();
                 ResumeGame();
             }
         }
