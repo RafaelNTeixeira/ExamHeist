@@ -119,6 +119,81 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &84620400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 84620401}
+  - component: {fileID: 84620403}
+  - component: {fileID: 84620402}
+  m_Layer: 5
+  m_Name: USBImage (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &84620401
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84620400}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1047161979}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1115, y: 292.9997}
+  m_SizeDelta: {x: 70, y: 70}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &84620402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84620400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -205043571989211089, guid: 7d4acc3ec9f00564ba7b1f0aa3b6000e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &84620403
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84620400}
+  m_CullTransparentMesh: 1
 --- !u!1 &103367185
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,7 +228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 427, y: 440}
+  m_AnchoredPosition: {x: 435, y: 474}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &103367187
@@ -228,7 +303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1115, y: -73}
+  m_AnchoredPosition: {x: -1115, y: -85}
   m_SizeDelta: {x: 44.2542, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &335721484
@@ -300,6 +375,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 1
   canPauseGame: 0
+  minutesTaken: 0
+  secondsTaken: 0
 --- !u!4 &399233377
 Transform:
   m_ObjectHideFlags: 0
@@ -470,7 +547,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1113.6, y: -388}
+  m_AnchoredPosition: {x: -1114.6, y: -379}
   m_SizeDelta: {x: 47.008, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &479538777
@@ -545,7 +622,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1115, y: 43}
+  m_AnchoredPosition: {x: -1115, y: 27}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &567330637
@@ -714,10 +791,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2560, y: 1440}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -818,8 +895,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87, y: 106.5}
-  m_SizeDelta: {x: 2264.291, y: 1153}
+  m_AnchoredPosition: {x: 87, y: 79.08313}
+  m_SizeDelta: {x: 2264.291, y: 1207.8337}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &654822047
 MonoBehaviour:
@@ -854,44 +931,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.7
-  m_Text: 'Movement - Move with the AD/Arrow keys. ''A''/''Left Arrow'' to move left
-    and ''D''/''Right Arrow'' to move right
-
-
-    Key - used to open locked doors.
-    To open a door    , click on ''Up Arrow'' to open it
-
-
-    UsbPen - Used to access
-    the professor''s computer     . Click on the ''Up Arrow'' key to open the computer.
-    But be careful. Once you access the pc a timer will start for you to insert the
-    password. If the timer ends or if you insert a wrong character, the alarm goes
-    off. If you insert it correctly, you obtain the exam answers and hack open the
-    final door
-
-
-    alarms - if the alarm is activated, the guards speed is increased
-    while the alarm is on
-
-
-    wardrobes - use them to hide yourself from cameras
-    and security
-
-
-    Eletrical panel - Press on the ''Up arrow'' key to kill the
-    cameras and reduce the guards pov for a certain amount of time.
-
-
-    Monster
-    Drink - Pick it up to give you a little speed boost
-
-
-    Cameras - if you are
-    detected, the alarm goes off
-
-
-    Floor Doors - Use them to go up or down a
-    floor'
+  m_Text: "Movement - 'A'/'Left Arrow' to move left and 'D'/'Right Arrow' to move
+    right\n\nKey - used to open locked doors. To open a door    , click on 'Up Arrow'
+    to open it\n\nUsbPen - Used to access the professor's computer     . Click on
+    the 'Up Arrow' key to open the computer. \n\nComputer - Once you access the pc
+    a timer will start. You need to fill the password in that time and correctly
+    to open the final door    , otherwise the alarm goes off.\n\nalarms - if the
+    alarm is activated, the guards speed is increased while the alarm is on\n\nwardrobes
+    - use them to hide yourself from cameras and security\n\nEletrical panel - Press
+    on the 'Up arrow' key to kill the cameras and reduce the guards pov for a certain
+    amount of time.\n\nMonster Drink - Pick it up to give you a little speed boost\n\nCameras
+    - if you are detected, the alarm goes off\n\nFloor Doors - Use them to go up
+    or down a floor"
 --- !u!222 &654822048
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -934,7 +985,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1115, y: 165}
+  m_AnchoredPosition: {x: -1115, y: 142}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &680481965
@@ -1040,7 +1091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 362, y: 573}
+  m_AnchoredPosition: {x: 359, y: 612}
   m_SizeDelta: {x: 50, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &842721942
@@ -1112,6 +1163,7 @@ RectTransform:
   - {fileID: 1813141344}
   - {fileID: 1264528353}
   - {fileID: 1258054738}
+  - {fileID: 84620401}
   - {fileID: 680481964}
   - {fileID: 567330636}
   - {fileID: 335721483}
@@ -1162,7 +1214,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1115, y: 382}
+  m_AnchoredPosition: {x: -1115, y: 450}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1258054739
@@ -1237,7 +1289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1115, y: 538}
+  m_AnchoredPosition: {x: -1115, y: 584}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1264528354
@@ -1312,7 +1364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1115.4, y: -196}
+  m_AnchoredPosition: {x: -1114.6, y: -202}
   m_SizeDelta: {x: 44.9728, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1492606161
@@ -1387,8 +1439,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57, y: 236.84125}
-  m_SizeDelta: {x: 32.4883, y: 52.1998}
+  m_AnchoredPosition: {x: 668, y: 278}
+  m_SizeDelta: {x: 32.4883, y: 67.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1553971959
 MonoBehaviour:
@@ -1534,7 +1586,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1115, y: 675}
+  m_AnchoredPosition: {x: -1115, y: 696}
   m_SizeDelta: {x: 57.127, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1813141345
@@ -1737,7 +1789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1115, y: -292}
+  m_AnchoredPosition: {x: -1114.6, y: -288}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2040404253

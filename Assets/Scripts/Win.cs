@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class Win : MonoBehaviour
 {
+    public Text timerText;
     public Button playAgainButton;
     public Button mainMenuButton;
     public Button quitButton;
@@ -12,6 +13,11 @@ public class Win : MonoBehaviour
         playAgainButton.onClick.AddListener(PlayAgain);
         mainMenuButton.onClick.AddListener(MainMenu);
         quitButton.onClick.AddListener(QuitGame);
+
+        int minutes = GameManager.instance.minutesTaken;
+        int seconds = GameManager.instance.secondsTaken;
+
+        timerText.text = $"You completed the level in: {minutes:D2}:{seconds:D2}";
     }
 
     public void PlayAgain()
