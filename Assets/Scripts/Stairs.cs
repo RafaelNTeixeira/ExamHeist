@@ -8,6 +8,8 @@ public class Stairs : MonoBehaviour
 
     private bool playerNearby = false;
     private Transform playerTransform;
+    public bool isBlocked = false;
+    [SerializeField] private GameObject blockage;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -29,7 +31,7 @@ public class Stairs : MonoBehaviour
 
     private void Update()
     {
-        if (playerNearby && playerTransform != null)
+        if (playerNearby && playerTransform != null && !isBlocked)
         {
             if (goesUp && Input.GetKeyDown(KeyCode.UpArrow))
             {
@@ -41,6 +43,13 @@ public class Stairs : MonoBehaviour
                 AudioSource.PlayClipAtPoint(stairsSound, transform.position);
                 playerTransform.position -= new Vector3(0, 2, 0);
             }
+        }
+        if (isBlocked)
+        {
+            blockage.SetActive(true);
+        }
+        else{
+            blockage.SetActive(false);
         }
     }
 }

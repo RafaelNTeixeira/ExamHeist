@@ -17,6 +17,7 @@ public class SecurityCamera : MonoBehaviour
     [SerializeField] private AlarmLamp[] alarmLamps;
     [SerializeField] private Light2D[] lamps;
     [SerializeField] private SecurityPatrol[] securityPatrols;
+    [SerializeField] private Stairs[] stairs;
 
     public bool alarmActive = false;
 
@@ -48,6 +49,7 @@ public class SecurityCamera : MonoBehaviour
             alarmActive = true;
             AlarmManager.instance.RequestAlarm(); // Notify the global alarm system 
             NotifySecurityPatrol(true); 
+            BlockStairs(true);
 
             if (GameManager.instance.currentState == GameManager.GameState.Tutorial)
             {
@@ -71,6 +73,7 @@ public class SecurityCamera : MonoBehaviour
                 ActivateAlarmLights(false);
                 alarmActive = false;
                 NotifySecurityPatrol(false);
+                BlockStairs(false);
             }
         }
 
@@ -85,6 +88,17 @@ public class SecurityCamera : MonoBehaviour
             if (patrol != null && patrol.playerDetected != state)
             {
                 patrol.PlayerDetected(state, 2f);
+            }
+        }
+    }
+
+    public void BlockStairs(bool state)
+    {
+        foreach (var stair in stairs)
+        {
+            if (stair != null)
+            {
+                stair.isBlocked = state;
             }
         }
     }
