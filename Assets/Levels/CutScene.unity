@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 90601404}
   - component: {fileID: 90601403}
   m_Layer: 0
-  m_Name: WrongText
+  m_Name: StealExamText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -557,7 +557,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: What could go wrong?
+  m_Text: And steal the exam! That's it!
 --- !u!222 &90601404
 CanvasRenderer:
   m_ObjectHideFlags: 0

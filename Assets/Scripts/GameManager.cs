@@ -1,4 +1,5 @@
 using UnityEngine;
+
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -10,7 +11,8 @@ public class GameManager : MonoBehaviour
     private SecurityPatrol[] securityPatrols;
     private bool cutscenePlayed = false;
     public bool canPauseGame = false;
-
+    public int minutesTaken = 0;
+    public int secondsTaken = 0;
 
     void Awake()
     {
@@ -188,6 +190,18 @@ public class GameManager : MonoBehaviour
     void ShowWinScreen()
     {
         Debug.Log("Win");
+
+        TimerText timer = Object.FindFirstObjectByType<TimerText>();
+        if (timer != null)
+        {
+            minutesTaken = timer.minutes;
+            secondsTaken = timer.seconds;
+        }
+        else
+        {
+            Debug.LogError("TimerText instance not found!");
+        }
+
         AlarmManager.instance.StopAllSounds();
         SceneManager.LoadScene("Win");
     }
