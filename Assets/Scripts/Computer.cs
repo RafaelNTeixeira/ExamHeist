@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Linq;
 
+// Class to manage the computer hacking system
+// This class is responsible for managing the hacking minigame
 public class Computer : MonoBehaviour
 {
     private bool playerNearby = false;
@@ -33,6 +35,7 @@ public class Computer : MonoBehaviour
     {
         if (playerNearby && USBPenText.penCount > 0 && Input.GetKeyDown(KeyCode.UpArrow))
         {
+            // If player is nearby, has the USB pen and the alarm is not activated, start hacking
             if (!gotAccess && !AlarmManager.instance.isAlarmActive && !isHacking)
             {
                 StartHacking();
@@ -41,6 +44,7 @@ public class Computer : MonoBehaviour
 
         if (isHacking)
         {
+            // Update the player input in the canvas and check if it's correct
             foreach (char c in Input.inputString)
             {
                 if (char.IsLetter(c))
@@ -53,6 +57,7 @@ public class Computer : MonoBehaviour
         }
     }
 
+    // Function to start the hacking minigame
     private void StartHacking()
     {
         Debug.Log("Started Hacking");
@@ -63,22 +68,23 @@ public class Computer : MonoBehaviour
             Player player = playerObj.GetComponent<Player>();
             if (player != null)
             {
-                player.canMove = false;
+                player.canMove = false; // Disable player movement while hacking
             }
         }
 
         AudioSource.PlayClipAtPoint(hackSound, transform.position);
 
-        correctSequence = GenerateRandomSequence(sequenceLength);
+        correctSequence = GenerateRandomSequence(sequenceLength); // Generate a random sequence of letters
         sequenceText.text = "Enter: " + correctSequence;
         playerInput = "";
         remainingTime = hackTimeLimit;
         isHacking = true;
-        hackingUIPanel.SetActive(true);
+        hackingUIPanel.SetActive(true); // Show the hacking UI panel
 
-        StartCoroutine(HackingCountdown());
+        StartCoroutine(HackingCountdown()); // Start the hacking countdown timer
     }
 
+    // Coroutine to countdown the hacking time
     private IEnumerator HackingCountdown()
     {
         while (remainingTime > 0)
@@ -96,6 +102,7 @@ public class Computer : MonoBehaviour
         }
     }
 
+    // Function to check the player input
     private void CheckInput()
     {
         if (playerInput == correctSequence)
@@ -108,6 +115,7 @@ public class Computer : MonoBehaviour
         }
     }
 
+    // Function to handle a successful hack
     private void SuccessHack()
     {
         isHacking = false;
@@ -119,6 +127,7 @@ public class Computer : MonoBehaviour
         EnablePlayerMovement();
     }
 
+    // Function to handle a failed hack
     private void FailHack()
     {
         isHacking = false;
@@ -140,6 +149,7 @@ public class Computer : MonoBehaviour
         AlarmManager.instance.RequestAlarm();
     }
 
+    // Function to generate a random sequence of letters
     private string GenerateRandomSequence(int length)
     {
         const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -147,6 +157,7 @@ public class Computer : MonoBehaviour
             .Select(s => s[Random.Range(0, s.Length)]).ToArray());
     }
 
+    // Function to handle player entering the trigger zone
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -156,6 +167,7 @@ public class Computer : MonoBehaviour
         }
     }
 
+    // Function to handle player leaving the trigger zone
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -165,6 +177,7 @@ public class Computer : MonoBehaviour
         }
     }
 
+    // Function to enable player movement
     private void EnablePlayerMovement()
     {
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");

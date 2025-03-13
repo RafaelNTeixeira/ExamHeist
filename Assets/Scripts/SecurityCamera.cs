@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using System.Collections;
 
+// Class to manage the security cameras 
+// This class is responsible for detecting the player and activating the alarm system
 public class SecurityCamera : MonoBehaviour
 {
     [Header("Rotation")]
@@ -15,7 +17,7 @@ public class SecurityCamera : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private LayerMask obstacleLayer;
     [SerializeField] private AlarmLamp[] alarmLamps;
-    [SerializeField] private Light2D[] lamps;
+    [SerializeField] private Light2D[] lamps; // Game lights
     [SerializeField] private SecurityPatrol[] securityPatrols;
 
     public bool alarmActive = false;
@@ -47,7 +49,7 @@ public class SecurityCamera : MonoBehaviour
             ActivateAlarmLights(true);
             alarmActive = true;
             AlarmManager.instance.RequestAlarm(); // Notify the global alarm system 
-            NotifySecurityPatrol(true); 
+            NotifySecurityPatrol(true); // Activate guards alert state
 
             if (GameManager.instance.currentState == GameManager.GameState.Tutorial)
             {
@@ -60,12 +62,13 @@ public class SecurityCamera : MonoBehaviour
         }
         else
         {
+            // If the player is no longer detected while the alarm is active, release the alarm
             if (alarmActive)
             {
                 AlarmManager.instance.ReleaseAlarm(); // Notify the alarm system
             }
 
-            // Only deactivate lights when cooldown reaches 0
+            // Deactivate all alarm lights when cooldown reaches 0
             if (AlarmManager.instance.cooldownTimer <= 0)
             {
                 ActivateAlarmLights(false);
@@ -78,6 +81,7 @@ public class SecurityCamera : MonoBehaviour
         AlarmManager.instance.UpdateAlarmCooldown(Time.deltaTime);
     }
 
+    // Function to notify the security patrols about the player detection
     public void NotifySecurityPatrol(bool state)
     {
         foreach (var patrol in securityPatrols)
@@ -89,6 +93,7 @@ public class SecurityCamera : MonoBehaviour
         }
     }
 
+    // Function to activate/deactivate the alarm lights
     public void ActivateAlarmLights(bool state)
     {
         foreach (var alarmLamp in alarmLamps)
@@ -109,6 +114,7 @@ public class SecurityCamera : MonoBehaviour
         //Debug.Log("Alarm " + (state ? "Activated" : "Deactivated"));
     }
 
+    // Function to reset the camera detection state
     public void ResetCameraState()
     {
         ActivateAlarmLights(false); // Turn off alarm lights
@@ -116,6 +122,7 @@ public class SecurityCamera : MonoBehaviour
         NotifySecurityPatrol(false);
     }
 
+    // Function to check if the player is in sight
     private bool PlayerInSight()
     {
         Vector2 origin = transform.position;
@@ -142,6 +149,7 @@ public class SecurityCamera : MonoBehaviour
         return false;
     }
 
+    // Function to manage camera rotation
     private void CameraRotation()
     {
         if (isWaiting)
@@ -170,11 +178,13 @@ public class SecurityCamera : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, startRotation + timer);
     }
 
+    // Function to disable the camera
     public void DisableCamera()
     {
         gameObject.SetActive(false);
     }
 
+    // Function to enable the camera
     public void EnableCamera()
     {
         gameObject.SetActive(true);

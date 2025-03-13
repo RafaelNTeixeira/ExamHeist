@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Class to manage the background music
+// This class is a singleton to allow managing the background music across different scenes
 public class BackgroundMusic : MonoBehaviour
 {
     public static BackgroundMusic instance; // Singleton instance
@@ -27,6 +29,7 @@ public class BackgroundMusic : MonoBehaviour
         }
     }
 
+    // Function to handle music on scene changes
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("Scene Loaded: " + scene.name);
@@ -44,6 +47,7 @@ public class BackgroundMusic : MonoBehaviour
         }
     }
 
+    // Function to play music
     public void PlayMusic()
     {
         if (!audioSource.isPlaying)
@@ -52,11 +56,13 @@ public class BackgroundMusic : MonoBehaviour
         }
     }
 
+    // Function to stop music
     public void StopMusic()
     {
         audioSource.Stop();
     }
 
+    // Function to destroy music object
     public void DestroyMusic()
     {
         Debug.Log("Destroying BackgroundMusic");
@@ -64,6 +70,7 @@ public class BackgroundMusic : MonoBehaviour
         Destroy(gameObject);
     }
 
+    // Function to handle music on object destruction
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded; // Unsubscribe from scene changes

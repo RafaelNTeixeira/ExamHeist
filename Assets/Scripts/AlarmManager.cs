@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
+// Class to manage the alarm system
+// This class is a singleton to allow managing the alarm system across different scenes
 public class AlarmManager : MonoBehaviour
 {
     public static AlarmManager instance;
@@ -36,45 +38,44 @@ public class AlarmManager : MonoBehaviour
         audioSource.volume = 0f;
     }
 
-    public bool IsAlarmActive()
-    {
-        return activeCameras > 0;
-    }
-
+    // Function to request the alarm activation from a camera
     public void RequestAlarm()
     {
         // Debug.Log("Called requestAlarm");
-        activeCameras++;
+        activeCameras++; // Camera detected the player
         cooldownTimer = alarmCooldown; // Reset cooldown every time a camera detects the player
         isAlarmActive = true;
 
-        // Only start the fade-in if the alarm is completely off
+        // Start the alarm sound if it's not already playing
         if (activeCameras == 1 && audioSource.volume == 0f)
         {
             if (fadeCoroutine != null)
                 StopCoroutine(fadeCoroutine);
-            fadeCoroutine = StartCoroutine(FadeAudio(0f, maxVolume, fadeDuration));
+            fadeCoroutine = StartCoroutine(FadeAudio(0f, maxVolume, fadeDuration)); // Fade in the alarm sound
         }
     }
 
+    // Function to release the alarm activation from a camera
     public void ReleaseAlarm()
     {
-        activeCameras--;
+        activeCameras--; // Camera stopped detecting the player
 
-        if (activeCameras <= 0)
+        if (activeCameras <= 0) 
         {
             activeCameras = 0;
 
+            // Start the cooldown timer to deactivate the alarm system
             if (cooldownTimer <= 0)
             {
                 isAlarmActive = false;
                 if (fadeCoroutine != null)
                     StopCoroutine(fadeCoroutine);
-                fadeCoroutine = StartCoroutine(FadeAudio(maxVolume, 0f, fadeDuration));
+                fadeCoroutine = StartCoroutine(FadeAudio(maxVolume, 0f, fadeDuration)); // Fade out the alarm sound
             }
         }
     }
 
+    // Function to fade the audio source volume
     private IEnumerator FadeAudio(float startVolume, float targetVolume, float duration)
     {
         float timer = 0f;
@@ -95,8 +96,10 @@ public class AlarmManager : MonoBehaviour
             audioSource.Stop();
     }
 
+    // Function to update the alarm cooldown
     public void UpdateAlarmCooldown(float deltaTime)
     {
+        // If no cameras are detecting the player and the alarm timer ended, deactivate the alarm sound
         if (activeCameras == 0 && cooldownTimer > 0)
         {
             cooldownTimer -= deltaTime;
@@ -127,6 +130,7 @@ public class AlarmManager : MonoBehaviour
         }
     }
 
+    // Function to stop all audio sources
     public void StopAllSounds()
     {
         if (audioSource.isPlaying)
@@ -137,6 +141,7 @@ public class AlarmManager : MonoBehaviour
         // BackgroundMusic.instance.StopMusic();
     }
 
+    // Function to reset the alarm state
     public void ResetAlarmState()
     {
         StopAllSounds();  // Stop all audio sources

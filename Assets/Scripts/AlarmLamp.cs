@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
+// Class to manage the alarm lamp
+// This class is responsible for the flickering effect of the alarm lamp
 public class AlarmLamp : MonoBehaviour
 {
     private Light2D alarmLight;
@@ -32,6 +34,7 @@ public class AlarmLamp : MonoBehaviour
         }
     }
 
+    // Function to activate the alarm light
     public void ActivateAlarmLight(bool state)
     {
         isActive = state;

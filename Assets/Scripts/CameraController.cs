@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// Class to manage the camera of the level scene
+// This class is responsible for making the camera follow the player along the level
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private Transform player;

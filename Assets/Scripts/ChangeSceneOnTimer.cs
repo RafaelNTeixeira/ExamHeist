@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Class to change the cutscene after a certain time
 public class ChangeSceneOnTimer : MonoBehaviour
 {
     [SerializeField] private float changeTime;
