@@ -9,6 +9,8 @@ public class ChangeSceneOnTimer : MonoBehaviour
     private void Update()
     {
         changeTime -= Time.deltaTime;
+
+        // Press the space key to skip the cutscene
         if (Input.GetKeyUp(KeyCode.Space)) {
             GameManager.instance.canPauseGame = true;
             SceneManager.LoadScene("GameScene");

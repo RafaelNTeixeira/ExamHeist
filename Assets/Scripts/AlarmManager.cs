@@ -83,6 +83,7 @@ public class AlarmManager : MonoBehaviour
         if (targetVolume > 0 && !audioSource.isPlaying)
             audioSource.Play();
 
+        // Fade the audio source volume
         while (timer < duration)
         {
             timer += Time.deltaTime;

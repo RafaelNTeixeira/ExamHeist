@@ -122,7 +122,6 @@ public class Computer : MonoBehaviour
         gotAccess = true;
         USBPenText.penCount--;
         hackingUIPanel.SetActive(false);
-        Debug.Log("Access Granted!");
         doorExit.OpenExitDoor();
         EnablePlayerMovement();
     }
@@ -132,7 +131,6 @@ public class Computer : MonoBehaviour
     {
         isHacking = false;
         hackingUIPanel.SetActive(false);
-        Debug.Log("Alarm Triggered!");
 
         inputText.text = "-> "; // Reset the displayed input text
         playerInput = ""; // Clear the stored player input
@@ -162,7 +160,6 @@ public class Computer : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player entered trigger zone");
             playerNearby = true;
         }
     }
@@ -172,7 +169,6 @@ public class Computer : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player left trigger zone");
             playerNearby = false;
         }
     }

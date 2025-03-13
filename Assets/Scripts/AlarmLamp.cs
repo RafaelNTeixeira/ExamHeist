@@ -24,11 +24,11 @@ public class AlarmLamp : MonoBehaviour
         {
             // Flickering effect
             float alpha = (Mathf.Sin(Time.time * flickerSpeed) + 1) / 2;
-            targetIntensity = isActive ? alpha * 3 : 0f;
+            targetIntensity = isActive ? alpha * 3 : 0f; // If the alarm is active, the light intensity will flicker between 0 and 3
 
-            // Smoothly interpolate light intensity
+            // Smoothly change the light intensity
             currentIntensity = Mathf.Lerp(currentIntensity, targetIntensity, Time.deltaTime * intensityLerpSpeed);
-            alarmLight.intensity = currentIntensity;
+            alarmLight.intensity = currentIntensity; 
 
             alarmLight.enabled = currentIntensity > 0.01f; // Prevents flickering when close to 0
         }
