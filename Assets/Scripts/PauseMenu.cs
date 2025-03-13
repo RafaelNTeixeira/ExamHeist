@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+// Class responsible for the Pause Menu screen
 public class PauseMenu : MonoBehaviour
 {
     public Button resumeButton;

@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Class responsible for the Key object
 public class Key : MonoBehaviour
 {
     public AudioClip pickupSound;
@@ -8,7 +9,7 @@ public class Key : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) 
         {
-            KeyText.keyCount += 1;
+            KeyText.keyCount += 1; // Increment the key count
 
             AudioSource.PlayClipAtPoint(pickupSound, transform.position);
 

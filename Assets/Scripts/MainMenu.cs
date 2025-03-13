@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+// Class responsible for the Main Menu screen
 public class MainMenu : MonoBehaviour
 {
     public Button playButton;
@@ -28,7 +29,6 @@ public class MainMenu : MonoBehaviour
 
     public void InstructionsScreen()
     {
-        Debug.Log("Clicked on Instructions");
         GameManager.instance.SetGameState(GameManager.GameState.Instructions);
     }
 

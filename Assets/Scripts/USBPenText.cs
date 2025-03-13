@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+// Class responsible for the USB pen count on the screen
 public class USBPenText : MonoBehaviour
 {
     Text text;

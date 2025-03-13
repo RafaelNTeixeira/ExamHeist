@@ -1,11 +1,14 @@
 using UnityEngine;
 
+// Class responsible for the wardrobe object
+// It allows the player to hide inside it
 public class Wardrobe : MonoBehaviour
 {
     private bool isPlayerInside = false;  
     private bool isHiding = false;        
     private GameObject player;
 
+    // Check if the player enters the wardrobe trigger area 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player")) 
@@ -15,6 +18,7 @@ public class Wardrobe : MonoBehaviour
         }
     }
 
+    // Check if the player exits the wardrobe trigger area 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player")) 
@@ -25,6 +29,7 @@ public class Wardrobe : MonoBehaviour
 
     private void Update()
     {
+        // If the player is near the wardrobe and presses the up/down arrow keys, hide/unhide the player
         if (Input.GetKeyDown(KeyCode.UpArrow) && isPlayerInside || 
             Input.GetKeyDown(KeyCode.DownArrow) && isHiding)
         {
@@ -33,6 +38,7 @@ public class Wardrobe : MonoBehaviour
 
     }
 
+    // Function to hide/unhide the player
      private void ToggleHide()
     {
         if (player == null) return;
@@ -41,6 +47,7 @@ public class Wardrobe : MonoBehaviour
         ApplyHideState(isHiding);
     }
 
+    // Function to apply the hide state to the player
     private void ApplyHideState(bool hide)
     {
         SpriteRenderer spriteRenderer = player.GetComponent<SpriteRenderer>();
@@ -53,6 +60,6 @@ public class Wardrobe : MonoBehaviour
         body.bodyType = hide ? RigidbodyType2D.Static : RigidbodyType2D.Dynamic;
         playerScript.enabled = !hide;
 
-       playerScript.animator.SetBool("isRunning", false);
+       playerScript.animator.SetBool("isRunning", false); // Stop the running animation of the player when hiding
     }
 }

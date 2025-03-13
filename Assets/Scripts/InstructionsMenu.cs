@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+// Class responsible for the Instructions screen
 public class InstructionsMenu : MonoBehaviour
 {
     public Button backButton;
@@ -13,7 +14,6 @@ public class InstructionsMenu : MonoBehaviour
 
     public void GoBack()
     {
-        Debug.Log("Clicked GO BACK");
         GameManager.instance.GoBackToMenu();
     }
 }

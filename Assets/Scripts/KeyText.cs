@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+// Class responsible for the key count on the screen
 public class KeyText : MonoBehaviour
 {
     Text text;

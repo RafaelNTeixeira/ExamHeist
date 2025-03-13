@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// Class responsible for the SpeedBoost object
+// It increases the player's speed when picked up
 public class SpeedBoost : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)

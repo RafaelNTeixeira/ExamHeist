@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
+// Class responsible for the player mechanics
+// It manages the player movement and speed
 public class Player : MonoBehaviour
 {
     private float speed = 4.0f;
@@ -34,13 +36,14 @@ public class Player : MonoBehaviour
     }
 
 
-    // Speed boost player movement speed during 20 seconds
+    // Speed boost player movement speed during a certain amount of time
     public void BoostSpeed(float boostSpeed)
     {
         speed *= boostSpeed;
         StartCoroutine(RestoreSpeed(boostSpeed));
     }
 
+    // Coroutine to restore the player speed after a certain amount of time
     private IEnumerator RestoreSpeed(float boostSpeed)
     {
         yield return new WaitForSeconds(20);

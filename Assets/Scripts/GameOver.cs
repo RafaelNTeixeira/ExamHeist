@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+// Class responsible for the Game Over screen
 public class GameOver : MonoBehaviour
 {
     public Button playAgainButton;

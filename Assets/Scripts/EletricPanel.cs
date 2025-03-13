@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using System.Collections;
-
+ 
+// Class to manage the eletric panel
+// It disables the security cameras, lights and alarm for a certain amount of time
 public class EletricPanel : MonoBehaviour
 {
     private bool isPlayerInside = false;
@@ -17,6 +19,7 @@ public class EletricPanel : MonoBehaviour
         }
     }
 
+    // Function to disable the security cameras, lights and alarm for a certain amount of time
     private void ToggleEletricPanel(int seconds)
     {
         StartCoroutine(DisableCamerasForSeconds(seconds));
@@ -24,32 +27,35 @@ public class EletricPanel : MonoBehaviour
         StartCoroutine(DisableAlarmForSeconds(seconds));
     }
 
+    // Coroutine to disable the security cameras for a certain amount of time
     private IEnumerator DisableCamerasForSeconds(float seconds)
     {
         foreach (SecurityCamera camera in securityCameras)
         {
             camera.DisableCamera();
         }
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSeconds(seconds); // Wait for the seconds to pass before enabling the cameras again
         foreach (SecurityCamera camera in securityCameras)
         {
             camera.EnableCamera();
         }
     }
 
+    // Coroutine to disable the lights for a certain amount of time
     private IEnumerator DisableLightsForSeconds(float seconds)
     {
         foreach (Light2D lamp in lamps)
         {
             lamp.enabled = false;
         }
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSeconds(seconds); // Wait for the seconds to pass before enabling the lights again
         foreach (Light2D lamp in lamps)
         {
             lamp.enabled = true;
         }
     }
 
+    // Coroutine to disable the alarm for a certain amount of time
     private IEnumerator DisableAlarmForSeconds(float seconds)
     {
         AlarmManager.instance.StopAlarm();
@@ -60,7 +66,7 @@ public class EletricPanel : MonoBehaviour
                 alarmLamp.ActivateAlarmLight(false);
             }
         }
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSeconds(seconds); // Wait for the seconds to pass before enabling the alarm again
         foreach (var alarmLamp in alarmLamps)
         {
             if (alarmLamp != null)
@@ -71,6 +77,7 @@ public class EletricPanel : MonoBehaviour
         AlarmManager.instance.ResumeAlarm();
     }
 
+    // Function to detect if the player is inside the interaction range of electric panel
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player")) 
@@ -79,6 +86,7 @@ public class EletricPanel : MonoBehaviour
         }
     }
 
+    // Function to detect if the player exits the interaction range of electric panel
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player")) 

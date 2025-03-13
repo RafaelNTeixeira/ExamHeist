@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// Class responsible for the stairs object
+// It moves the player up or down when the player is nearby
 public class Stairs : MonoBehaviour
 {
     [SerializeField] private bool goesUp = true;
@@ -11,6 +13,7 @@ public class Stairs : MonoBehaviour
     public bool isBlocked = false;
     [SerializeField] private GameObject blockage;
 
+    // Function to detect if the player is close enough to interact with the stairs
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
@@ -20,6 +23,7 @@ public class Stairs : MonoBehaviour
         }
     }
 
+    // Function to detect if the player exits the interaction range with the stairs
     private void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
@@ -31,6 +35,7 @@ public class Stairs : MonoBehaviour
 
     private void Update()
     {
+        // If the player is nearby and the door isn't locked, move the player up or down when pressing the up or down arrow key
         if (playerNearby && playerTransform != null && !isBlocked)
         {
             if (goesUp && Input.GetKeyDown(KeyCode.UpArrow))

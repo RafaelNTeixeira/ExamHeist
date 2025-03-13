@@ -3,6 +3,8 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
+// Class responsible for the security guard
+// It manages the detection of the player and the security light
 public class Security : MonoBehaviour
 {
     [Header("Detection Settings")]
@@ -51,11 +53,13 @@ public class Security : MonoBehaviour
                 nextSoundTime = Time.time + soundCooldown;
             }
 
+            // If the player is detected, the game is over
             if (GameManager.instance.currentState == GameManager.GameState.Playing)
             {
                 GameManager.instance.SetGameState(GameManager.GameState.GameOver);
             }
 
+            // If the player is detected in the tutorial, reset the player position
             if (GameManager.instance.currentState == GameManager.GameState.Tutorial)
             {
                 uiTextDelete.SetActive(false);
@@ -69,12 +73,13 @@ public class Security : MonoBehaviour
         {
             securityPatrol.enabled = !PlayerInSight();
 
-
+            // If the player is detected, speed up the security guard
             if (playerDetected != PlayerDetected() && !playerDetected)
             {
                 securityPatrol.SpeedUp(2f);
                 playerDetected = true;
             }
+            // If the player is not detected, slow down the security guard
             else if (securityPatrol.IsAtEdge() && playerDetected)
             {
                 securityPatrol.SpeedDown(2f);
@@ -83,16 +88,19 @@ public class Security : MonoBehaviour
         }
     }
 
+    // Function to detect if the player is in sight
     private bool PlayerInSight()
     {
         return PerformRaycast(viewDistance);
     }
     
+    // Function to detect if the player is detected
     private bool PlayerDetected()
     {
         return PerformRaycast(detectedDistance);
     }
 
+    // Function to perform a raycast to detect the player
     private bool PerformRaycast(float distance)
     {
         if (securityPatrol != null && securityPatrol.IsAtEdge())
@@ -136,7 +144,7 @@ public class Security : MonoBehaviour
         return false;
     }
 
-
+    // Function to draw the field of view in the Scene view
     private void OnDrawGizmos()
     {
         if (securityPatrol != null && securityPatrol.IsAtEdge())
