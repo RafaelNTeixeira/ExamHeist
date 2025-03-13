@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3233070}
   - component: {fileID: 3233071}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 17850632}
   - component: {fileID: 17850633}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -466,7 +466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 40677198}
   - component: {fileID: 40677199}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -782,7 +782,7 @@ GameObject:
   m_Component:
   - component: {fileID: 60113203}
   - component: {fileID: 60113204}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1576,7 +1576,7 @@ GameObject:
   - component: {fileID: 126228919}
   - component: {fileID: 126228921}
   - component: {fileID: 126228920}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1974,7 +1974,7 @@ GameObject:
   m_Component:
   - component: {fileID: 150982215}
   - component: {fileID: 150982216}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2061,7 +2061,7 @@ GameObject:
   m_Component:
   - component: {fileID: 165642065}
   - component: {fileID: 165642066}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2372,7 +2372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 168999675}
   - component: {fileID: 168999676}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2460,7 +2460,7 @@ GameObject:
   - component: {fileID: 169279530}
   - component: {fileID: 169279532}
   - component: {fileID: 169279531}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2605,7 +2605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 193550108}
   - component: {fileID: 193550109}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2692,7 +2692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 209548234}
   - component: {fileID: 209548235}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2779,7 +2779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 211396881}
   - component: {fileID: 211396882}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2866,7 +2866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 231326994}
   - component: {fileID: 231326995}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2953,7 +2953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 237520630}
   - component: {fileID: 237520631}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3375,7 +3375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 266528665}
   - component: {fileID: 266528666}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3540,7 +3540,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 278041541}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3926,7 +3926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 303236415}
   - component: {fileID: 303236416}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4047,7 +4047,7 @@ GameObject:
   - component: {fileID: 315059848}
   - component: {fileID: 315059850}
   - component: {fileID: 315059849}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4758,7 +4758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 395248317}
   - component: {fileID: 395248318}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5018,7 +5018,7 @@ GameObject:
   - component: {fileID: 450450487}
   - component: {fileID: 450450488}
   - component: {fileID: 450450489}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnterWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5152,7 +5152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 454903972}
   - component: {fileID: 454903973}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5239,7 +5239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 461056663}
   - component: {fileID: 461056664}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5748,7 +5748,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 503880028}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5933,7 +5933,7 @@ GameObject:
   m_Component:
   - component: {fileID: 537559648}
   - component: {fileID: 537559649}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6160,7 +6160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 612047721}
   - component: {fileID: 612047722}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6246,7 +6246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 707142775}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6604,7 +6604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 751110387}
   - component: {fileID: 751110388}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6849,7 +6849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 772225271}
   - component: {fileID: 772225272}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7251,7 +7251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 799803362}
   - component: {fileID: 799803363}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7338,7 +7338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 840064907}
   - component: {fileID: 840064908}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8087,7 +8087,7 @@ GameObject:
   - component: {fileID: 893522751}
   - component: {fileID: 893522752}
   - component: {fileID: 893522753}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8502,7 +8502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 924754186}
   - component: {fileID: 924754187}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8767,7 +8767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 928657288}
   - component: {fileID: 928657289}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8854,7 +8854,7 @@ GameObject:
   m_Component:
   - component: {fileID: 936937860}
   - component: {fileID: 936937861}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8942,7 +8942,7 @@ GameObject:
   - component: {fileID: 952786648}
   - component: {fileID: 952786650}
   - component: {fileID: 952786649}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9075,7 +9075,7 @@ GameObject:
   m_Component:
   - component: {fileID: 956655975}
   - component: {fileID: 956655976}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9195,7 +9195,7 @@ GameObject:
   - component: {fileID: 986298070}
   - component: {fileID: 986298072}
   - component: {fileID: 986298071}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9419,7 +9419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 992519141}
   - component: {fileID: 992519142}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9507,7 +9507,7 @@ GameObject:
   - component: {fileID: 998626420}
   - component: {fileID: 998626419}
   - component: {fileID: 998626418}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9652,7 +9652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1006378000}
   - component: {fileID: 1006378001}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9739,7 +9739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1014774477}
   - component: {fileID: 1014774478}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9827,7 +9827,7 @@ GameObject:
   - component: {fileID: 1031554935}
   - component: {fileID: 1031554937}
   - component: {fileID: 1031554936}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9960,7 +9960,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1057444113}
   - component: {fileID: 1057444114}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11044,7 +11044,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1139985235}
   - component: {fileID: 1139985236}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11131,7 +11131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1142775191}
   - component: {fileID: 1142775192}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11807,7 +11807,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1239267723}
   - component: {fileID: 1239267724}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11894,7 +11894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1240796895}
   - component: {fileID: 1240796896}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11981,7 +11981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1251420443}
   - component: {fileID: 1251420444}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12068,7 +12068,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1254320422}
   - component: {fileID: 1254320423}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12268,7 +12268,7 @@ MonoBehaviour:
     m_Bits: 64
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   hitSound: {fileID: 8300000, guid: 84f41981f5541184f83dab1d3e4f8c7c, type: 3}
   uiText: {fileID: 919119059}
   uiTextDelete: {fileID: 1096247960}
@@ -12745,7 +12745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1347136066}
   - component: {fileID: 1347136067}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12913,7 +12913,7 @@ GameObject:
   - component: {fileID: 1406394108}
   - component: {fileID: 1406394110}
   - component: {fileID: 1406394109}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13145,7 +13145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1414064467}
   - component: {fileID: 1414064468}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13319,7 +13319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1443968331}
   - component: {fileID: 1443968332}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13560,7 +13560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447313353}
   - component: {fileID: 1447313354}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14205,7 +14205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1541291508}
   - component: {fileID: 1541291509}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14455,7 +14455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1571222910}
   - component: {fileID: 1571222911}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14630,7 +14630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1593094093}
   - component: {fileID: 1593094094}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14968,7 +14968,7 @@ GameObject:
   - component: {fileID: 1616450838}
   - component: {fileID: 1616450840}
   - component: {fileID: 1616450839}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15400,7 +15400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1712404489}
   - component: {fileID: 1712404490}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15487,7 +15487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1713012587}
   - component: {fileID: 1713012588}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15574,7 +15574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1715790714}
   - component: {fileID: 1715790715}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15888,7 +15888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1738588063}
   - component: {fileID: 1738588064}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15975,7 +15975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1745621701}
   - component: {fileID: 1745621702}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16094,7 +16094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1763693287}
   - component: {fileID: 1763693288}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16181,7 +16181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1788367483}
   - component: {fileID: 1788367484}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DoorEnter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16408,7 +16408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1803914908}
   - component: {fileID: 1803914909}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16667,7 +16667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1833409361}
   - component: {fileID: 1833409362}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16754,7 +16754,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1833986637}
   - component: {fileID: 1833986638}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16842,7 +16842,7 @@ GameObject:
   - component: {fileID: 1835857341}
   - component: {fileID: 1835857342}
   - component: {fileID: 1835857343}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16975,7 +16975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1836934459}
   - component: {fileID: 1836934460}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17432,7 +17432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1866697338}
   - component: {fileID: 1866697339}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17519,7 +17519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1870145124}
   - component: {fileID: 1870145125}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17748,7 +17748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1878787718}
   - component: {fileID: 1878787719}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17835,7 +17835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1880901048}
   - component: {fileID: 1880901049}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17922,7 +17922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1893120893}
   - component: {fileID: 1893120894}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18149,7 +18149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1905259336}
   - component: {fileID: 1905259337}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18237,7 +18237,7 @@ GameObject:
   - component: {fileID: 1909994753}
   - component: {fileID: 1909994755}
   - component: {fileID: 1909994754}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18370,7 +18370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1924942260}
   - component: {fileID: 1924942261}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18858,7 +18858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1947695471}
   - component: {fileID: 1947695472}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18946,7 +18946,7 @@ GameObject:
   - component: {fileID: 1948287542}
   - component: {fileID: 1948287543}
   - component: {fileID: 1948287544}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19079,7 +19079,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1950415422}
   - component: {fileID: 1950415423}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19166,7 +19166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1965686989}
   - component: {fileID: 1965686990}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19253,7 +19253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2011692861}
   - component: {fileID: 2011692862}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19339,7 +19339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2014422767}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19680,7 +19680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2038365612}
   - component: {fileID: 2038365613}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19953,7 +19953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2064684704}
   - component: {fileID: 2064684705}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20040,7 +20040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2064717952}
   - component: {fileID: 2064717953}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20158,7 +20158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2075186112}
   - component: {fileID: 2075186113}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20385,7 +20385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2106367613}
   - component: {fileID: 2106367614}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20472,7 +20472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2129400269}
   - component: {fileID: 2129400270}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20559,7 +20559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2138228348}
   - component: {fileID: 2138228349}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSprite (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20647,7 +20647,7 @@ GameObject:
   - component: {fileID: 2140370370}
   - component: {fileID: 2140370372}
   - component: {fileID: 2140370371}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
