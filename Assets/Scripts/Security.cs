@@ -75,7 +75,7 @@ public class Security : MonoBehaviour
                 securityPatrol.SpeedUp(2f);
                 playerDetected = true;
             }
-            if (securityPatrol.IsAtEdge() && playerDetected)
+            else if (securityPatrol.IsAtEdge() && playerDetected)
             {
                 securityPatrol.SpeedDown(2f);
                 playerDetected = false;
