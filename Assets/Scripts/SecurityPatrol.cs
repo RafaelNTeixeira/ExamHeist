@@ -79,12 +79,25 @@ public class SecurityPatrol : MonoBehaviour
             security.position.y, security.position.z);
     }
 
-    public void PlayerDetected(bool _detected, float _speed)
+    public void PlayerDetected(bool detected, float speedMultiplier)
     {
-        if (_detected) speed *= _speed;
-        
-        else speed /= _speed;
-
-        playerDetected = _detected;
+        playerDetected = detected;
+        AdjustSpeed(detected ? speedMultiplier : 1 / speedMultiplier);
     }
+
+    public void SpeedUp(float multiplier)
+    {
+        AdjustSpeed(multiplier);
+    }
+
+    public void SpeedDown(float divisor)
+    {
+        AdjustSpeed(1 / divisor);
+    }
+
+    private void AdjustSpeed(float factor)
+    {
+        speed *= factor;
+    }
+
 }
