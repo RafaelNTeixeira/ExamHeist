@@ -1,3 +1,4 @@
+using System.ComponentModel.Design.Serialization;
 using UnityEngine;
 
 // Class responsible for the wardrobe object
@@ -7,6 +8,7 @@ public class Wardrobe : MonoBehaviour
     private bool isPlayerInside = false;  
     private bool isHiding = false;        
     private GameObject player;
+    public AudioClip wardrobeSound;
 
     // Check if the player enters the wardrobe trigger area 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -39,12 +41,14 @@ public class Wardrobe : MonoBehaviour
     }
 
     // Function to hide/unhide the player
-     private void ToggleHide()
+    private void ToggleHide()
     {
         if (player == null) return;
 
         isHiding = !isHiding;
         ApplyHideState(isHiding);
+
+        AudioSource.PlayClipAtPoint(wardrobeSound, transform.position);
     }
 
     // Function to apply the hide state to the player

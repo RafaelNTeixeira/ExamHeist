@@ -635,6 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8704b9b499fb35d469509ca78e3a692d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wardrobeSound: {fileID: 8300000, guid: 6468da479698a954a8ef8855644c412a, type: 3}
 --- !u!61 &27741750
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7698,6 +7699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8704b9b499fb35d469509ca78e3a692d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wardrobeSound: {fileID: 8300000, guid: 6468da479698a954a8ef8855644c412a, type: 3}
 --- !u!61 &306763569
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9731,6 +9733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8704b9b499fb35d469509ca78e3a692d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wardrobeSound: {fileID: 8300000, guid: 6468da479698a954a8ef8855644c412a, type: 3}
 --- !u!61 &404785994
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10410,6 +10413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8704b9b499fb35d469509ca78e3a692d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wardrobeSound: {fileID: 8300000, guid: 6468da479698a954a8ef8855644c412a, type: 3}
 --- !u!61 &419657295
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10798,6 +10802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8704b9b499fb35d469509ca78e3a692d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wardrobeSound: {fileID: 8300000, guid: 6468da479698a954a8ef8855644c412a, type: 3}
 --- !u!61 &437458731
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16188,6 +16193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8704b9b499fb35d469509ca78e3a692d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wardrobeSound: {fileID: 8300000, guid: 6468da479698a954a8ef8855644c412a, type: 3}
 --- !u!61 &718648167
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16457,6 +16463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8704b9b499fb35d469509ca78e3a692d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wardrobeSound: {fileID: 8300000, guid: 6468da479698a954a8ef8855644c412a, type: 3}
 --- !u!61 &731303665
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20432,6 +20439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8704b9b499fb35d469509ca78e3a692d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wardrobeSound: {fileID: 8300000, guid: 6468da479698a954a8ef8855644c412a, type: 3}
 --- !u!61 &874247198
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21768,6 +21776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8704b9b499fb35d469509ca78e3a692d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wardrobeSound: {fileID: 8300000, guid: 6468da479698a954a8ef8855644c412a, type: 3}
 --- !u!61 &917731272
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22002,6 +22011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8704b9b499fb35d469509ca78e3a692d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wardrobeSound: {fileID: 8300000, guid: 6468da479698a954a8ef8855644c412a, type: 3}
 --- !u!61 &925496017
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37444,6 +37454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8704b9b499fb35d469509ca78e3a692d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wardrobeSound: {fileID: 8300000, guid: 6468da479698a954a8ef8855644c412a, type: 3}
 --- !u!61 &1691953613
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38200,6 +38211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8704b9b499fb35d469509ca78e3a692d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wardrobeSound: {fileID: 0}
 --- !u!61 &1740327826
 BoxCollider2D:
   m_ObjectHideFlags: 0
