@@ -10872,12 +10872,12 @@ MonoBehaviour:
   - {fileID: 82029084}
   stairs:
   - {fileID: 1057719044}
-  - {fileID: 1542412378}
-  - {fileID: 264918608}
-  - {fileID: 1604969770}
   - {fileID: 131903037}
+  - {fileID: 1542412378}
   - {fileID: 871839926}
+  - {fileID: 264918608}
   - {fileID: 1945466830}
+  - {fileID: 1604969770}
   - {fileID: 1866528271}
   alarmActive: 0
   eletricCamera: 0
@@ -19311,7 +19311,15 @@ MonoBehaviour:
   - {fileID: 357270401}
   securityPatrols:
   - {fileID: 82029084}
-  stairs: []
+  stairs:
+  - {fileID: 1057719044}
+  - {fileID: 131903037}
+  - {fileID: 1542412378}
+  - {fileID: 871839926}
+  - {fileID: 264918608}
+  - {fileID: 1945466830}
+  - {fileID: 1604969770}
+  - {fileID: 1866528271}
   alarmActive: 0
   eletricCamera: 1
   uiText: {fileID: 299447532}

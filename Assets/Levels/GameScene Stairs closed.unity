@@ -10307,7 +10307,19 @@ MonoBehaviour:
   - {fileID: 276842061}
   - {fileID: 211404296}
   - {fileID: 890348187}
-  stairs: []
+  stairs:
+  - {fileID: 1057719044}
+  - {fileID: 131903037}
+  - {fileID: 175619575}
+  - {fileID: 1660637829}
+  - {fileID: 627610785}
+  - {fileID: 668596145}
+  - {fileID: 904870249}
+  - {fileID: 1062710434}
+  - {fileID: 1542412378}
+  - {fileID: 871839926}
+  - {fileID: 1604969770}
+  - {fileID: 1866528271}
   alarmActive: 0
   eletricCamera: 0
   uiText: {fileID: 0}
@@ -13049,7 +13061,19 @@ MonoBehaviour:
   - {fileID: 276842061}
   - {fileID: 211404296}
   - {fileID: 890348187}
-  stairs: []
+  stairs:
+  - {fileID: 1057719044}
+  - {fileID: 131903037}
+  - {fileID: 175619575}
+  - {fileID: 1660637829}
+  - {fileID: 627610785}
+  - {fileID: 668596145}
+  - {fileID: 904870249}
+  - {fileID: 1062710434}
+  - {fileID: 1542412378}
+  - {fileID: 871839926}
+  - {fileID: 1604969770}
+  - {fileID: 1866528271}
   alarmActive: 0
   eletricCamera: 0
   uiText: {fileID: 0}
@@ -16947,7 +16971,19 @@ MonoBehaviour:
   - {fileID: 276842061}
   - {fileID: 211404296}
   - {fileID: 890348187}
-  stairs: []
+  stairs:
+  - {fileID: 1057719044}
+  - {fileID: 131903037}
+  - {fileID: 175619575}
+  - {fileID: 1660637829}
+  - {fileID: 627610785}
+  - {fileID: 668596145}
+  - {fileID: 904870249}
+  - {fileID: 1062710434}
+  - {fileID: 1542412378}
+  - {fileID: 871839926}
+  - {fileID: 1604969770}
+  - {fileID: 1866528271}
   alarmActive: 0
   eletricCamera: 0
   uiText: {fileID: 0}
@@ -17352,7 +17388,19 @@ MonoBehaviour:
   - {fileID: 276842061}
   - {fileID: 211404296}
   - {fileID: 890348187}
-  stairs: []
+  stairs:
+  - {fileID: 1057719044}
+  - {fileID: 131903037}
+  - {fileID: 175619575}
+  - {fileID: 1660637829}
+  - {fileID: 627610785}
+  - {fileID: 668596145}
+  - {fileID: 904870249}
+  - {fileID: 1062710434}
+  - {fileID: 1542412378}
+  - {fileID: 871839926}
+  - {fileID: 1604969770}
+  - {fileID: 1866528271}
   alarmActive: 0
   eletricCamera: 0
   uiText: {fileID: 0}
@@ -25267,16 +25315,16 @@ MonoBehaviour:
   - {fileID: 890348187}
   stairs:
   - {fileID: 1057719044}
-  - {fileID: 175619575}
-  - {fileID: 627610785}
-  - {fileID: 904870249}
-  - {fileID: 1542412378}
-  - {fileID: 1604969770}
   - {fileID: 131903037}
+  - {fileID: 175619575}
   - {fileID: 1660637829}
+  - {fileID: 627610785}
   - {fileID: 668596145}
+  - {fileID: 904870249}
   - {fileID: 1062710434}
+  - {fileID: 1542412378}
   - {fileID: 871839926}
+  - {fileID: 1604969770}
   - {fileID: 1866528271}
   alarmActive: 0
   eletricCamera: 0
@@ -29544,7 +29592,19 @@ MonoBehaviour:
   - {fileID: 276842061}
   - {fileID: 211404296}
   - {fileID: 890348187}
-  stairs: []
+  stairs:
+  - {fileID: 1057719044}
+  - {fileID: 131903037}
+  - {fileID: 175619575}
+  - {fileID: 1660637829}
+  - {fileID: 627610785}
+  - {fileID: 668596145}
+  - {fileID: 904870249}
+  - {fileID: 1062710434}
+  - {fileID: 1542412378}
+  - {fileID: 871839926}
+  - {fileID: 1604969770}
+  - {fileID: 1866528271}
   alarmActive: 0
   eletricCamera: 0
   uiText: {fileID: 0}
@@ -37261,7 +37321,19 @@ MonoBehaviour:
   - {fileID: 276842061}
   - {fileID: 211404296}
   - {fileID: 890348187}
-  stairs: []
+  stairs:
+  - {fileID: 1057719044}
+  - {fileID: 131903037}
+  - {fileID: 175619575}
+  - {fileID: 1660637829}
+  - {fileID: 627610785}
+  - {fileID: 668596145}
+  - {fileID: 904870249}
+  - {fileID: 1062710434}
+  - {fileID: 1542412378}
+  - {fileID: 871839926}
+  - {fileID: 1604969770}
+  - {fileID: 1866528271}
   alarmActive: 0
   eletricCamera: 0
   uiText: {fileID: 0}
@@ -38369,7 +38441,19 @@ MonoBehaviour:
   - {fileID: 276842061}
   - {fileID: 211404296}
   - {fileID: 890348187}
-  stairs: []
+  stairs:
+  - {fileID: 1057719044}
+  - {fileID: 131903037}
+  - {fileID: 175619575}
+  - {fileID: 1660637829}
+  - {fileID: 627610785}
+  - {fileID: 668596145}
+  - {fileID: 904870249}
+  - {fileID: 1062710434}
+  - {fileID: 1542412378}
+  - {fileID: 871839926}
+  - {fileID: 1604969770}
+  - {fileID: 1866528271}
   alarmActive: 0
   eletricCamera: 0
   uiText: {fileID: 0}
