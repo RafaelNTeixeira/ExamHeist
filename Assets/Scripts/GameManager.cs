@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     public void SetGameState(GameState newState)
     {
         currentState = newState;
+        Debug.Log("Current State: " + currentState);
 
         switch (currentState)
         {
@@ -72,9 +73,10 @@ public class GameManager : MonoBehaviour
         Debug.Log("Loaded Start Game");
         Time.timeScale = 1; // Ensure normal game speed
 
-        GameObject backgroundMusic = GameObject.Find("BackgroundMusic");
-        if (backgroundMusic != null) {
-            Destroy(backgroundMusic);
+        // Rebuild music object to restart music due to game state changes
+        if (BackgroundMusic.instance != null)
+        {
+            BackgroundMusic.instance.DestroyMusic();
         }
 
         GameObject room = GameObject.Find("Room");
@@ -105,9 +107,11 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Loaded Tutorial");
         Time.timeScale = 1;
-        GameObject backgroundMusic = GameObject.Find("BackgroundMusic");
-        if (backgroundMusic != null) {
-            Destroy(backgroundMusic);
+
+        // Rebuild music object to restart music due to game state changes
+        if (BackgroundMusic.instance != null)
+        {
+            BackgroundMusic.instance.DestroyMusic();
         }
 
         GameObject room = GameObject.Find("Room");
@@ -156,7 +160,7 @@ public class GameManager : MonoBehaviour
     public void ResetGameState() 
     {
         AlarmManager.instance.ResetAlarmState();
-        BackgroundMusic.instance.PlayMusic();
+        // BackgroundMusic.instance.PlayMusic();
 
         foreach (var camera in Object.FindObjectsByType<SecurityCamera>(FindObjectsSortMode.None))
         {
@@ -172,7 +176,12 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game Over");
         AlarmManager.instance.StopAllSounds();
-        //Time.timeScale = 0;
+
+        if (BackgroundMusic.instance != null)
+        {
+            BackgroundMusic.instance.DestroyMusic();
+        }
+
         SceneManager.LoadScene("GameOver");
     }
 
@@ -180,7 +189,6 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Win");
         AlarmManager.instance.StopAllSounds();
-        //Time.timeScale = 0;
         SceneManager.LoadScene("Win");
     }
 

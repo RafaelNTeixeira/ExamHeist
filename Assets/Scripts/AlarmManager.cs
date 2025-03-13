@@ -134,7 +134,7 @@ public class AlarmManager : MonoBehaviour
             audioSource.Stop();
         }
 
-        BackgroundMusic.instance.StopMusic();
+        //BackgroundMusic.instance.StopMusic();
 
         // // Also stop all other audio sources in the scene
         // AudioSource[] allAudioSources = Object.FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
