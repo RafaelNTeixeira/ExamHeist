@@ -82,6 +82,7 @@ public class SecurityCamera : MonoBehaviour
     {
         foreach (var patrol in securityPatrols)
         {
+            Debug.Log("Patrol: " + patrol);
             if (patrol != null && patrol.playerDetected != state)
             {
                 patrol.PlayerDetected(state, 2f);
