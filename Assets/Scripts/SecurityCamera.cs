@@ -26,6 +26,11 @@ public class SecurityCamera : MonoBehaviour
     [SerializeField] private GameObject uiTextDelete;
 
     private float startRotation;
+    private float timer = 0f;
+    private bool reversing = false;
+    private float edgeWaitTime = 2f; // Time to wait at edges
+    private float edgeTimer = 0f; // Timer for edge delay
+    private bool isWaiting = false; // Flag to check if we are pausing
 
     void Start()
     {
@@ -34,11 +39,9 @@ public class SecurityCamera : MonoBehaviour
 
     void Update()
     {
-        float angle = Mathf.PingPong(Time.time * rotationSpeed, rotationAngle * 2) - rotationAngle;
-        transform.rotation = Quaternion.Euler(0, 0, startRotation + angle);
+        CameraRotation();
 
         bool playerDetected = PlayerInSight();
-
         if (playerDetected)
         {
             ActivateAlarmLights(true);
@@ -137,6 +140,34 @@ public class SecurityCamera : MonoBehaviour
             }
         }
         return false;
+    }
+
+    private void CameraRotation()
+    {
+        if (isWaiting)
+        {
+            edgeTimer += Time.deltaTime;
+            if (edgeTimer >= edgeWaitTime)
+            {
+                isWaiting = false;
+                edgeTimer = 0f;
+            }
+            return; // Skip rotation update while waiting
+        }
+
+        // Update rotation timer
+        timer += (reversing ? -1 : 1) * Time.deltaTime * rotationSpeed;
+
+        // Check if we reached the edge
+        if (timer >= rotationAngle || timer <= -rotationAngle)
+        {
+            timer = Mathf.Clamp(timer, -rotationAngle, rotationAngle); // Ensure exact edge position
+            reversing = !reversing; // Flip direction
+            isWaiting = true; // Start waiting
+        }
+
+        // Apply rotation
+        transform.rotation = Quaternion.Euler(0, 0, startRotation + timer);
     }
 
     public void DisableCamera()
