@@ -35,6 +35,8 @@ public class Stairs : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.instance.currentState == GameManager.GameState.Paused) return;
+
         // If the player is nearby and the door isn't locked, move the player up or down when pressing the up or down arrow key
         if (playerNearby && playerTransform != null && !isBlocked)
         {

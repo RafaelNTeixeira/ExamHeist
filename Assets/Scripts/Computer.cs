@@ -33,6 +33,8 @@ public class Computer : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.instance.currentState == GameManager.GameState.Paused) return;
+        
         if (playerNearby && USBPenText.penCount > 0 && Input.GetKeyDown(KeyCode.UpArrow))
         {
             // If player is nearby, has the USB pen and the alarm is not activated, start hacking
