@@ -34,7 +34,7 @@ public class GameOver : MonoBehaviour
             selectedIndex = (selectedIndex - 1 + buttons.Length) % buttons.Length;
             UpdateSelection();
         }
-        else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
+        else if (Input.GetKeyDown(KeyCode.Return))
         {
             switch (selectedIndex)
             {
