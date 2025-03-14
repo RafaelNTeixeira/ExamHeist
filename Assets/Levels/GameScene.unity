@@ -7166,6 +7166,19 @@ MonoBehaviour:
   - {fileID: 1036819591}
   - {fileID: 1511630788}
   - {fileID: 2125448664}
+  stairs:
+  - {fileID: 1057719044}
+  - {fileID: 175619575}
+  - {fileID: 627610785}
+  - {fileID: 904870249}
+  - {fileID: 1542412378}
+  - {fileID: 1604969770}
+  - {fileID: 131903037}
+  - {fileID: 1660637829}
+  - {fileID: 668596145}
+  - {fileID: 1062710434}
+  - {fileID: 871839926}
+  - {fileID: 1866528271}
 --- !u!61 &281486337
 BoxCollider2D:
   m_ObjectHideFlags: 0

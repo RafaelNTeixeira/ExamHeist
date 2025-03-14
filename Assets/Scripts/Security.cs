@@ -17,7 +17,7 @@ public class Security : MonoBehaviour
     private readonly float fovAngle = 45f;
     private readonly float viewDistance = 3f;
     private readonly float detectedDistance = 5f;
-    private readonly int rayCount = 10;
+    private readonly int rayCount = 15;
     [SerializeField] private LayerMask obstacleLayer;
 
     [Header("Audio Settings")]
@@ -150,27 +150,33 @@ public class Security : MonoBehaviour
         if (securityPatrol != null && securityPatrol.IsAtEdge())
             return;
 
-
         float securityHeight = boxCollider.bounds.size.y;
-        Vector2 origin = new Vector2(transform.position.x, transform.position.y + securityHeight/2);
+        Vector2 origin = new Vector2(transform.position.x, transform.position.y + securityHeight / 2);
         Vector2 forward = transform.right * Mathf.Sign(transform.localScale.x);
         float halfFOV = fovAngle / 2f;
-        float angleStep = fovAngle / (rayCount - 1);
 
+        int rayCountCyan = rayCount;  // More cyan rays
+        int rayCountRed = Mathf.Max(1, rayCount / 2);  // Fewer red rays
+        float angleStepCyan = fovAngle / (rayCountCyan - 1);
+        float angleStepRed = fovAngle / (rayCountRed - 1);
+
+        // Draw cyan rays (full count)
         Gizmos.color = Color.cyan;
-        for (int i = 0; i < rayCount; i++)
+        for (int i = 0; i < rayCountCyan; i++)
         {
-            float currentAngle = -halfFOV + angleStep * i;
+            float currentAngle = -halfFOV + angleStepCyan * i;
             Vector2 rayDirection = Quaternion.Euler(0, 0, currentAngle) * forward;
             Gizmos.DrawLine(origin, origin + rayDirection * viewDistance);
         }
 
+        // Draw red rays (half count)
         Gizmos.color = Color.red;
-        for (int i = 0; i < rayCount; i++)
+        for (int i = 0; i < rayCountRed; i++)
         {
-            float currentAngle = -halfFOV + angleStep * i;
+            float currentAngle = -halfFOV + angleStepRed * i;
             Vector2 rayDirection = Quaternion.Euler(0, 0, currentAngle) * forward;
             Gizmos.DrawLine(origin, origin + rayDirection * detectedDistance);
         }
     }
+
 }

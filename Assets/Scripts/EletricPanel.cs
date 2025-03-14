@@ -10,6 +10,7 @@ public class EletricPanel : MonoBehaviour
     [SerializeField] private SecurityCamera[] securityCameras;
     [SerializeField] private Light2D[] lamps;
     [SerializeField] private AlarmLamp[] alarmLamps;
+    [SerializeField] private Stairs[] stairs;
 
     private void Update()
     {
@@ -19,12 +20,13 @@ public class EletricPanel : MonoBehaviour
         }
     }
 
-    // Function to disable the security cameras, lights and alarm for a certain amount of time
+    // Function to disable the security cameras, lights, alarm and lock stairs for a certain amount of time
     private void ToggleEletricPanel(int seconds)
     {
         StartCoroutine(DisableCamerasForSeconds(seconds));
         StartCoroutine(DisableLightsForSeconds(seconds));
         StartCoroutine(DisableAlarmForSeconds(seconds));
+        LockStairsForSeconds();
     }
 
     // Coroutine to disable the security cameras for a certain amount of time
@@ -75,6 +77,15 @@ public class EletricPanel : MonoBehaviour
             }
         }
         AlarmManager.instance.ResumeAlarm();
+    }
+
+    // Unlock the stairs
+    private void LockStairsForSeconds()
+    {
+        foreach (Stairs stair in stairs)
+        {
+            stair.isBlocked = false;
+        }
     }
 
     // Function to detect if the player is inside the interaction range of electric panel
