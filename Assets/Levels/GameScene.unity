@@ -13133,7 +13133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0e903803d0cc64ab2f3841b0f07ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 20
+  rotationSpeed: 34
   rotationAngle: 80
   fovAngle: 40
   viewDistance: 1.5
@@ -20191,8 +20191,8 @@ Transform:
   m_GameObject: {fileID: 851742204}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.001244861, w: 0.9999992}
-  m_LocalPosition: {x: -1.8, y: -1.1, z: -0.035950657}
-  m_LocalScale: {x: 1.7782038, y: 2.5296924, z: 5.286412}
+  m_LocalPosition: {x: -1.8765, y: -1.1, z: -0.035950657}
+  m_LocalScale: {x: 1.8948541, y: 2.5296924, z: 5.286412}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2141126273}
@@ -25503,7 +25503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0e903803d0cc64ab2f3841b0f07ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 10
+  rotationSpeed: 30
   rotationAngle: 80
   fovAngle: 40
   viewDistance: 1.5
@@ -29907,7 +29907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0e903803d0cc64ab2f3841b0f07ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 10
+  rotationSpeed: 32
   rotationAngle: 80
   fovAngle: 40
   viewDistance: 1.5
@@ -37453,7 +37453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0e903803d0cc64ab2f3841b0f07ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 10
+  rotationSpeed: 20
   rotationAngle: 80
   fovAngle: 40
   viewDistance: 1.5
@@ -38743,7 +38743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8704b9b499fb35d469509ca78e3a692d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wardrobeSound: {fileID: 0}
+  wardrobeSound: {fileID: 8300000, guid: 6468da479698a954a8ef8855644c412a, type: 3}
 --- !u!61 &1740327826
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43889,8 +43889,8 @@ Transform:
   m_GameObject: {fileID: 1955053456}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.001244861, w: 0.9999992}
-  m_LocalPosition: {x: -6.1535006, y: -1.0725, z: -0.035950657}
-  m_LocalScale: {x: 8.132862, y: 2.7236755, z: 5.286412}
+  m_LocalPosition: {x: -6.077, y: -1.0725, z: -0.035950657}
+  m_LocalScale: {x: 8.344758, y: 2.7236755, z: 5.286412}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2141126273}
@@ -45594,7 +45594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2051994783
 Transform:
   m_ObjectHideFlags: 0
