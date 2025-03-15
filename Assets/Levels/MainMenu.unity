@@ -614,6 +614,7 @@ MonoBehaviour:
   tutorialButton: {fileID: 1041433555}
   instructionsButton: {fileID: 715550727}
   quitButton: {fileID: 436866817}
+  menuOptionSwitchSound: {fileID: 8300000, guid: 6ec47db0428323b4eb61e884c30769fc, type: 3}
 --- !u!1 &669943199
 GameObject:
   m_ObjectHideFlags: 0

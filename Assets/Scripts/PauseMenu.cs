@@ -12,9 +12,15 @@ public class PauseMenu : MonoBehaviour
 
     private Button[] buttons;
     private int selectedIndex = 0;
+    public AudioClip menuOptionSwitchSound; // Sound to play when switching between menu options
+    private AudioSource audioSource;
 
     private void Start()
     {
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false; // Don't play the audio on awake
+        audioSource.ignoreListenerPause = true; // Don't pause the audio when the game is frozen
+
         buttons = new Button[] { resumeButton, restartButton, mainMenuButton, quitButton };
         UpdateSelection();
 
@@ -59,6 +65,10 @@ public class PauseMenu : MonoBehaviour
     private void UpdateSelection()
     {
         EventSystem.current.SetSelectedGameObject(buttons[selectedIndex].gameObject);
+        if (menuOptionSwitchSound != null)
+        {
+            audioSource.PlayOneShot(menuOptionSwitchSound);
+        }
     }
 
     public void ResumeGame()

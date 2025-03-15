@@ -11,6 +11,7 @@ public class GameOver : MonoBehaviour
 
     private Button[] buttons;
     private int selectedIndex = 0;
+    public AudioClip menuOptionSwitchSound; // Sound to play when switching between menu options
 
     private void Start()
     {
@@ -54,6 +55,7 @@ public class GameOver : MonoBehaviour
     private void UpdateSelection()
     {
         EventSystem.current.SetSelectedGameObject(buttons[selectedIndex].gameObject);
+        AudioSource.PlayClipAtPoint(menuOptionSwitchSound, transform.position);
     }
 
     public void PlayAgain()
