@@ -1023,8 +1023,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 0.7
   m_Text: "Movement - 'A'/'Left Arrow' to move left and 'D'/'Right Arrow' to move
-    right\n\nKey - used to open locked doors. To open a door    , click on 'Up Arrow'
-    to open it\n\nUsbPen - Used to access the professor's computer     . Click on
+    right.\n\nKey - used to open locked doors. To open a door    , click on 'Up Arrow'
+    to open it.\n\nUsbPen - Used to access the professor's computer     . Click on
     the 'Up Arrow' key to open the computer. \n\nComputer - Once you access the pc
     a timer will start. You need to fill the password in that time and correctly
     to open the final door    , otherwise the alarm goes off.\n\nalarms - if the
@@ -1372,7 +1372,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8148798175944400101, guid: 772525d24f4355b4e90c8931fe6b1bfc, type: 3}
+  m_Sprite: {fileID: -5225540622116197949, guid: 788273b1db265d9479930e9f55b60086, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
