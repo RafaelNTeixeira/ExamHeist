@@ -31,6 +31,8 @@ public class Wardrobe : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.instance.currentState == GameManager.GameState.Paused) return;
+
         // If the player is near the wardrobe and presses the up/down arrow keys, hide/unhide the player
         if (Input.GetKeyDown(KeyCode.UpArrow) && isPlayerInside || 
             Input.GetKeyDown(KeyCode.DownArrow) && isHiding)

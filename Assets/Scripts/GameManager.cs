@@ -108,7 +108,7 @@ public class GameManager : MonoBehaviour
     void ShowInstructionsMenu()
     {
         Debug.Log("Loaded Instructions");
-        SceneManager.LoadSceneAsync("Instructions", LoadSceneMode.Additive); // Load instructions menu without unloading the game
+        SceneManager.LoadScene("Instructions"); // Load instructions menu without unloading the game
     }
 
     // Function to start the tutorial
@@ -136,8 +136,7 @@ public class GameManager : MonoBehaviour
     public void GoBackToMenu()
     {
         Debug.Log("Game Resumed");
-        SceneManager.UnloadSceneAsync("Instructions"); // Only remove the instructions menu
-        currentState = GameState.MainMenu;
+        SceneManager.LoadScene("MainMenu"); // Only remove the instructions menu
     }
 
     // Function to pause the game
@@ -231,6 +230,9 @@ public class GameManager : MonoBehaviour
         {
             if (currentState == GameState.Tutorial) {
                 BackgroundMusic.instance.StopMusic();
+                SetGameState(GameState.MainMenu);
+            }
+            else if (currentState == GameState.Instructions){
                 SetGameState(GameState.MainMenu);
             }
             else if (currentState == GameState.Playing && canPauseGame)
