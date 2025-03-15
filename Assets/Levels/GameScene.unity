@@ -9180,7 +9180,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360128357}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.005}
+  m_LocalPosition: {x: 0, y: 0, z: 0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9188,7 +9188,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.3929, y: 4.5}
+  m_AnchoredPosition: {x: -3.21, y: 4.52}
   m_SizeDelta: {x: 2.2544, y: 0.9438}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &360128360
@@ -12842,7 +12842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.65, y: 4.5}
+  m_AnchoredPosition: {x: -6.64, y: 4.54}
   m_SizeDelta: {x: 0.61243, y: 0.6124}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &522590935
@@ -26712,7 +26712,7 @@ Animator:
   m_GameObject: {fileID: 1136491238}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 50aa862dee186f14db85bf77b3b6a526, type: 2}
+  m_Controller: {fileID: 9100000, guid: b64ed1dbbd59f484fa937029521f9af3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -26788,7 +26788,7 @@ BoxCollider2D:
   m_Offset: {x: 0.000000007450581, y: 0.114664696}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.50617826, y: -0.007087641}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.14, y: 0.22}
     newSize: {x: 0.14, y: 0.22}
     adaptiveTilingThreshold: 0.5
@@ -26841,7 +26841,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1000
-  m_Sprite: {fileID: 511056802, guid: 74006950bbe302f408e21c6814edcb38, type: 3}
+  m_Sprite: {fileID: 5512607597691280977, guid: 02c98db1e6e39884e9160536aca49340, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -30104,7 +30104,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1274082579}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0296}
+  m_LocalPosition: {x: 0, y: 0, z: 0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30112,7 +30112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.0008, y: 4.52}
+  m_AnchoredPosition: {x: -4.8200006, y: 4.54}
   m_SizeDelta: {x: 0.5708, y: 0.5708}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1274082581
