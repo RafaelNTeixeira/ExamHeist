@@ -16,7 +16,7 @@ public class EletricPanel : MonoBehaviour
     {
         if (isPlayerInside && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            ToggleEletricPanel(5);
+            ToggleEletricPanel(15);
         }
     }
 
