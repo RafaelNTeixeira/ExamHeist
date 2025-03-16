@@ -8,7 +8,8 @@ public class SpeedBoost : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) 
         {
-            other.gameObject.GetComponent<Player>().BoostSpeed(2.0f);
+            if (!other.gameObject.GetComponent<Player>().isBoosted)
+                other.gameObject.GetComponent<Player>().BoostSpeed(2.0f);
             
             Destroy(gameObject);
         }

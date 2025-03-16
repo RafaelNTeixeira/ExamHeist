@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D body;
     public Animator animator;
     public bool canMove = true;
+    public bool isBoosted = false;
 
     private void Awake()
     {
@@ -40,6 +41,7 @@ public class Player : MonoBehaviour
     public void BoostSpeed(float boostSpeed)
     {
         speed *= boostSpeed;
+        isBoosted = true;
         StartCoroutine(RestoreSpeed(boostSpeed));
     }
 
@@ -48,6 +50,7 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(20);
         speed /= boostSpeed;
+        isBoosted = false;
     }
 
 }
