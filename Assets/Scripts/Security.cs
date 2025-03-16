@@ -72,13 +72,13 @@ public class Security : MonoBehaviour
             // If the player is detected, speed up the security guard
             if (playerDetected != PlayerDetected() && !playerDetected)
             {
-                securityPatrol.SpeedUp(2f);
+                securityPatrol.SpeedUp(2.2f);
                 playerDetected = true;
             }
             // If the player is not detected, slow down the security guard
             else if (securityPatrol.IsAtEdge() && playerDetected)
             {
-                securityPatrol.SpeedDown(2f);
+                securityPatrol.SpeedDown(2.2f);
                 playerDetected = false;
             }
         }
