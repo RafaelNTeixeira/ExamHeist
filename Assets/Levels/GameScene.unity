@@ -8345,8 +8345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b8a59eeeb15914f9e9ee9e4ba586d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 1.1
-  colliderDistance: 0.5
   boxCollider: {fileID: 323938822}
   playerLayer:
     serializedVersion: 2
@@ -13438,7 +13436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0e903803d0cc64ab2f3841b0f07ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 34
+  rotationSpeed: 43
   rotationAngle: 80
   fovAngle: 40
   viewDistance: 1.5
@@ -16249,8 +16247,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b8a59eeeb15914f9e9ee9e4ba586d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 1.1
-  colliderDistance: 0.5
   boxCollider: {fileID: 707796095}
   playerLayer:
     serializedVersion: 2
@@ -17803,7 +17799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0e903803d0cc64ab2f3841b0f07ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 30
+  rotationSpeed: 40
   rotationAngle: 80
   fovAngle: 40
   viewDistance: 1.5
@@ -25545,7 +25541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0e903803d0cc64ab2f3841b0f07ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 30
+  rotationSpeed: 42
   rotationAngle: 80
   fovAngle: 40
   viewDistance: 1.5
@@ -26700,8 +26696,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b8a59eeeb15914f9e9ee9e4ba586d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 1.1
-  colliderDistance: 0.5
   boxCollider: {fileID: 1136491243}
   playerLayer:
     serializedVersion: 2
@@ -27542,6 +27536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   canMove: 1
+  isBoosted: 0
 --- !u!95 &1157457332
 Animator:
   serializedVersion: 7
@@ -30291,8 +30286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b8a59eeeb15914f9e9ee9e4ba586d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 1.1
-  colliderDistance: 0.5
   boxCollider: {fileID: 1290242025}
   playerLayer:
     serializedVersion: 2
@@ -36092,8 +36085,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b8a59eeeb15914f9e9ee9e4ba586d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 1.1
-  colliderDistance: 0.5
   boxCollider: {fileID: 1627003917}
   playerLayer:
     serializedVersion: 2
@@ -37810,7 +37801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0e903803d0cc64ab2f3841b0f07ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 20
+  rotationSpeed: 44
   rotationAngle: 80
   fovAngle: 40
   viewDistance: 1.5
@@ -39270,7 +39261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0e903803d0cc64ab2f3841b0f07ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 40
+  rotationSpeed: 50
   rotationAngle: 80
   fovAngle: 40
   viewDistance: 1.5
@@ -39576,8 +39567,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b8a59eeeb15914f9e9ee9e4ba586d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 1.1
-  colliderDistance: 0.5
   boxCollider: {fileID: 1753230730}
   playerLayer:
     serializedVersion: 2
@@ -40461,8 +40450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b8a59eeeb15914f9e9ee9e4ba586d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 1.1
-  colliderDistance: 0.5
   boxCollider: {fileID: 1785917181}
   playerLayer:
     serializedVersion: 2

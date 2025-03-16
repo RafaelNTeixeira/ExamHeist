@@ -1,21 +1,17 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
-using UnityEngine.UI;
 
 // Class responsible for the security guard
 // It manages the detection of the player and the security light
 public class Security : MonoBehaviour
 {
     [Header("Detection Settings")]
-    [SerializeField] private float range;
-    [SerializeField] private float colliderDistance;
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask playerLayer;
     
     [Header("Cone Raycast Settings")]
     private readonly float fovAngle = 45f;
-    private readonly float viewDistance = 3f;
+    private readonly float viewDistance = 2f;
     private readonly float detectedDistance = 5f;
     private readonly int rayCount = 15;
     [SerializeField] private LayerMask obstacleLayer;

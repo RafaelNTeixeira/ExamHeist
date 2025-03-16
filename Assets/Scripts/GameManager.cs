@@ -1,5 +1,4 @@
 using UnityEngine;
-
 using UnityEngine.SceneManagement;
 
 // Class to manage the game state
@@ -10,7 +9,6 @@ public class GameManager : MonoBehaviour
 
     public enum GameState { MainMenu, Instructions, Tutorial, Playing, Paused, GameOver, Win}
     public GameState currentState;
-    private SecurityPatrol[] securityPatrols;
     private bool cutscenePlayed = false;
     public bool canPauseGame = false;
     public int minutesTaken = 0;

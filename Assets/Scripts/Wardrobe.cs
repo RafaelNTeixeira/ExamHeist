@@ -1,4 +1,3 @@
-using System.ComponentModel.Design.Serialization;
 using UnityEngine;
 
 // Class responsible for the wardrobe object

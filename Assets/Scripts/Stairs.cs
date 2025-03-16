@@ -5,7 +5,6 @@ using UnityEngine;
 public class Stairs : MonoBehaviour
 {
     [SerializeField] private bool goesUp = true;
-    public bool GoesUp => goesUp; // Getter
     public AudioClip stairsSound;
 
     private bool playerNearby = false;

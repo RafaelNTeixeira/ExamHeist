@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 // Class responsible for the tutorial text
 public class TutorialText : MonoBehaviour
