@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+// Class responsible for spliting the password in half for the papers
 public class Paper : MonoBehaviour
 {
     private string password;
