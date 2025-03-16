@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class USBPenText : MonoBehaviour
 {
     Text text;
-    public static int penCount = 0;
+    public static int penCount = 1;
 
     private void Awake()
     {
