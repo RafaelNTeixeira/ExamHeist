@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     // Speed boost player movement speed during a certain amount of time
     public void BoostSpeed(float boostSpeed)
     {
-        speed *= boostSpeed;
+        ApplySpeed(boostSpeed);
         isBoosted = true;
         StartCoroutine(RestoreSpeed(boostSpeed));
     }
@@ -49,8 +49,13 @@ public class Player : MonoBehaviour
     private IEnumerator RestoreSpeed(float boostSpeed)
     {
         yield return new WaitForSeconds(20);
-        speed /= boostSpeed;
+        ApplySpeed(1 / boostSpeed);
         isBoosted = false;
+    }
+
+    public void ApplySpeed(float _speed)
+    {
+        speed *= _speed;
     }
 
 }
