@@ -15,10 +15,10 @@ public class Computer : MonoBehaviour
     public Text sequenceText; // Assign in Inspector
     public Text inputText; // Assign in Inspector
     public Text timerText; // Assign in Inspector
-    public int sequenceLength = 4; // Number of letters to input
+    public static int sequenceLength = 4; // Number of letters to input
     public float hackTimeLimit = 30f; // Seconds to complete the hack
 
-    private string correctSequence;
+    public static string correctSequence;
     private string playerInput = "";
     private float remainingTime;
     private bool isHacking = false;
@@ -76,8 +76,8 @@ public class Computer : MonoBehaviour
 
         AudioSource.PlayClipAtPoint(hackSound, transform.position);
 
-        correctSequence = GenerateRandomSequence(sequenceLength); // Generate a random sequence of letters
-        sequenceText.text = "Enter: " + correctSequence;
+        // correctSequence = GenerateRandomSequence(sequenceLength); // Generate a random sequence of letters
+        sequenceText.text = "Enter PassWord";
         playerInput = "";
         remainingTime = hackTimeLimit;
         isHacking = true;
@@ -150,7 +150,7 @@ public class Computer : MonoBehaviour
     }
 
     // Function to generate a random sequence of letters
-    private string GenerateRandomSequence(int length)
+    public static string GenerateRandomSequence(int length)
     {
         const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         return new string(Enumerable.Repeat(chars, length)
