@@ -132,6 +132,9 @@ public class GameManager : MonoBehaviour
         }
 
         SceneManager.LoadScene("Tutorial");
+
+        Computer.correctSequence = Computer.GenerateRandomSequence(Computer.sequenceLength); // Generate a random sequence of letters for password
+        Debug.Log("Correct Sequence: " + Computer.correctSequence);
     }
 
     // Function to go back to the main menu from the instructions menu
