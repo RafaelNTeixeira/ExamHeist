@@ -11,7 +11,7 @@ public class Security : MonoBehaviour
     
     [Header("Cone Raycast Settings")]
     private readonly float fovAngle = 45f;
-    private readonly float viewDistance = 2f;
+    private readonly float viewDistance = 1f;
     private readonly float detectedDistance = 5f;
     private readonly int rayCount = 15;
     [SerializeField] private LayerMask obstacleLayer;
