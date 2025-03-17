@@ -11,8 +11,8 @@ public class Security : MonoBehaviour
     
     [Header("Cone Raycast Settings")]
     private readonly float fovAngle = 45f;
-    private readonly float viewDistance = 1f;
-    private readonly float detectedDistance = 5f;
+    private readonly float detectedDistance = 1f;
+    private readonly float viewDistance = 5f;
     private readonly int rayCount = 15;
     [SerializeField] private LayerMask obstacleLayer;
 
@@ -39,7 +39,7 @@ public class Security : MonoBehaviour
     
     private void Update()
     {
-        if (PlayerInSight())
+        if (PlayerDetected())
         {
             anim.SetTrigger("catch");
 
@@ -67,16 +67,17 @@ public class Security : MonoBehaviour
 
         if (securityPatrol != null)
         {
-            securityPatrol.enabled = !PlayerInSight();
+            securityPatrol.enabled = !PlayerDetected();
 
             // If the player is detected, speed up the security guard
-            if (playerDetected != PlayerDetected() && !playerDetected)
+            if (!playerDetected && PlayerInSight())
             {
+                print("Player in sight");
                 securityPatrol.SpeedUp(2.2f);
                 playerDetected = true;
             }
             // If the player is not detected, slow down the security guard
-            else if (securityPatrol.IsAtEdge() && playerDetected)
+            else if (securityPatrol.IsAtEdge() && playerDetected && !AlarmManager.instance.isAlarmActive)
             {
                 securityPatrol.SpeedDown(2.2f);
                 playerDetected = false;
@@ -84,16 +85,16 @@ public class Security : MonoBehaviour
         }
     }
 
-    // Function to detect if the player is in sight
-    private bool PlayerInSight()
-    {
-        return PerformRaycast(viewDistance);
-    }
-    
     // Function to detect if the player is detected
     private bool PlayerDetected()
     {
         return PerformRaycast(detectedDistance);
+    }
+    
+    // Function to detect if the player is in sight
+    private bool PlayerInSight()
+    {
+        return PerformRaycast(viewDistance);
     }
 
     // Function to perform a raycast to detect the player
@@ -162,7 +163,7 @@ public class Security : MonoBehaviour
         {
             float currentAngle = -halfFOV + angleStepCyan * i;
             Vector2 rayDirection = Quaternion.Euler(0, 0, currentAngle) * forward;
-            Gizmos.DrawLine(origin, origin + rayDirection * viewDistance);
+            Gizmos.DrawLine(origin, origin + rayDirection * detectedDistance);
         }
 
         // Draw red rays (half count)
@@ -171,7 +172,7 @@ public class Security : MonoBehaviour
         {
             float currentAngle = -halfFOV + angleStepRed * i;
             Vector2 rayDirection = Quaternion.Euler(0, 0, currentAngle) * forward;
-            Gizmos.DrawLine(origin, origin + rayDirection * detectedDistance);
+            Gizmos.DrawLine(origin, origin + rayDirection * viewDistance);
         }
     }
 
