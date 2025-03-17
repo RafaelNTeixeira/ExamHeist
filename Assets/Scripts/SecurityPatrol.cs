@@ -13,6 +13,8 @@ public class SecurityPatrol : MonoBehaviour
 
     [Header("Movement parameters")]
     [SerializeField] private float speed;
+    [SerializeField] private float minSpeed = 2f;
+    [SerializeField] private float maxSpeed = 4.5f;
     private Vector3 initScale;
     private bool movingLeft;
 
@@ -108,6 +110,7 @@ public class SecurityPatrol : MonoBehaviour
     private void AdjustSpeed(float factor)
     {
         speed *= factor;
+        speed = Mathf.Clamp(speed, minSpeed, maxSpeed);
     }
 
 }
