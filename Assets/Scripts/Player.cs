@@ -10,11 +10,13 @@ public class Player : MonoBehaviour
     public Animator animator;
     public bool canMove = true;
     public bool isBoosted = false;
+    private float originalSpeed;
 
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        originalSpeed = speed;
     }
 
     private void Update()
@@ -40,6 +42,7 @@ public class Player : MonoBehaviour
     // Speed boost player movement speed during a certain amount of time
     public void BoostSpeed(float boostSpeed)
     {
+        originalSpeed = speed; // Store the current speed before boosting
         ApplySpeed(boostSpeed);
         isBoosted = true;
         StartCoroutine(RestoreSpeed(boostSpeed));
@@ -49,7 +52,7 @@ public class Player : MonoBehaviour
     private IEnumerator RestoreSpeed(float boostSpeed)
     {
         yield return new WaitForSeconds(20);
-        ApplySpeed(1 / boostSpeed);
+        speed = originalSpeed; // Restore the original speed
         isBoosted = false;
     }
 
