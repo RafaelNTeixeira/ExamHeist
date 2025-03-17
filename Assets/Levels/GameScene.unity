@@ -7211,7 +7211,6 @@ MonoBehaviour:
   - {fileID: 413677386}
   - {fileID: 526919417}
   - {fileID: 1741635715}
-  - {fileID: 0}
   - {fileID: 1267051626}
   lamps:
   - {fileID: 166143025}
@@ -29630,7 +29629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0e903803d0cc64ab2f3841b0f07ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 32
+  rotationSpeed: 40
   rotationAngle: 80
   fovAngle: 40
   viewDistance: 1.5
