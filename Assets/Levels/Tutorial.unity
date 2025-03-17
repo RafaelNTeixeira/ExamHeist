@@ -1203,6 +1203,8 @@ MonoBehaviour:
   rightEdge: {fileID: 927626576}
   security: {fileID: 1290242021}
   speed: 2
+  minSpeed: 2
+  maxSpeed: 4.5
   idleDuration: 1
   anim: {fileID: 1290242023}
   playerDetected: 0
@@ -12257,6 +12259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   canMove: 1
+  isBoosted: 0
 --- !u!95 &1157457332
 Animator:
   serializedVersion: 7
@@ -13250,8 +13253,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b8a59eeeb15914f9e9ee9e4ba586d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 1.1
-  colliderDistance: 0.5
   boxCollider: {fileID: 1290242025}
   playerLayer:
     serializedVersion: 2
@@ -19013,7 +19014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1870913218
 RectTransform:
   m_ObjectHideFlags: 0
