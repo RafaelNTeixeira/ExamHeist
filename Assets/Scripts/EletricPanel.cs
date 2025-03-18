@@ -16,7 +16,17 @@ public class EletricPanel : MonoBehaviour
     {
         if (isPlayerInside && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            ToggleEletricPanel(40);
+            if (GameManager.instance.currentState == GameManager.GameState.Paused) return;
+
+            else if (GameManager.instance.currentState == GameManager.GameState.Playing)
+            {
+                ToggleEletricPanel(40);
+            }
+
+            else if (GameManager.instance.currentState == GameManager.GameState.Tutorial)
+            {
+                ToggleEletricPanel(5);
+            }
         }
     }
 
