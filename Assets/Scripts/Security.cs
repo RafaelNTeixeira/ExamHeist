@@ -29,6 +29,7 @@ public class Security : MonoBehaviour
     private SecurityPatrol securityPatrol;
     private Light2D securityLight;
     private bool playerDetected = false;
+    private bool securityTouchPlayer = false;
 
     private void Awake()
     {
@@ -39,7 +40,7 @@ public class Security : MonoBehaviour
     
     private void Update()
     {
-        if (PlayerDetected())
+        if (PlayerDetected() || securityTouchPlayer)
         {
             anim.SetTrigger("catch");
 
@@ -82,6 +83,14 @@ public class Security : MonoBehaviour
                 securityPatrol.SpeedDown(2.2f);
                 playerDetected = false;
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            securityTouchPlayer = true;
         }
     }
 
