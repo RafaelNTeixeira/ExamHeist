@@ -63,6 +63,7 @@ public class Security : MonoBehaviour
                 uiText.SetActive(true);
                 GameObject player = GameObject.Find("Player");
                 player.transform.position = new Vector2(7.7f, player.transform.position.y);
+                securityTouchPlayer = false;
             }
         }
 

@@ -178,7 +178,8 @@ public class Computer : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerNearby = false;
-            NoUBSUIText.SetActive(false);
+            if (NoUBSUIText != null)
+                NoUBSUIText.SetActive(false);
         }
     }
 
