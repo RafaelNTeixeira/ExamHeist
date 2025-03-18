@@ -9469,7 +9469,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 00:00
+  m_Text: 05:00
 --- !u!222 &360128361
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9491,7 +9491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  minutes: 0
+  minutes: 5
   seconds: 0
 --- !u!1 &375767729
 GameObject:
