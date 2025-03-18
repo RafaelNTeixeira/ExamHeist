@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
     public GameState currentState;
     private bool cutscenePlayed = false;
     public bool canPauseGame = false;
-    public int minutesTaken = 0;
-    public int secondsTaken = 0;
+    public int minutesLeft = 0;
+    public int secondsLeft = 0;
 
     void Awake()
     {
@@ -208,8 +208,8 @@ public class GameManager : MonoBehaviour
         TimerText timer = Object.FindFirstObjectByType<TimerText>();
         if (timer != null)
         {
-            minutesTaken = timer.minutes;
-            secondsTaken = timer.seconds;
+            minutesLeft = timer.minutes;
+            secondsLeft = timer.seconds;
         }
         else
         {

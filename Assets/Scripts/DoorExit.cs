@@ -5,7 +5,7 @@ using UnityEngine;
 public class DoorExit : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
-    private bool doorOpened = false;
+    private bool doorOpened = true;
     public GameObject DoorClosedText;
 
     private void Awake()
@@ -49,7 +49,7 @@ public class DoorExit : MonoBehaviour
     // Function to detect if the player exits the exit door
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player") && !doorOpened)
         {
             DoorClosedText.SetActive(false);
         }

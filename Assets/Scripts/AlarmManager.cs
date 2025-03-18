@@ -17,6 +17,7 @@ public class AlarmManager : MonoBehaviour
     [SerializeField] private float alarmCooldown = 50f; // Global cooldown
     public float cooldownTimer = 0f;
     public bool isAlarmActive = false; // Check if alarm is active
+    public bool wasPlayerDetected = false; // Check if player was detected in game
 
     void Awake()
     {
@@ -45,6 +46,7 @@ public class AlarmManager : MonoBehaviour
         activeCameras++; // Camera detected the player
         cooldownTimer = alarmCooldown; // Reset cooldown every time a camera detects the player
         isAlarmActive = true;
+        wasPlayerDetected = true;
 
         // Start the alarm sound if it's not already playing
         if (activeCameras == 1 && audioSource.volume == 0f)

@@ -23,10 +23,21 @@ public class Win : MonoBehaviour
         mainMenuButton.onClick.AddListener(MainMenu);
         quitButton.onClick.AddListener(QuitGame);
 
-        int minutes = GameManager.instance.minutesTaken;
-        int seconds = GameManager.instance.secondsTaken;
+        int minutes = GameManager.instance.minutesLeft;
+        int seconds = GameManager.instance.secondsLeft;
 
-        timerText.text = $"You completed the level in: {minutes:D2}:{seconds:D2}"; // Display the time taken to complete the level
+        int score = minutes * 100 + seconds * 10; // Calculate the score based on the time taken to complete the level
+       
+        if (!AlarmManager.instance.wasPlayerDetected)
+        {
+            score += 1000; // Add bonus points if the player was not detected
+            timerText.text = $"You completed the level with {score} points.\nBonus: 1000 points for not being detected by the cameras.";
+        }
+        else
+        {
+            timerText.text = $"You completed the level with {score} points.";
+        }
+
     }
 
     private void Update()
