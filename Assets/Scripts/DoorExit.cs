@@ -5,7 +5,7 @@ using UnityEngine;
 public class DoorExit : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
-    private bool doorOpened = true;
+    private bool doorOpened = false;
     public GameObject DoorClosedText;
 
     private void Awake()
