@@ -86,6 +86,7 @@ public class Security : MonoBehaviour
         }
     }
 
+    // Function to detect if the player collides with the security guard
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Player"))
