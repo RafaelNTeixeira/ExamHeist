@@ -10,6 +10,7 @@ public class Computer : MonoBehaviour
     private bool playerNearby = false;
     public AudioClip hackSound;
     public AudioClip alarmSound;
+    public GameObject NoUBSUIText;
     
     public GameObject hackingUIPanel; // Assign in Inspector
     public Text sequenceText; // Assign in Inspector
@@ -42,6 +43,11 @@ public class Computer : MonoBehaviour
             {
                 StartHacking();
             }
+        }
+        
+        else if (playerNearby && USBPenText.penCount < 1 && Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            NoUBSUIText.SetActive(true);
         }
 
         if (isHacking)
@@ -172,6 +178,7 @@ public class Computer : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerNearby = false;
+            NoUBSUIText.SetActive(false);
         }
     }
 

@@ -6,6 +6,7 @@ public class DoorExit : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     private bool doorOpened = false;
+    public GameObject DoorClosedText;
 
     private void Awake()
     {
@@ -39,6 +40,18 @@ public class DoorExit : MonoBehaviour
                     GameManager.instance.SetGameState(GameManager.GameState.MainMenu);
                 }
             }
+            else{
+                DoorClosedText.SetActive(true);
+            }
+        }
+    }
+
+    // Function to detect if the player exits the exit door
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            DoorClosedText.SetActive(false);
         }
     }
 }
