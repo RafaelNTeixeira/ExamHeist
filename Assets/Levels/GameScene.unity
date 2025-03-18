@@ -9899,6 +9899,7 @@ MonoBehaviour:
   alarmCooldown: 50
   cooldownTimer: 0
   isAlarmActive: 0
+  wasPlayerDetected: 0
 --- !u!1 &404785990
 GameObject:
   m_ObjectHideFlags: 0
@@ -10595,10 +10596,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0e903803d0cc64ab2f3841b0f07ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 30
+  rotationSpeed: 40
   rotationAngle: 80
   fovAngle: 40
-  viewDistance: 1.5
+  viewDistance: 1.15
   rayCount: 15
   playerLayer:
     serializedVersion: 2
@@ -13361,7 +13362,7 @@ MonoBehaviour:
   rotationSpeed: 43
   rotationAngle: 80
   fovAngle: 40
-  viewDistance: 1.5
+  viewDistance: 1.15
   rayCount: 15
   playerLayer:
     serializedVersion: 2
@@ -25635,7 +25636,7 @@ MonoBehaviour:
   rotationSpeed: 42
   rotationAngle: 80
   fovAngle: 40
-  viewDistance: 1.5
+  viewDistance: 1.15
   rayCount: 15
   playerLayer:
     serializedVersion: 2
@@ -29777,7 +29778,7 @@ MonoBehaviour:
   rotationSpeed: 40
   rotationAngle: 80
   fovAngle: 40
-  viewDistance: 1.5
+  viewDistance: 1.15
   rayCount: 15
   playerLayer:
     serializedVersion: 2
@@ -37668,7 +37669,7 @@ MonoBehaviour:
   rotationSpeed: 44
   rotationAngle: 80
   fovAngle: 40
-  viewDistance: 1.5
+  viewDistance: 1.15
   rayCount: 15
   playerLayer:
     serializedVersion: 2
@@ -39128,7 +39129,7 @@ MonoBehaviour:
   rotationSpeed: 50
   rotationAngle: 80
   fovAngle: 40
-  viewDistance: 1.5
+  viewDistance: 1.15
   rayCount: 15
   playerLayer:
     serializedVersion: 2
