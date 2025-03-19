@@ -21,7 +21,7 @@ public class SecurityCamera : MonoBehaviour
     [SerializeField] private SecurityPatrol[] securityPatrols;
     [SerializeField] private Stairs[] stairs;
 
-    public bool alarmActive = false;
+    private bool alarmActive = false;
 
     [Header("Tutorial UI Settings")]    
     [SerializeField] private bool eletricCamera = false;
@@ -88,7 +88,7 @@ public class SecurityCamera : MonoBehaviour
     }
 
     // Function to notify the security patrols about the player detection
-    public void NotifySecurityPatrol(bool state)
+    private void NotifySecurityPatrol(bool state)
     {
         foreach (var patrol in securityPatrols)
         {
@@ -100,7 +100,7 @@ public class SecurityCamera : MonoBehaviour
     }
 
     // Function to block/unblock the stairs
-    public void BlockStairs(bool state)
+    private void BlockStairs(bool state)
     {
         foreach (var stair in stairs)
         {
@@ -112,7 +112,7 @@ public class SecurityCamera : MonoBehaviour
     }
 
     // Function to activate/deactivate the alarm lights
-    public void ActivateAlarmLights(bool state)
+    private void ActivateAlarmLights(bool state)
     {
         foreach (var alarmLamp in alarmLamps)
         {
