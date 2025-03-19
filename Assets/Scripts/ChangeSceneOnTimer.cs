@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class ChangeSceneOnTimer : MonoBehaviour
 {
     [SerializeField] private float changeTime;
+    [SerializeField] private bool isFinalCutscene;
 
     private void Update()
     {
@@ -12,14 +13,14 @@ public class ChangeSceneOnTimer : MonoBehaviour
 
         // Press the space key to skip the cutscene
         if (Input.GetKeyUp(KeyCode.Space)) {
-            GameManager.instance.canPauseGame = true;
-            SceneManager.LoadScene("GameScene");
+            GameManager.instance.canPauseGame = true && !isFinalCutscene; // Can only pause the game after initial cutscene
+            SceneManager.LoadScene(isFinalCutscene ? "MainMenu" : "GameScene");
         }
         
         if (changeTime <= 0) 
         {
-            GameManager.instance.canPauseGame = true;
-            SceneManager.LoadScene("GameScene");
+            GameManager.instance.canPauseGame = true && !isFinalCutscene; // Can only pause the game after initial cutscene
+            SceneManager.LoadScene(isFinalCutscene ? "MainMenu" : "GameScene");
         } 
     }
 }

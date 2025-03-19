@@ -10674,7 +10674,6 @@ MonoBehaviour:
   - {fileID: 1062710434}
   - {fileID: 871839926}
   - {fileID: 1866528271}
-  alarmActive: 0
   eletricCamera: 0
   uiText: {fileID: 0}
   uiTextDelete: {fileID: 0}
@@ -12107,7 +12106,7 @@ Transform:
   m_GameObject: {fileID: 471209126}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.58, y: -3.7663, z: 0}
+  m_LocalPosition: {x: 26.54, y: -3.7663, z: 0}
   m_LocalScale: {x: 0.7466549, y: 2.1835825, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13437,7 +13436,6 @@ MonoBehaviour:
   - {fileID: 1062710434}
   - {fileID: 871839926}
   - {fileID: 1866528271}
-  alarmActive: 0
   eletricCamera: 0
   uiText: {fileID: 0}
   uiTextDelete: {fileID: 0}
@@ -25713,7 +25711,6 @@ MonoBehaviour:
   - {fileID: 1062710434}
   - {fileID: 871839926}
   - {fileID: 1866528271}
-  alarmActive: 0
   eletricCamera: 0
   uiText: {fileID: 0}
   uiTextDelete: {fileID: 0}
@@ -29855,7 +29852,6 @@ MonoBehaviour:
   - {fileID: 1062710434}
   - {fileID: 871839926}
   - {fileID: 1866528271}
-  alarmActive: 0
   eletricCamera: 0
   uiText: {fileID: 0}
   uiTextDelete: {fileID: 0}
@@ -37746,7 +37742,6 @@ MonoBehaviour:
   - {fileID: 1062710434}
   - {fileID: 871839926}
   - {fileID: 1866528271}
-  alarmActive: 0
   eletricCamera: 0
   uiText: {fileID: 0}
   uiTextDelete: {fileID: 0}
@@ -39206,7 +39201,6 @@ MonoBehaviour:
   - {fileID: 1062710434}
   - {fileID: 871839926}
   - {fileID: 1866528271}
-  alarmActive: 0
   eletricCamera: 0
   uiText: {fileID: 0}
   uiTextDelete: {fileID: 0}
