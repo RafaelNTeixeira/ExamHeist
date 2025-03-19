@@ -36,7 +36,7 @@ public class EletricPanel : MonoBehaviour
         StartCoroutine(DisableCamerasForSeconds(seconds));
         StartCoroutine(DisableLightsForSeconds(seconds));
         StartCoroutine(DisableAlarmForSeconds(seconds));
-        LockStairsForSeconds();
+        UnlockStairs();
     }
 
     // Coroutine to disable the security cameras for a certain amount of time
@@ -90,11 +90,11 @@ public class EletricPanel : MonoBehaviour
     }
 
     // Unlock the stairs
-    private void LockStairsForSeconds()
+    private void UnlockStairs()
     {
         foreach (Stairs stair in stairs)
         {
-            stair.isBlocked = false;
+            stair.BlockStairs(false);
         }
     }
 

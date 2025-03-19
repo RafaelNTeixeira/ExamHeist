@@ -97,13 +97,13 @@ public class SecurityCamera : MonoBehaviour
     }
 
     // Function to block/unblock the stairs
-    public void BlockStairs(bool state)
+    private void BlockStairs(bool state)
     {
         foreach (var stair in stairs)
         {
             if (stair != null)
             {
-                stair.isBlocked = state;
+                stair.BlockStairs(state);
             }
         }
     }

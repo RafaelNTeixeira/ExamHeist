@@ -58,4 +58,9 @@ public class Stairs : MonoBehaviour
             blockage.SetActive(false);
         }
     }
+
+    public void BlockStairs(bool state)
+    {
+        isBlocked = state;
+    }
 }

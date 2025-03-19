@@ -122,6 +122,7 @@ public class AlarmManager : MonoBehaviour
         {
             audioSource.Pause(); // Pause the audio when the game is paused
         }
+        isAlarmActive = false;
     }
 
     // Resume alarm sound when game is unpaused

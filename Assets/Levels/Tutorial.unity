@@ -8360,6 +8360,7 @@ GameObject:
   - component: {fileID: 871839925}
   - component: {fileID: 871839927}
   - component: {fileID: 871839926}
+  - component: {fileID: 871839928}
   m_Layer: 0
   m_Name: FloorDoor (1)
   m_TagString: Untagged
@@ -8500,6 +8501,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.05, y: 0.65031755}
   m_EdgeRadius: 0
+--- !u!114 &871839928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871839923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b541e3af63e294aabc2523473b24eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiText: {fileID: 80778495}
 --- !u!1 &874423216
 GameObject:
   m_ObjectHideFlags: 0
@@ -19081,6 +19095,7 @@ GameObject:
   - component: {fileID: 1866528270}
   - component: {fileID: 1866528272}
   - component: {fileID: 1866528271}
+  - component: {fileID: 1866528273}
   m_Layer: 0
   m_Name: FloorDoor (1)
   m_TagString: Untagged
@@ -19221,6 +19236,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.05, y: 0.65031755}
   m_EdgeRadius: 0
+--- !u!114 &1866528273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866528268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b541e3af63e294aabc2523473b24eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiText: {fileID: 874423216}
 --- !u!1 &1866697337
 GameObject:
   m_ObjectHideFlags: 0
@@ -20519,6 +20547,7 @@ GameObject:
   - component: {fileID: 1945466832}
   - component: {fileID: 1945466831}
   - component: {fileID: 1945466830}
+  - component: {fileID: 1945466833}
   m_Layer: 0
   m_Name: FloorDoor (1)
   m_TagString: Untagged
@@ -20659,6 +20688,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1945466833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945466828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b541e3af63e294aabc2523473b24eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiText: {fileID: 1850097051}
 --- !u!1 &1947695470
 GameObject:
   m_ObjectHideFlags: 0
