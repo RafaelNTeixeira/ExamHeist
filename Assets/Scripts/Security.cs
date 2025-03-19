@@ -74,7 +74,6 @@ public class Security : MonoBehaviour
             // If the player is detected, speed up the security guard
             if (!playerDetected && PlayerInSight())
             {
-                print("Player in sight");
                 securityPatrol.SpeedUp(2.2f);
                 playerDetected = true;
             }

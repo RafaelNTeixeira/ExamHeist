@@ -125,8 +125,6 @@ public class SecurityCamera : MonoBehaviour
                 lamp.enabled = !state; // Ensure lights only turn on when no alarm is active
             }
         }
-
-        //Debug.Log("Alarm " + (state ? "Activated" : "Deactivated"));
     }
 
     // Function to reset the camera detection state

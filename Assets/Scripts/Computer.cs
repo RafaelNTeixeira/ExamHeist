@@ -68,7 +68,6 @@ public class Computer : MonoBehaviour
     // Function to start the hacking minigame
     private void StartHacking()
     {
-        Debug.Log("Started Hacking");
         playerInput = "";
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)

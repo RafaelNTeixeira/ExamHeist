@@ -42,7 +42,6 @@ public class AlarmManager : MonoBehaviour
     // Function to request the alarm activation from a camera
     public void RequestAlarm()
     {
-        // Debug.Log("Called requestAlarm");
         activeCameras++; // Camera detected the player
         cooldownTimer = alarmCooldown; // Reset cooldown every time a camera detects the player
         isAlarmActive = true;
