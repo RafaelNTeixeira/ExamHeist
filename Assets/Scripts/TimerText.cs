@@ -5,17 +5,27 @@ using UnityEngine.SceneManagement; // Required for scene management
 // Class responsible for the countdown timer on the screen
 public class TimerText : MonoBehaviour
 {
+    public static TimerText instance;
     public Text text;
     public int minutes = 0; // Set the countdown start time
     public int seconds = 10;
     private float gameTimer;
     private bool isTimerRunning = true;
 
-    public static int minutesLeft = 0;
-    public static int secondsLeft = 0;
+    public int minutesLeft = 0;
+    public int secondsLeft = 0;
 
     private void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject); // Keep this across scenes
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         text = GetComponent<Text>();
         gameTimer = minutes * 60 + seconds;
     }

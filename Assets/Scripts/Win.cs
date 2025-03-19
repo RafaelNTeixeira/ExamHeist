@@ -26,8 +26,8 @@ public class Win : MonoBehaviour
         mainMenuButton.onClick.AddListener(MainMenu);
         quitButton.onClick.AddListener(QuitGame);
 
-        int minutes = TimerText.minutesLeft;
-        int seconds = TimerText.secondsLeft;
+        int minutes = TimerText.instance.minutesLeft;
+        int seconds = TimerText.instance.secondsLeft;
 
         int score = minutes * 100 + seconds; // Calculate the score based on the time taken to complete the level
        
