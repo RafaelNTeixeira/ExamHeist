@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Threading;
 
 // Class responsible for the Win screen
 public class Win : MonoBehaviour
@@ -23,10 +24,10 @@ public class Win : MonoBehaviour
         mainMenuButton.onClick.AddListener(MainMenu);
         quitButton.onClick.AddListener(QuitGame);
 
-        int minutes = GameManager.instance.minutesLeft;
-        int seconds = GameManager.instance.secondsLeft;
+        int minutes = TimerText.minutesLeft;
+        int seconds = TimerText.secondsLeft;
 
-        int score = minutes * 100 + seconds * 10; // Calculate the score based on the time taken to complete the level
+        int score = minutes * 100 + seconds; // Calculate the score based on the time taken to complete the level
        
         if (!AlarmManager.instance.wasPlayerDetected)
         {

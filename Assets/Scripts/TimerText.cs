@@ -11,6 +11,9 @@ public class TimerText : MonoBehaviour
     private float gameTimer;
     private bool isTimerRunning = true;
 
+    public static int minutesLeft = 0;
+    public static int secondsLeft = 0;
+
     private void Awake()
     {
         text = GetComponent<Text>();
@@ -35,6 +38,9 @@ public class TimerText : MonoBehaviour
                 isTimerRunning = false;
                 TriggerGameOver();
             }
+
+            minutesLeft = minutes;
+            secondsLeft = seconds;
         }
     }
 
