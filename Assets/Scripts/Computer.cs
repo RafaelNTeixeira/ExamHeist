@@ -27,6 +27,9 @@ public class Computer : MonoBehaviour
 
     [SerializeField] private DoorExit doorExit;
 
+    public AudioClip successHackSound;
+    public AudioClip failedHackSound;
+
     private void Awake()
     {
         inputText.text = "-> ";
@@ -125,6 +128,7 @@ public class Computer : MonoBehaviour
     // Function to handle a successful hack
     private void SuccessHack()
     {
+        AudioSource.PlayClipAtPoint(successHackSound, transform.position);
         isHacking = false;
         gotAccess = true;
         USBPenText.penCount--;
@@ -136,6 +140,7 @@ public class Computer : MonoBehaviour
     // Function to handle a failed hack
     private void FailHack()
     {
+        AudioSource.PlayClipAtPoint(failedHackSound, transform.position);
         isHacking = false;
         hackingUIPanel.SetActive(false);
 

@@ -1156,8 +1156,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 2
   canPauseGame: 0
-  minutesTaken: 0
-  secondsTaken: 0
+  minutesLeft: 0
+  secondsLeft: 0
+  winSound: {fileID: 8300000, guid: 3ccc8ac156d4d654488a8de7573ec2e0, type: 3}
 --- !u!4 &1933328052
 Transform:
   m_ObjectHideFlags: 0

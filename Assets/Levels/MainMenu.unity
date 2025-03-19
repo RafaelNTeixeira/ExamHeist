@@ -269,10 +269,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0138c856646bf6341834c14b33ba9f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 1
+  currentState: 0
   canPauseGame: 0
-  minutesTaken: 0
-  secondsTaken: 0
+  minutesLeft: 0
+  secondsLeft: 0
+  winSound: {fileID: 8300000, guid: 3ccc8ac156d4d654488a8de7573ec2e0, type: 3}
 --- !u!4 &399233377
 Transform:
   m_ObjectHideFlags: 0

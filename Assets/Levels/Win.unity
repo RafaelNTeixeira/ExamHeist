@@ -510,6 +510,7 @@ MonoBehaviour:
   mainMenuButton: {fileID: 1781744093}
   quitButton: {fileID: 436866817}
   menuOptionSwitchSound: {fileID: 8300000, guid: 6ec47db0428323b4eb61e884c30769fc, type: 3}
+  winSound: {fileID: 8300000, guid: 3ccc8ac156d4d654488a8de7573ec2e0, type: 3}
 --- !u!1 &653402333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,6 +1045,7 @@ GameObject:
   - component: {fileID: 1816757428}
   - component: {fileID: 1816757427}
   - component: {fileID: 1816757429}
+  - component: {fileID: 1816757430}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1161,6 +1163,14 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!81 &1816757430
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816757425}
+  m_Enabled: 1
 --- !u!1 &1908653255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,8 +1281,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 3
   canPauseGame: 0
-  minutesTaken: 0
-  secondsTaken: 0
+  minutesLeft: 0
+  secondsLeft: 0
 --- !u!4 &1945806000
 Transform:
   m_ObjectHideFlags: 0

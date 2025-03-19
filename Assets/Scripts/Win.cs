@@ -14,9 +14,11 @@ public class Win : MonoBehaviour
     private Button[] buttons;
     private int selectedIndex = 0;
     public AudioClip menuOptionSwitchSound; // Sound to play when switching between menu options
+    public AudioClip winSound; // Sound to play when switching between menu options
 
     private void Start()
     {
+        AudioSource.PlayClipAtPoint(winSound, transform.position);
         buttons = new Button[] { playAgainButton, mainMenuButton, quitButton };
         UpdateSelection();
 
