@@ -11110,6 +11110,8 @@ MonoBehaviour:
   timerText: {fileID: 1296278565}
   hackTimeLimit: 5
   doorExit: {fileID: 471209129}
+  successHackSound: {fileID: 8300000, guid: 65a026786cc22494e8de0efc33afee49, type: 3}
+  failedHackSound: {fileID: 8300000, guid: 475a5d8496d951944967a204d29f42fc, type: 3}
 --- !u!1 &1057719041
 GameObject:
   m_ObjectHideFlags: 0
