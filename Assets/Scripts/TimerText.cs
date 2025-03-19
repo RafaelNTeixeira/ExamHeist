@@ -54,6 +54,7 @@ public class TimerText : MonoBehaviour
         }
     }
 
+    // Function to stop the game when the timer ends
     private void TriggerGameOver()
     {
         Debug.Log("Game Over - Timer Ended");

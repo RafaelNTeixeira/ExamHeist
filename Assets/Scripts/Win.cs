@@ -29,8 +29,8 @@ public class Win : MonoBehaviour
         mainMenuButton.onClick.AddListener(MainMenu);
         quitButton.onClick.AddListener(QuitGame);
 
-        int minutes = TimerText.instance.minutesLeft;
-        int seconds = TimerText.instance.secondsLeft;
+        int minutes = TimerText.instance.minutesLeft; // Get the minutes left from the TimerText script
+        int seconds = TimerText.instance.secondsLeft; // Get the seconds left from the TimerText script
 
         int score = minutes * 100 + seconds; // Calculate the score based on the time taken to complete the level
        
@@ -48,6 +48,7 @@ public class Win : MonoBehaviour
 
     private void Update()
     {
+        // Check if the player is pressing the arrow keys to switch between menu options
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             selectedIndex = (selectedIndex + 1) % buttons.Length;
@@ -78,27 +79,32 @@ public class Win : MonoBehaviour
         }
     }
 
+    // Function to update the selected button
     private void UpdateSelection()
     {
         EventSystem.current.SetSelectedGameObject(buttons[selectedIndex].gameObject);
         AudioSource.PlayClipAtPoint(menuOptionSwitchSound, transform.position);
     }
 
+    // Function to play the final cutscene
     public void PlayFinalCutscene()
     {
         GameManager.instance.PlayFinalCutscene();
     }
 
+    // Function to play again
     public void PlayAgain()
     {
         GameManager.instance.PlayAgain();
     }
 
+    // Function to go back to the main menu
     public void MainMenu()
     {
         GameManager.instance.SetGameState(GameManager.GameState.MainMenu);
     }
 
+    // Function to quit the game
     public void QuitGame()
     {
         GameManager.instance.QuitGame();

@@ -56,6 +56,7 @@ public class Player : MonoBehaviour
         isBoosted = false;
     }
 
+    // Function to apply a speed multiplier to the player
     public void ApplySpeed(float _speed)
     {
         speed *= _speed;

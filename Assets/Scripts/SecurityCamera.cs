@@ -79,6 +79,7 @@ public class SecurityCamera : MonoBehaviour
         AlarmManager.instance.UpdateAlarmCooldown(Time.deltaTime);
     }
 
+    // Function to set the alarm state
     public void SetAlarmState(bool state)
     {
         ActivateAlarmLights(state);
@@ -135,7 +136,8 @@ public class SecurityCamera : MonoBehaviour
     {
         ActivateAlarmLights(false); // Turn off alarm lights
         alarmActive = false;
-        NotifySecurityPatrol(false);
+        NotifySecurityPatrol(false); // Notify patrols
+        BlockStairs(false); // Unblock the stairs
     }
 
     // Function to check if the player is in sight

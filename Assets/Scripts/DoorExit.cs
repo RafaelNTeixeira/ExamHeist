@@ -41,6 +41,7 @@ public class DoorExit : MonoBehaviour
                 }
             }
             else{
+                // If the door is closed, show a warning message
                 DoorClosedText.SetActive(true);
             }
         }

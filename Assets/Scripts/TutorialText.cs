@@ -7,7 +7,7 @@ public class TutorialText : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // If the player enters the trigger display the tutorial text
+        // If the player enters the trigger display the tutorial texts
         if (other.CompareTag("Player") && uiText != null && !uiText.activeSelf)
         {
             uiText.SetActive(true);

@@ -19,10 +19,10 @@ public class Computer : MonoBehaviour
     public static int sequenceLength = 4; // Number of letters to input
     public float hackTimeLimit = 30f; // Seconds to complete the hack
 
-    public static string correctSequence;
+    public static string correctSequence; // Correct sequence of computer password
     private string playerInput = "";
     private float remainingTime;
-    private bool isHacking = false;
+    private bool isHacking = false; // Check if player is currently hacking
     private bool gotAccess = false; // Check if player already guessed the password
 
     [SerializeField] private DoorExit doorExit;
@@ -37,6 +37,7 @@ public class Computer : MonoBehaviour
 
     private void Update()
     {
+        // If the game is paused, do not allow the player to interact with the computer
         if (GameManager.instance.currentState == GameManager.GameState.Paused) return;
         
         if (playerNearby && USBPenText.penCount > 0 && Input.GetKeyDown(KeyCode.UpArrow))
@@ -48,6 +49,7 @@ public class Computer : MonoBehaviour
             }
         }
         
+        // If player is nearby, has no USB pen and wants to hack, show a warning message
         else if (playerNearby && USBPenText.penCount < 1 && Input.GetKeyDown(KeyCode.UpArrow))
         {
             NoUBSUIText.SetActive(true);
@@ -152,7 +154,7 @@ public class Computer : MonoBehaviour
         SecurityCamera[] cameras = Object.FindObjectsByType<SecurityCamera>(FindObjectsSortMode.None);
         foreach (SecurityCamera camera in cameras)
         {
-            camera.SetAlarmState(true);
+            camera.SetAlarmState(true); // Set the alarm state to active
         }
 
         AlarmManager.instance.RequestAlarm();

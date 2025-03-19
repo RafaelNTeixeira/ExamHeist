@@ -32,12 +32,15 @@ public class Paper : MonoBehaviour
         }
     }
 
+    // Function to split the password in half
     private void HalfPassword()
     {
+        // first half
         if (isFirstHalf)
         {
             password = Computer.correctSequence[..(Computer.sequenceLength / 2)] + "__";
         }
+        // second half
         else
         {
             password = "__" + Computer.correctSequence[(Computer.sequenceLength / 2)..];

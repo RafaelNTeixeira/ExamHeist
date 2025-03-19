@@ -20,6 +20,7 @@ public class InstructionsMenu : MonoBehaviour
 
     private void Update()
     {
+        // Check if the player is pressing the return key to go back to the main menu
         if (Input.GetKeyDown(KeyCode.Return))
         {
             switch (selectedIndex)
@@ -31,11 +32,13 @@ public class InstructionsMenu : MonoBehaviour
         }
     }
 
+    // Function to update the selected button
     private void UpdateSelection()
     {
         EventSystem.current.SetSelectedGameObject(buttons[selectedIndex].gameObject);
     }
 
+    // Function to go back to the main menu
     public void GoBack()
     {
         GameManager.instance.SetGameState(GameManager.GameState.MainMenu);

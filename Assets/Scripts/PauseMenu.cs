@@ -32,6 +32,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
+        // Check if the player is pressing the arrow keys to switch between menu options
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             selectedIndex = (selectedIndex + 1) % buttons.Length;
@@ -62,6 +63,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    // Function to update the selected button
     private void UpdateSelection()
     {
         EventSystem.current.SetSelectedGameObject(buttons[selectedIndex].gameObject);
@@ -71,21 +73,25 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    // Function to resume the game
     public void ResumeGame()
     {
         GameManager.instance.ResumeGame();
     }
 
+    // Function to restart the game
     public void RestartGame()
     {
         GameManager.instance.PlayAgain();
     }
 
+    // Function to go back to the main menu
     public void MainMenu()
     {
         GameManager.instance.SetGameState(GameManager.GameState.MainMenu);
     }
 
+    // Function to quit the game
     public void QuitGame()
     {
         GameManager.instance.QuitGame();

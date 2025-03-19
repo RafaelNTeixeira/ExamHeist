@@ -26,6 +26,7 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
+        // Check if the player is pressing the arrow keys to switch between menu options
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             selectedIndex = (selectedIndex + 1) % buttons.Length;
@@ -56,27 +57,32 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    // Function to update the selected button
     private void UpdateSelection()
     {
         EventSystem.current.SetSelectedGameObject(buttons[selectedIndex].gameObject);
         AudioSource.PlayClipAtPoint(menuOptionSwitchSound, transform.position);
     }
 
+    // Function to play the game
     public void PlayGame()
     {
         GameManager.instance.SetGameState(GameManager.GameState.Playing);
     }
 
+    // Function to go to the tutorial
     public void Tutorial()
     {
         GameManager.instance.SetGameState(GameManager.GameState.Tutorial);
     }
 
+    // Function to go to the instructions screen
     public void InstructionsScreen()
     {
         GameManager.instance.SetGameState(GameManager.GameState.Instructions);
     }
 
+    // Function to quit the game
     public void QuitGame()
     {
         GameManager.instance.QuitGame();

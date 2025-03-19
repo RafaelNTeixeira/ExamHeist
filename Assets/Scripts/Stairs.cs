@@ -59,6 +59,7 @@ public class Stairs : MonoBehaviour
         }
     }
 
+    // Function to block/unblock the stairs
     public void BlockStairs(bool state)
     {
         isBlocked = state;

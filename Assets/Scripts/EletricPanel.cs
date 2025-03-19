@@ -20,17 +20,17 @@ public class EletricPanel : MonoBehaviour
 
             else if (GameManager.instance.currentState == GameManager.GameState.Playing)
             {
-                ToggleEletricPanel(40);
+                ToggleEletricPanel(40); // Activate the eletric panel for 40 seconds
             }
 
             else if (GameManager.instance.currentState == GameManager.GameState.Tutorial)
             {
-                ToggleEletricPanel(5);
+                ToggleEletricPanel(5); // Activate the eletric panel for 5 seconds
             }
         }
     }
 
-    // Function to disable the security cameras, lights, alarm and lock stairs for a certain amount of time
+    // Function to disable the security cameras, lights, alarm for a certain amount of time and unlock the stairs
     private void ToggleEletricPanel(int seconds)
     {
         StartCoroutine(DisableCamerasForSeconds(seconds));
