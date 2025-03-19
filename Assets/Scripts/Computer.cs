@@ -154,6 +154,8 @@ public class Computer : MonoBehaviour
         {
             camera.ActivateAlarmLights(true);
             camera.alarmActive = true;
+            camera.NotifySecurityPatrol(true);
+            camera.BlockStairs(true);
         }
 
         AlarmManager.instance.RequestAlarm();
