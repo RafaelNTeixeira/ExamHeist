@@ -104,6 +104,17 @@ public class GameManager : MonoBehaviour
         Debug.Log("Correct Sequence: " + Computer.correctSequence);
     }
 
+    // Function to play the final cutscene
+    public void PlayFinalCutscene()
+    {
+        GameObject room = GameObject.Find("Room");
+        if (room != null)
+        {
+            Destroy(room); // Remove game room from the screen
+        }
+        SceneManager.LoadScene("FinalCutscene");
+    }
+
     // Function to show the instructions menu
     void ShowInstructionsMenu()
     {

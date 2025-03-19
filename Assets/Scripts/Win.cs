@@ -7,6 +7,7 @@ using System.Threading;
 public class Win : MonoBehaviour
 {
     public Text timerText;
+    public Button playCutsceneButton;
     public Button playAgainButton;
     public Button mainMenuButton;
     public Button quitButton;
@@ -19,9 +20,11 @@ public class Win : MonoBehaviour
     private void Start()
     {
         AudioSource.PlayClipAtPoint(winSound, transform.position);
-        buttons = new Button[] { playAgainButton, mainMenuButton, quitButton };
+        buttons = new Button[] { playCutsceneButton, playAgainButton, mainMenuButton, quitButton };
         UpdateSelection();
 
+    
+        playCutsceneButton.onClick.AddListener(PlayFinalCutscene);
         playAgainButton.onClick.AddListener(PlayAgain);
         mainMenuButton.onClick.AddListener(MainMenu);
         quitButton.onClick.AddListener(QuitGame);
@@ -60,12 +63,15 @@ public class Win : MonoBehaviour
             switch (selectedIndex)
             {
                 case 0:
-                    playAgainButton.onClick.AddListener(PlayAgain);
+                    playCutsceneButton.onClick.AddListener(PlayFinalCutscene);
                     break;
                 case 1:
-                    mainMenuButton.onClick.AddListener(MainMenu);
+                    playAgainButton.onClick.AddListener(PlayAgain);
                     break;
                 case 2:
+                    mainMenuButton.onClick.AddListener(MainMenu);
+                    break;
+                case 3:
                     quitButton.onClick.AddListener(QuitGame);
                     break;
             }
@@ -76,6 +82,11 @@ public class Win : MonoBehaviour
     {
         EventSystem.current.SetSelectedGameObject(buttons[selectedIndex].gameObject);
         AudioSource.PlayClipAtPoint(menuOptionSwitchSound, transform.position);
+    }
+
+    public void PlayFinalCutscene()
+    {
+        GameManager.instance.PlayFinalCutscene();
     }
 
     public void PlayAgain()
