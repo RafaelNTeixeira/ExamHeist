@@ -152,10 +152,7 @@ public class Computer : MonoBehaviour
         SecurityCamera[] cameras = Object.FindObjectsByType<SecurityCamera>(FindObjectsSortMode.None);
         foreach (SecurityCamera camera in cameras)
         {
-            camera.ActivateAlarmLights(true);
-            camera.alarmActive = true;
-            camera.NotifySecurityPatrol(true);
-            camera.BlockStairs(true);
+            camera.SetAlarmState(true);
         }
 
         AlarmManager.instance.RequestAlarm();

@@ -47,11 +47,9 @@ public class SecurityCamera : MonoBehaviour
         bool playerDetected = PlayerInSight();
         if (playerDetected)
         {
-            ActivateAlarmLights(true);
-            alarmActive = true;
+            
+            SetAlarmState(true); // Activate the alarm system
             AlarmManager.instance.RequestAlarm(); // Notify the global alarm system 
-            NotifySecurityPatrol(true); // Activate guards alert state
-            BlockStairs(true); // Block the stairs
 
             if (GameManager.instance.currentState == GameManager.GameState.Tutorial)
             {
@@ -73,15 +71,20 @@ public class SecurityCamera : MonoBehaviour
             // Deactivate all alarm lights when cooldown reaches 0
             if (AlarmManager.instance.cooldownTimer <= 0)
             {
-                ActivateAlarmLights(false);
-                alarmActive = false;
-                NotifySecurityPatrol(false);
-                BlockStairs(false);
+                SetAlarmState(false); // Deactivate the alarm system
             }
         }
 
         // Update cooldown in AlarmManager
         AlarmManager.instance.UpdateAlarmCooldown(Time.deltaTime);
+    }
+
+    public void SetAlarmState(bool state)
+    {
+        ActivateAlarmLights(state);
+        alarmActive = state;
+        NotifySecurityPatrol(state); // Activate/deactivate security patrols
+        BlockStairs(state); // Block/unblock the stairs
     }
 
     // Function to notify the security patrols about the player detection
