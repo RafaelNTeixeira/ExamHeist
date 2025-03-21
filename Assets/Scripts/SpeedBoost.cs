@@ -4,10 +4,13 @@ using UnityEngine;
 // It increases the player's speed when picked up
 public class SpeedBoost : MonoBehaviour
 {
+    public AudioClip pickupSound;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player")) 
         {
+            AudioSource.PlayClipAtPoint(pickupSound, transform.position);
             if (!other.gameObject.GetComponent<Player>().isBoosted)
                 other.gameObject.GetComponent<Player>().BoostSpeed(2.0f);
 

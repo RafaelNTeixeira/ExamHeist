@@ -2645,6 +2645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9465167956d6f074abec34f925e99be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSound: {fileID: 8300000, guid: eb7986cac6aac4649bf8028de76a4318, type: 3}
 --- !u!1 &102586476
 GameObject:
   m_ObjectHideFlags: 0
@@ -5705,6 +5706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9465167956d6f074abec34f925e99be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSound: {fileID: 8300000, guid: eb7986cac6aac4649bf8028de76a4318, type: 3}
 --- !u!61 &218509176
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20308,6 +20310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9465167956d6f074abec34f925e99be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSound: {fileID: 8300000, guid: eb7986cac6aac4649bf8028de76a4318, type: 3}
 --- !u!61 &852053138
 BoxCollider2D:
   m_ObjectHideFlags: 0
