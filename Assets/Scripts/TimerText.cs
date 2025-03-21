@@ -20,7 +20,6 @@ public class TimerText : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Keep this across scenes
         }
         else
         {
