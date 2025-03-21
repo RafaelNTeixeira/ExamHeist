@@ -8356,7 +8356,6 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 512
-  hitSound: {fileID: 8300000, guid: 84f41981f5541184f83dab1d3e4f8c7c, type: 3}
   uiText: {fileID: 0}
   uiTextDelete: {fileID: 0}
 --- !u!95 &323938820
@@ -9492,6 +9491,8 @@ MonoBehaviour:
   text: {fileID: 0}
   minutes: 5
   seconds: 0
+  minutesLeft: 0
+  secondsLeft: 0
 --- !u!1 &375767729
 GameObject:
   m_ObjectHideFlags: 0
@@ -16174,7 +16175,6 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 512
-  hitSound: {fileID: 8300000, guid: 84f41981f5541184f83dab1d3e4f8c7c, type: 3}
   uiText: {fileID: 0}
   uiTextDelete: {fileID: 0}
 --- !u!95 &707796093
@@ -19334,8 +19334,8 @@ Transform:
   m_GameObject: {fileID: 801007016}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.346, y: 0.4688, z: 0}
-  m_LocalScale: {x: 0.050948586, y: 2.9592605, z: 1.9102988}
+  m_LocalPosition: {x: 0.35089, y: 0.4688, z: 0}
+  m_LocalScale: {x: 0.062319294, y: 2.9592605, z: 1.9102988}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1650772928}
@@ -26793,7 +26793,6 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 512
-  hitSound: {fileID: 8300000, guid: 84f41981f5541184f83dab1d3e4f8c7c, type: 3}
   uiText: {fileID: 0}
   uiTextDelete: {fileID: 0}
 --- !u!95 &1136491241
@@ -30241,7 +30240,6 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 512
-  hitSound: {fileID: 8300000, guid: 84f41981f5541184f83dab1d3e4f8c7c, type: 3}
   uiText: {fileID: 0}
   uiTextDelete: {fileID: 0}
 --- !u!95 &1290242023
@@ -36042,7 +36040,6 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 512
-  hitSound: {fileID: 8300000, guid: 84f41981f5541184f83dab1d3e4f8c7c, type: 3}
   uiText: {fileID: 0}
   uiTextDelete: {fileID: 0}
 --- !u!50 &1627003916
@@ -39434,7 +39431,6 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 512
-  hitSound: {fileID: 8300000, guid: 84f41981f5541184f83dab1d3e4f8c7c, type: 3}
   uiText: {fileID: 0}
   uiTextDelete: {fileID: 0}
 --- !u!95 &1753230728
@@ -40317,7 +40313,6 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 512
-  hitSound: {fileID: 8300000, guid: 84f41981f5541184f83dab1d3e4f8c7c, type: 3}
   uiText: {fileID: 0}
   uiTextDelete: {fileID: 0}
 --- !u!95 &1785917179
