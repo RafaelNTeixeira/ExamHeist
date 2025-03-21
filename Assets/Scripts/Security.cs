@@ -47,7 +47,7 @@ public class Security : MonoBehaviour
             }
 
             // If the player is detected in the tutorial, reset the player position
-            if (GameManager.instance.currentState == GameManager.GameState.Tutorial)
+            else if (GameManager.instance.currentState == GameManager.GameState.Tutorial)
             {
                 uiTextDelete.SetActive(false);
                 uiText.SetActive(true);
