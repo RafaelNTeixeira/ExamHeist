@@ -134,10 +134,7 @@ public class SecurityCamera : MonoBehaviour
     // Function to reset the camera detection state
     public void ResetCameraState()
     {
-        ActivateAlarmLights(false); // Turn off alarm lights
-        alarmActive = false;
-        NotifySecurityPatrol(false); // Notify patrols
-        BlockStairs(false); // Unblock the stairs
+        SetAlarmState(false); // Deactivate the alarm systemI
     }
 
     // Function to check if the player is in sight
