@@ -42,6 +42,7 @@ public class Security : MonoBehaviour
             // If the player is detected, the game is over
             if (GameManager.instance.currentState == GameManager.GameState.Playing)
             {
+                securityTouchPlayer = false;
                 GameManager.instance.SetGameState(GameManager.GameState.GameOver);
             }
 
