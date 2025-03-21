@@ -14,7 +14,6 @@ public class Security : MonoBehaviour
     private const float detectedDistance = 1f;
     private const float viewDistance = 5f;
     private const int rayCount = 15;
-
     [SerializeField] private LayerMask obstacleLayer;
 
     [Header("Tutorial UI Settings")]
