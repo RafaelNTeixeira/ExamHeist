@@ -67,7 +67,7 @@ public class Security : MonoBehaviour
                 playerDetected = true;
             }
             // If the player is not detected, slow down the security guard
-            else if (securityPatrol.IsAtEdge() && playerDetected && !AlarmManager.instance.isAlarmActive)
+            else if (securityPatrol.IsAtEdge() && playerDetected && !AlarmManager.instance.isAlarmActive && !EletricPanel.isEletricPanelDown)
             {
                 securityPatrol.SpeedDown(2.2f);
                 playerDetected = false;

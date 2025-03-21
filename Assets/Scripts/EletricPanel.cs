@@ -12,6 +12,8 @@ public class EletricPanel : MonoBehaviour
     [SerializeField] private AlarmLamp[] alarmLamps;
     [SerializeField] private Stairs[] stairs;
 
+    public static bool isEletricPanelDown = false;
+
     private void Update()
     {
         if (isPlayerInside && Input.GetKeyDown(KeyCode.UpArrow))
@@ -33,10 +35,18 @@ public class EletricPanel : MonoBehaviour
     // Function to disable the security cameras, lights, alarm for a certain amount of time and unlock the stairs
     private void ToggleEletricPanel(int seconds)
     {
+        StartCoroutine(EletricPanelTimer(seconds));
         StartCoroutine(DisableCamerasForSeconds(seconds));
         StartCoroutine(DisableLightsForSeconds(seconds));
         StartCoroutine(DisableAlarmForSeconds(seconds));
         UnlockStairs();
+    }
+
+    private IEnumerator EletricPanelTimer(float seconds)
+    {
+        isEletricPanelDown = true;
+        yield return new WaitForSeconds(seconds);
+        isEletricPanelDown = false;
     }
 
     // Coroutine to disable the security cameras for a certain amount of time
