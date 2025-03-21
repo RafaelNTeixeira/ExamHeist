@@ -10,10 +10,11 @@ public class Security : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     
     [Header("Cone Raycast Settings")]
-    private readonly float fovAngle = 45f;
-    private readonly float detectedDistance = 1f;
-    private readonly float viewDistance = 5f;
-    private readonly int rayCount = 15;
+    private const float fovAngle = 45f;
+    private const float detectedDistance = 1f;
+    private const float viewDistance = 5f;
+    private const int rayCount = 15;
+
     [SerializeField] private LayerMask obstacleLayer;
 
     [Header("Tutorial UI Settings")]
