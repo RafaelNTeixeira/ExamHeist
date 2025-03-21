@@ -16,11 +16,6 @@ public class Security : MonoBehaviour
     private readonly int rayCount = 15;
     [SerializeField] private LayerMask obstacleLayer;
 
-    [Header("Audio Settings")]
-    public AudioClip hitSound;
-    private readonly float soundCooldown = 2f;
-    private float nextSoundTime = 0f;
-    
     [Header("Tutorial UI Settings")]
     public GameObject uiText;
     public GameObject uiTextDelete;
@@ -43,12 +38,6 @@ public class Security : MonoBehaviour
         if (PlayerDetected() || securityTouchPlayer)
         {
             anim.SetTrigger("catch");
-
-            if (Time.time >= nextSoundTime)
-            {
-                AudioSource.PlayClipAtPoint(hitSound, transform.position);
-                nextSoundTime = Time.time + soundCooldown;
-            }
 
             // If the player is detected, the game is over
             if (GameManager.instance.currentState == GameManager.GameState.Playing)
